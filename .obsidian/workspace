@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Untitled.md",
+            "file": "1 command line fun.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "1 command line fun.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "Untitled.md",
+    "1 command line fun.md",
     "0_prep/1 links.md",
     "0_prep/2 commands.md",
     "oscp/0_prep_notes/1 links.md",
