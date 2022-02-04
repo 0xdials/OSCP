@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0_prep/2 commands.md",
+            "file": "Untitled.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0_prep/2 commands.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,24 +96,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "0_prep/2 commands.md",
+    "Untitled.md",
     "0_prep/1 links.md",
+    "0_prep/2 commands.md",
     "oscp/0_prep_notes/1 links.md",
     "oscp/0_prep_notes/2 commands.md",
     "oscp/SQLi/manual.md",
     "oscp/active directory/Untitled.md",
     "oscp/1_privesc/nix/linux.md",
     "oscp/1_privesc/nix/Linux+Privilege+Escalation.pdf",
-    "hacking/SQLi/manual.md",
-    "hacking/Untitled.md"
+    "hacking/SQLi/manual.md"
   ]
 }
