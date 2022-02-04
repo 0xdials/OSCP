@@ -1,0 +1,119 @@
+{
+  "main": {
+    "id": "b81478c30c050cb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec2634e7431bda82",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "0_prep/2 commands.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d76cae4c140eb3ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6d0bacb1f0a8014",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a88011756828ab9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ef052dd9f79b8c9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 210.5
+  },
+  "right": {
+    "id": "b137f5909e3463b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "2141a4fbebfa3737",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fde76c990dc52974",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0_prep/2 commands.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5de310f60f85766e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "fa834cb310323f79",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "ec2634e7431bda82",
+  "lastOpenFiles": [
+    "0_prep/2 commands.md",
+    "0_prep/1 links.md",
+    "oscp/0_prep_notes/1 links.md",
+    "oscp/0_prep_notes/2 commands.md",
+    "oscp/SQLi/manual.md",
+    "oscp/active directory/Untitled.md",
+    "oscp/1_privesc/nix/linux.md",
+    "oscp/1_privesc/nix/Linux+Privilege+Escalation.pdf",
+    "hacking/SQLi/manual.md",
+    "hacking/Untitled.md"
+  ]
+}
