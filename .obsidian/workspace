@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 command line fun.md",
+            "file": "notes/00 table of contents.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 command line fun.md",
+                "file": "notes/00 table of contents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "1 command line fun.md",
-    "0_prep/1 links.md",
-    "0_prep/2 commands.md",
-    "oscp/0_prep_notes/1 links.md",
-    "oscp/0_prep_notes/2 commands.md",
-    "oscp/SQLi/manual.md",
-    "oscp/active directory/Untitled.md",
-    "oscp/1_privesc/nix/linux.md",
-    "oscp/1_privesc/nix/Linux+Privilege+Escalation.pdf",
-    "hacking/SQLi/manual.md"
+    "notes/00 table of contents.md",
+    "notes/1 command line fun.md",
+    "notes/999 links.md",
+    "notes/99 nix commands.md",
+    "notes/99 win commands.md",
+    "prep/1 links.md",
+    "prep/2 commands.md",
+    "Pasted image 20220204130607.png",
+    "Pasted image 20220204130227.png",
+    "0_prep/1 links.md"
   ]
 }

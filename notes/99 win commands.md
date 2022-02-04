@@ -1,4 +1,3 @@
-# windows
 ## one-liners
 #### dir and file
 list all files current dir
@@ -7,11 +6,8 @@ list all files current dir
 search C:\ for password
 `ci -recurse C:\ | % { select-string -path $_ -pattern password} 2>$null`
 
-
-
 base64
 `certutil -encone/-decode <FILE> <OUTFILE>`
-
 
 #### network file transfers
 smb setup on nix
