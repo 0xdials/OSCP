@@ -106,14 +106,14 @@
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
     "notes/2 command line fun.md",
+    "cat_pipe_sort.png",
+    "rerun_command.png",
+    "history_search.png",
+    "bck-i-search.png",
     "notes/1 Getting Comfortable with Kali.md",
     "images/1_getting_comfortable/apropos_compression.png",
-    "rerun_command.png",
-    "bck-i-search.png",
-    "history_search.png",
     "images/1_getting_comfortable/which_pwd.png",
     "images/1_getting_comfortable/updatedb_locate.png",
-    "images/1_getting_comfortable/man_ls.png",
-    "images/1_getting_comfortable/ls_manpage.png"
+    "images/1_getting_comfortable/man_ls.png"
   ]
 }
