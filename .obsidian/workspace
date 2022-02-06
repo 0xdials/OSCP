@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/1 command line fun.md",
+            "file": "notes/0.1 Getting Comfortable with Kali.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/1 command line fun.md",
+                "file": "notes/0.1 Getting Comfortable with Kali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +105,7 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "notes/0.1 Getting Comfortable with Kali.md",
     "notes/1 command line fun.md",
     "notes/00 table of contents.md",
     "notes/999 links.md",
@@ -113,7 +114,6 @@
     "prep/1 links.md",
     "prep/2 commands.md",
     "Pasted image 20220204130607.png",
-    "Pasted image 20220204130227.png",
-    "0_prep/1 links.md"
+    "Pasted image 20220204130227.png"
   ]
 }
