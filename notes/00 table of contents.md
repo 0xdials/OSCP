@@ -1,5 +1,5 @@
 # PEN-200
-- [[1 command line fun]]
+- [[2 command line fun]]
 
 # Apendix
 - [[99 nix commands]]
