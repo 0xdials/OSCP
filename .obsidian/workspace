@@ -7,11 +7,9 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "notes/0.1 Getting Comfortable with Kali.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted image 20220205212644.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/0.1 Getting Comfortable with Kali.md",
+                "file": "Pasted image 20220205212644.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +103,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "Pasted image 20220205212644.png",
+    "Pasted image 20220205211844.png",
+    "Pasted image 20220205211752.png",
+    "Pasted image 20220205211329.png",
+    "Pasted image 20220205210920.png",
+    "Pasted image 20220205210908.png",
+    "Pasted image 20220205210959.png",
     "notes/0.1 Getting Comfortable with Kali.md",
     "notes/00 table of contents.md",
-    "Pasted image 20220204170114.png",
-    "Pasted image 20220204164240.png",
-    "notes/1 command line fun.md",
-    "notes/999 links.md",
-    "notes/99 nix commands.md",
-    "notes/99 win commands.md",
-    "prep/1 links.md",
-    "prep/2 commands.md"
+    "Pasted image 20220204170114.png"
   ]
 }
