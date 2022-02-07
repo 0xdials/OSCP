@@ -7,9 +7,11 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "vimdiff_output.png"
+            "file": "notes/2 command line fun.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vimdiff_output.png",
+                "file": "notes/2 command line fun.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "notes/2 command line fun.md",
+    "notes/1 Getting Comfortable with Kali.md",
     "vimdiff_output.png",
     "vim_d.png",
-    "notes/2 command line fun.md",
     "light_dm.png",
     "Pasted image 20220206183639.png",
     "Pasted image 20220206183544.png",
     "Pasted image 20220206183531.png",
     "Pasted image 20220206183521.png",
-    "Pasted image 20220206183503.png",
-    "sed_lightdm.png"
+    "Pasted image 20220206183503.png"
   ]
 }

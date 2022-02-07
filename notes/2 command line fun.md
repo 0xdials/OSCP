@@ -47,3 +47,14 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 2.  This archive contains the results of scanning the same target machine at different times. Extract the archive and see if you can spot the differences by diffing the scans.
 ![[vim_d.png]]
 ![[vimdiff_output.png]]
+
+# 3.6.4 exercises
+#### Exercises
+
+_(To be performed on your own Kali VM - Reporting is required for these exercises)_
+
+1.  Find files that have changed on your Kali virtual machine within the past 7 days by running a specific command in the background.
+2.  Re-run the previous command and suspend it; once suspended, background it.
+3.  Bring the previous background job into the foreground.
+4.  Start the Firefox browser on your Kali system. Use **ps** and **grep** to identify Firefox's PID.
+5.  Terminate Firefox from the command line using its PID.
