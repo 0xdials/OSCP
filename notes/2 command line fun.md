@@ -45,4 +45,5 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 
 
 2.  This archive contains the results of scanning the same target machine at different times. Extract the archive and see if you can spot the differences by diffing the scans.
-
+![[vim_d.png]]
+![[vimdiff_output.png]]
