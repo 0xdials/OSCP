@@ -24,15 +24,12 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 _(To be performed on your own Kali VM - Reporting is required for these exercises)_
 
 1.  Using **/etc/passwd**, extract the user and home directory fields for all users on your Kali machine for which the shell is set to _/bin/false_. Make sure you use a Bash one-liner to print the output to the screen. The output should look similar to Listing 26 below:
-
-```
-kali@kali:~$ **YOUR COMMAND HERE**
-The user mysql home directory is /nonexistent
-The user Debian-snmp home directory is /var/lib/snmp
-The user speech-dispatcher home directory is /var/run/speech-dispatcher
-The user Debian-gdm home directory is /var/lib/gdm3
-```
+`cat /etc/passwd | grep /bin/false | awk -F ":" '{print "User " $1 " home directory is " $6}' `
+![[Pasted image 20220206182853.png]]
 
 2.  Copy the **/etc/passwd** file to your home directory (**/home/kali**).
     
 3.  Use **cat** in a one-liner to print the output of the **/kali/passwd** and replace all instances of the "Gnome Display Manager" string with "GDM".
+(System uses Lightdm, replaced command accordingly)
+![[Pasted image 20220206183618.png]]
+![[Pasted image 20220206183544.png]]
