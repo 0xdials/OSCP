@@ -106,14 +106,14 @@
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
     "notes/2 command line fun.md",
-    "tail_monitor_accesslogs.png",
-    "watch_ps_command.png",
-    "ps_command.png",
-    "fg_process.png",
-    "background_process.png",
-    "kill_command_firefox.png",
-    "notes/1 Getting Comfortable with Kali.md",
-    "recently_modified_bg_process.png",
-    "vimdiff_output.png"
+    "images/2_command_line_fun/watch_ps_command.png",
+    "images/2_command_line_fun/histsize.png",
+    "images/2_command_line_fun/alias.png",
+    "Pasted image 20220207185741.png",
+    "images/2_command_line_fun/ps_sorted.png",
+    "images/2_command_line_fun/ps_command.png",
+    "images/2_command_line_fun/tail_monitor_accesslogs.png",
+    "images/2_command_line_fun/fg_process.png",
+    "images/2_command_line_fun/background_process.png"
   ]
 }

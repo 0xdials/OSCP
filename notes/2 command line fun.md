@@ -100,7 +100,9 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 
 1.  Create an alias named ".." to change to the parent directory and make it persistent across terminal sessions.
 `vim .bashrc`
-![[Pasted image 20220208103116.png]]
+![[alias.png]]
 
 2.  Permanently configure the history command to store 10000 entries and include the full date in its output.
-
+`vim .bashrc`
+![[histsize.png]]
+`echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc`
