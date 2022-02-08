@@ -68,3 +68,20 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 5.  Terminate Firefox from the command line using its PID.
 ![[kill_command_firefox.png]]
 
+# 3.7.3 exercises
+#### Exercises
+
+_(To be performed on your own Kali VM - Reporting is required for these exercises)_
+
+1.  Start your apache2 web service and access it locally while monitoring its **access.log** file in real-time.
+`systemctl start apache2.service`
+`tail -f ./var/log/apache2/access.log`
+![[tail_monitor_accesslogs.png]]
+
+2.  Use a combination of **watch** and **ps** to monitor the most CPU-intensive processes on your Kali machine in a terminal window; launch different applications to see how the list changes in real time.
+
+`watch "ps aux | sort -nrk 3,3 | head -n 5"`
+![[watch_ps_command.png]]
+
+
+
