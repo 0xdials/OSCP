@@ -90,3 +90,7 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 
 1.  Download the PoC code for an exploit from https://www.exploit-db.com using **curl**, **wget**, and **axel**, saving each download with a different name.
 
+`wget https://www.exploit-db.com/download/50714 -O exploit.rb`
+`curl -o exploit2.rb https://www.exploit-db.com/download/50714`
+`axel -a -n 20 -o exploit3.rb https://www.exploit-db.com/download/50714`
+
