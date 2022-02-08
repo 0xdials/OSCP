@@ -83,5 +83,10 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 `watch "ps aux | sort -nrk 3,3 | head -n 5"`
 ![[watch_ps_command.png]]
 
+# 3.8.4 exercises
+#### Exercises
 
+_(To be performed on your own Kali VM - Reporting is required for these exercises)_
+
+1.  Download the PoC code for an exploit from https://www.exploit-db.com using **curl**, **wget**, and **axel**, saving each download with a different name.
 
