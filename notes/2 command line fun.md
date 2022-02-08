@@ -94,3 +94,11 @@ _(To be performed on your own Kali VM - Reporting is required for these exercise
 `curl -o exploit2.rb https://www.exploit-db.com/download/50714`
 `axel -a -n 20 -o exploit3.rb https://www.exploit-db.com/download/50714`
 
+
+# 3.9.4 exercises
+_(To be performed on your own Kali VM - Reporting is required for these exercises)_
+
+1.  Create an alias named ".." to change to the parent directory and make it persistent across terminal sessions.
+
+
+2.  Permanently configure the history command to store 10000 entries and include the full date in its output.
