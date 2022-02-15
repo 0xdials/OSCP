@@ -1,5 +1,5 @@
 # PEN-200
-- [[2 command line fun]]
+- [[2 Command Line Fun]]
 
 # Apendix
 - [[99 commands cheat sheet]]
