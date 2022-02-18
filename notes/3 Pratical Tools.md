@@ -20,6 +20,7 @@ create listener using .pem and execute shell
 connect 
 `socat - OPENSSL:192.168.119.249:443,verify=0`
 ![[Pasted image 20220218122213.png]]
+# !!SKIPPED QUESTIONS RETURN HERE!!
 3.  Create an encrypted bind shell on your Windows system. Try to connect to it from Kali without encryption. Does it still work?
 use previously generated .pem
 start socat listener
@@ -29,3 +30,12 @@ target windows machine do a callback using socat
 
 4.  Make an unencrypted **socat ** bind shell on your Windows system. Connect to the shell using Netcat. Does it work?
 
+
+# 4.3.9 exercises
+#### Exercises
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Use **PowerShell** and **powercat** to create a reverse shell from your Windows system to your Kali machine.
+2.  Use **PowerShell** and **powercat** to create a bind shell on your Windows system and connect to it from your Kali machine. Can you also use **powercat** to connect to it locally?
+3.  Use **powercat** to generate an encoded payload and then have it executed through **powershell**. Have a reverse shell sent to your Kali machine, also create an encoded bind shell on your Windows system and use your Kali machine to connect to it.
