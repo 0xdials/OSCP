@@ -119,6 +119,7 @@ truncated packets - from the tcpdump manpage, usage of -s flag:
 `sudo tcpdump -nX -s 0 -r sample.pcap`
 
 3.  Find all 'SYN', 'ACK', and 'RST' packets in the password_cracking_filtered.pcap file.
-
+`tcpdump -A -n 'tcp[13] &4!=0 or tcp[13] & 2!=0 or tcp[13] & 16!=0' -r password_cracking_ptap.pcap`
 
 4.  An alternative syntax is available in tcpdump where you can use a more user-friendly filter to display only ACK and PSH packets. Explore this syntax in the tcpdump manual by searching for "tcpflags". Come up with an equivalent display filter using this syntax to filter ACK and PSH packets.
+`tcpdump -A -n 'tcp[tcpflags] == tcp-push or tcp[tcpflags] == tcp-ack' -r password_cracking_ptap.pcap`
