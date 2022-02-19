@@ -70,3 +70,27 @@ or if encoded, running posershell.exe with -E flag and encoded payload
 `Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard`
 ![[Pasted image 20220218173555.png]]
 ![[Pasted image 20220218173813.png]]
+
+# exercises 4.4.6
+#### Exercises
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Wireshark to capture network activity while attempting to connect to 10.11.1.217 on port 110 using Netcat, and then attempt to log into it.
+setup filter to only capture traffic on port 110
+connect to pop server via nc
+`nc -nv <IP> 110`
+attempt to log into pop server 
+`USER student`
+`PASS lab`
+![[Pasted image 20220218183021.png]]
+2.  Read and understand the output. Where is the three-way handshake happening? Where is the connection closed?
+
+
+3.  Follow the TCP stream to read the login attempt.
+
+
+4.  Use the display filter to only monitor traffic on port 110.
+
+
+5.  Run a new session, this time using the capture filter to only collect traffic on port 110.
