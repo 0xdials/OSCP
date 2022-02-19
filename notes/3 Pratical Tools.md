@@ -85,12 +85,19 @@ attempt to log into pop server
 `PASS lab`
 ![[Pasted image 20220218183021.png]]
 2.  Read and understand the output. Where is the three-way handshake happening? Where is the connection closed?
-
+Frame 1, 2, and 3 contain the three-way handshake
+![[Pasted image 20220218183223.png]]
+frame 13 contains RST, ack which is used to reset/shutdown a connection
+![[Pasted image 20220218183755.png]]
 
 3.  Follow the TCP stream to read the login attempt.
-
+![[Pasted image 20220218183815.png]]
 
 4.  Use the display filter to only monitor traffic on port 110.
-
+this can be done one the startup page via the capture filter
+![[Pasted image 20220218183859.png]]
+or with the display filter once the capture has begun
+![[Pasted image 20220218184037.png]]
 
 5.  Run a new session, this time using the capture filter to only collect traffic on port 110.
+see above section for capture filtering
