@@ -106,10 +106,17 @@ see above section for capture filtering
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
 
 1.  Use tcpdump to recreate the Wireshark exercise of capturing traffic on port 110.
-
+`sudo tcpdump -i tun0 port 110`
+or save to pcap file
+`sudo tcpdump -i tun0 port 110 -w sample.pcap`
 
 2.  Use the -X flag to view the content of the packet. If data is truncated, investigate how the -s flag might help.
+view contents of .pcap
+`sudo tcpdump -nX -r sample.pcap `
 
+truncated packets - from the tcpdump manpage, usage of -s flag:
+"Packets truncated because of a limited snapshot are indicated in the output with '''{proto}'', where proto is the name of the protocol level at which the truncation has occurred"
+`sudo tcpdump -nX -s 0 -r sample.pcap`
 
 3.  Find all 'SYN', 'ACK', and 'RST' packets in the password_cracking_filtered.pcap file.
 
