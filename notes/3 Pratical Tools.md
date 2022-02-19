@@ -101,3 +101,17 @@ or with the display filter once the capture has begun
 
 5.  Run a new session, this time using the capture filter to only collect traffic on port 110.
 see above section for capture filtering
+
+# exercises 4.5.3
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use tcpdump to recreate the Wireshark exercise of capturing traffic on port 110.
+
+
+2.  Use the -X flag to view the content of the packet. If data is truncated, investigate how the -s flag might help.
+
+
+3.  Find all 'SYN', 'ACK', and 'RST' packets in the password_cracking_filtered.pcap file.
+
+
+4.  An alternative syntax is available in tcpdump where you can use a more user-friendly filter to display only ACK and PSH packets. Explore this syntax in the tcpdump manual by searching for "tcpflags". Come up with an equivalent display filter using this syntax to filter ACK and PSH packets.
