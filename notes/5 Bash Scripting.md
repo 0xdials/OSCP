@@ -32,6 +32,6 @@ for i in range(0, 257):
 ```
 
 3.  Use the practical examples in this module to help you create a Bash script that extracts JavaScript files from the **access_log.txt** file (http://www.offensive-security.com/pwk-files/access_log.txt.gz). Make sure the file names DO NOT include the path, are unique, and are sorted.
-
+`cat access_log.txt | grep -o ".*\.js" | sed 's:.*/::' | sort | uniq`
 
 4.  Re-write the previous exercise in another language such as Python, Perl, or Ruby.
