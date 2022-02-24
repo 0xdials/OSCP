@@ -1,4 +1,37 @@
-![[Pasted image 20220223111554.png]]
+#### Exercises
+
+_(To be performed on your own Kali VM - Reporting is required for these exercises)_
+
+1.  Research Bash loops and write a short script to perform a ping sweep of your target IP range of 10.11.1.0/24.
+```bash
+#!/bin/bash
 
 
-Write a short Bash script to perform a ping sweep of a target IP address range. This script will only print the IP addresses of any valid responses (one IP address per line) and nothing else. To make this script more broadly applicable, you will not hardcode the IP address range. Instead, this script will require three arguments: the first three octets of the IP address, the starting value of the last octet, and the ending value of the last octet (see below for examples). You DO NOT need to do any error checking (but feel free to do so). Upload your script to the Kali VM #8 student's home folder and run _/challenge/ping-sweep_ with your script's location as the first argument to get the flag.
+for i  in $(seq 0 256)
+do
+	if ($( ping 10.11.1.$i -c1 > /dev/null ))
+	then
+		echo "10.11.1.$i"
+	fi
+done
+```
+
+2.  Try to do the above exercise with a higher-level scripting language such as Python, Perl, or Ruby.
+```python 
+#!/bin/python
+import sys
+import os
+
+for i in range(0, 257):
+	response = os.system(f"ping 10.11.1.{i} -c1 > /dev/null")
+
+	if response == 0:
+		print(f"10.11.1.{i}")
+	else:
+		pass
+```
+
+3.  Use the practical examples in this module to help you create a Bash script that extracts JavaScript files from the **access_log.txt** file (http://www.offensive-security.com/pwk-files/access_log.txt.gz). Make sure the file names DO NOT include the path, are unique, and are sorted.
+
+
+4.  Re-write the previous exercise in another language such as Python, Perl, or Ruby.
