@@ -35,3 +35,20 @@ for i in range(0, 257):
 `cat access_log.txt | grep -o ".*\.js" | sed 's:.*/::' | sort | uniq`
 
 4.  Re-write the previous exercise in another language such as Python, Perl, or Ruby.
+```python
+#!/bin/python
+
+filelist = set()
+
+with open("access_log.txt") as file:
+	lines =file.readlines()
+
+for line in lines:
+	if ".js" in line: #return all lines that contain .js extension
+		split = line.split() #split the lines by space
+		filepath = split[6] #return index that contains filename and path
+		filename = filepath[filepath.rindex('/')+1:] #return txt after last "/"
+		filelist.add(filename) #append to set
+
+print(sorted(filelist))
+```
