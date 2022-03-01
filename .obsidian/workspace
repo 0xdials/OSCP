@@ -7,12 +7,8 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/5 Bash Scripting.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/5 Bash Scripting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +100,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "notes/5 Bash Scripting.md",
-    "notes/2 Getting Comfortable with Kali.md",
+    "Pasted image 20220218171730.png",
     "notes/3 Command Line Fun.md",
     "notes/4 Pratical Tools.md",
-    "notes/99 commands cheat sheet.md",
-    "Pasted image 20220218171401.png",
-    "Pasted image 20220218171345.png",
-    "notes/99 win commands.md",
-    "notes/999 links.md",
-    "images/2_command_line_fun/watch_ps_command.png"
+    "images/4 practical tools/reverse_connection.png",
+    "images/4 practical tools/powershell_encoded_revshell.png",
+    "images/4 practical tools/root_through_powercat.png",
+    "images/4 practical tools/powercat_revshell.png",
+    "images/4 practical tools/socat_openssl.png",
+    "images/4 practical tools/powercat_received.png",
+    "images/4 practical tools/wireshark_handshake2.png"
   ]
 }
