@@ -7,8 +7,12 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "notes/6 Passive Information Gathering - OSINT.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/6 Passive Information Gathering - OSINT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +105,7 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "notes/6 Passive Information Gathering - OSINT.md",
     "Pasted image 20220218171730.png",
     "notes/3 Command Line Fun.md",
     "notes/4 Pratical Tools.md",
@@ -108,7 +114,6 @@
     "images/4 practical tools/root_through_powercat.png",
     "images/4 practical tools/powercat_revshell.png",
     "images/4 practical tools/socat_openssl.png",
-    "images/4 practical tools/powercat_received.png",
-    "images/4 practical tools/wireshark_handshake2.png"
+    "images/4 practical tools/powercat_received.png"
   ]
 }
