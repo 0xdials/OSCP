@@ -7,9 +7,11 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "whois_first_named_server.png"
+            "file": "notes/6 Passive Information Gathering - OSINT.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "whois_first_named_server.png",
+                "file": "notes/6 Passive Information Gathering - OSINT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,8 +105,8 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "whois_first_named_server.png",
     "notes/6 Passive Information Gathering - OSINT.md",
+    "whois_first_named_server.png",
     "notes/4 Pratical Tools.md",
     "notes/5 Bash Scripting.md",
     "Pasted image 20220218171730.png",
