@@ -106,14 +106,14 @@
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
     "notes/6 Passive Information Gathering - OSINT.md",
+    "notes/4 Pratical Tools.md",
+    "notes/5 Bash Scripting.md",
     "Pasted image 20220218171730.png",
     "notes/3 Command Line Fun.md",
-    "notes/4 Pratical Tools.md",
     "images/4 practical tools/reverse_connection.png",
     "images/4 practical tools/powershell_encoded_revshell.png",
     "images/4 practical tools/root_through_powercat.png",
     "images/4 practical tools/powercat_revshell.png",
-    "images/4 practical tools/socat_openssl.png",
-    "images/4 practical tools/powercat_received.png"
+    "images/4 practical tools/socat_openssl.png"
   ]
 }
