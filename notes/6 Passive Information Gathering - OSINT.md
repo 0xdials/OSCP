@@ -29,3 +29,20 @@ Email: mcarlow@megacorpone.com
 4.  What is the email address of VP of Legal for Megacorpone.com?
 `site:megacorpone.com allintext:"VP"`
 ![[Pasted image 20220301193824.png]]
+
+
+# 6.5.1 exercises
+## Practice - Netcraft
+
+_(To be performed from your own Kali VM - Reporting is required for these exercises)_
+
+#### Exercises
+
+1.  Use Netcraft to determine what application server is running on www.megacorpone.com.
+
+![[Pasted image 20220301221623.png]]
+![[Pasted image 20220301221655.png]]
+
+2.  What is the name of the _Client-Side Scripting Framework_ that handles fonts?
+
+![[Pasted image 20220301221755.png]]
