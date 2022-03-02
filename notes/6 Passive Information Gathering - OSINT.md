@@ -21,9 +21,11 @@ Title: VP Of Legal
 Email: mcarlow@megacorpone.com
 
 2.  Use Google dorks (either your own or any from the GHDB) to search www.megacorpone.com for interesting documents.
-
+![[Pasted image 20220301193527.png]]
 
 3.  What other MegaCorp One employees can you identify that are not listed on www.megacorpone.com?
-
+![[Pasted image 20220301193714.png]]
 
 4.  What is the email address of VP of Legal for Megacorpone.com?
+`site:megacorpone.com allintext:"VP"`
+![[Pasted image 20220301193824.png]]
