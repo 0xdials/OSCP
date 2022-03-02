@@ -50,8 +50,13 @@ _(To be performed from your own Kali VM - Reporting is required for these exerci
 
 
 
-# 
+# 6.7.1 exercises
+## Practice - Open-Source Code
 
+#### Exercises
+
+1.  Perform some open-source recon on the MegaCorp One's GitHub repository to see if you can find some user credentials. What is the username associated with the discovered hash?
 
 ![[Pasted image 20220302135200.png]]
-![[Pasted image 20220302135219.png]]
+![[Pasted image 20220302135219.png]]![[Pasted image 20220302135316.png]]
+
