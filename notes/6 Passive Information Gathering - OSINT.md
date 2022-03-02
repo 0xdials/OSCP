@@ -46,3 +46,12 @@ _(To be performed from your own Kali VM - Reporting is required for these exerci
 2.  What is the name of the _Client-Side Scripting Framework_ that handles fonts?
 
 ![[Pasted image 20220301221755.png]]
+
+
+
+
+# 
+
+
+![[Pasted image 20220302135200.png]]
+![[Pasted image 20220302135219.png]]
