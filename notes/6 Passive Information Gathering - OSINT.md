@@ -60,3 +60,19 @@ _(To be performed from your own Kali VM - Reporting is required for these exerci
 ![[Pasted image 20220302135200.png]]
 ![[Pasted image 20220302135219.png]]![[Pasted image 20220302135316.png]]
 
+
+
+# 6.12.3 exercises
+## Practice - User Information Gathering
+
+_(To be performed from your own Kali VM - Reporting is required for these exercises)_
+
+1.  Use theHarvester to enumerate emails addresses for megacorpone.com.
+`theharvester -d megacorpone.com -b google`
+first@megacorpone.com
+joe@megacorpone.com
+mcarlow@megacorpone.com
+x22joe@megacorpone.com
+![[Pasted image 20220302195043.png]]
+![[Pasted image 20220302195058.png]]
+2.  Experiment with different data sources (-b). Which ones work best for you?
