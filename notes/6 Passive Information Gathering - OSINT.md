@@ -76,3 +76,7 @@ x22joe@megacorpone.com
 ![[Pasted image 20220302195043.png]]
 ![[Pasted image 20220302195058.png]]
 2.  Experiment with different data sources (-b). Which ones work best for you?
+bing
+![[Pasted image 20220302211419.png]]
+sublist3r
+![[Pasted image 20220302211519.png]]
