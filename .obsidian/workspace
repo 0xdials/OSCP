@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/6 Passive Information Gathering - OSINT.md",
+            "file": "notes/7 Active Information Gathering.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/6 Passive Information Gathering - OSINT.md",
+                "file": "notes/7 Active Information Gathering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +105,7 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "notes/7 Active Information Gathering.md",
     "notes/6 Passive Information Gathering - OSINT.md",
     "images/6 passive information gathering/github_user_credentials.png",
     "images/6 passive information gathering/whois_first_named_server.png",
@@ -113,7 +114,6 @@
     "images/6 passive information gathering/github_user_results.png",
     "images/6 passive information gathering/github_user_search.png",
     "images/6 passive information gathering/netcraft_client_scripting.png",
-    "images/6 passive information gathering/netcraft_server_technology.png",
-    "images/6 passive information gathering/netcraft_application_servers.png"
+    "images/6 passive information gathering/netcraft_server_technology.png"
   ]
 }
