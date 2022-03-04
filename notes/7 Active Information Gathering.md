@@ -27,6 +27,29 @@ fs1.megacorpone.com has address 51.222.169.210
 
 2.  Write a small script to attempt a zone transfevim r from megacorpone.com using a higher-level scripting language such as Python, Perl, or Ruby.
 
+to use our script:
+`./dns_zone_xfer.py <domain name> <file containing list of servers>`
+```python
+#!/bin/python
+import sys
+import os
+
+args = sys.argv 
+host = args[1]
+
+
+with open(args[2]) as file:
+	lines = file.readlines()
+
+
+for line in lines:
+	os.system(f"host -l {host} {line} ")
+
+
+```
 
 
 3.  Recreate the example above and use **dnsrecon** to attempt a zone transfer from megacorpone.com
+`dnsrecon -d megacorpone.com -t axfr`
+
+![[Pasted image 20220303230713.png]]
