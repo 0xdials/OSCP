@@ -25,7 +25,7 @@ syslog.megacorpone.com has address 51.222.169.217
 fs1.megacorpone.com has address 51.222.169.210
 ```
 
-2.  Write a small script to attempt a zone transfer from megacorpone.com using a higher-level scripting language such as Python, Perl, or Ruby.
+2.  Write a small script to attempt a zone transfevim r from megacorpone.com using a higher-level scripting language such as Python, Perl, or Ruby.
 
 
 
