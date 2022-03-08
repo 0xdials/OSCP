@@ -64,9 +64,12 @@ _(To be performed on your own Kali machine - Reporting is required for these exe
 `nmap -v -sn <first.three.octets>.1-254 -oG ping-sweep.txt`
 we would then grep the output and pipe to cut to easily dentify discovered machines
 `grep Up ping-sweep.txt | cut -d " " -f 2`
+![[Pasted image 20220308142101.png]]
 this can also be accomplished via the "fping" tool, which uses ICMP to identify addresses (does not send TCP syn/ack packets to ports, unlike "nmap -sn")
-
+![[Pasted image 20220308142032.png]]
 2.  Scan the IP addresses you found in exercise 1 for open webserver ports. Use Nmap to find the webserver and operating system versions.
+run nmap, scanning for top 20 ports and reading IPs from a list
+`nmap -sT -A --top-ports=20 -iL ping-sweep.txt`
 
 
 3.  Use NSE scripts to scan the machines in the labs that are running the SMB service.
