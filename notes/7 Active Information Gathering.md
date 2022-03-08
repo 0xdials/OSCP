@@ -53,3 +53,26 @@ for line in lines:
 `dnsrecon -d megacorpone.com -t axfr`
 
 ![[Pasted image 20220303230713.png]]
+
+
+# 7.2.3 port scanning exercises
+#### Exercises
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Nmap to conduct a ping sweep of your target IP range and save the output to a file. Use grep to show machines that are online.
+`nmap -v -sn <first.three.octets>.1-254 -oG ping-sweep.txt`
+we would then grep the output and pipe to cut to easily dentify discovered machines
+`grep Up ping-sweep.txt | cut -d " " -f 2`
+this can also be accomplished via the "fping" tool, which uses ICMP to identify addresses (does not send TCP syn/ack packets to ports, unlike "nmap -sn")
+
+2.  Scan the IP addresses you found in exercise 1 for open webserver ports. Use Nmap to find the webserver and operating system versions.
+
+
+3.  Use NSE scripts to scan the machines in the labs that are running the SMB service.
+
+
+4.  Use Wireshark to capture a Nmap connect and UDP scan and compare it against the Netcat port scans. Are they the same or different?
+
+
+5.  Use Wireshark to capture a Nmap SYN scan and compare it to a connect scan and identify the difference between them.
