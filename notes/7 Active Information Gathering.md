@@ -109,7 +109,21 @@ Host script results:
 
 3.  Use NSE scripts to scan the machines in the labs that are running the SMB service.
 `nmap --script=smb-os-discovery -iL ping-sweep.txt -oG smb`
+```Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 16:36 PST
+Nmap scan report for 192.168.198.6
+Host is up (0.083s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
 
+Nmap scan report for 192.168.198.8
+Host is up (0.082s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+22/tcp open  ssh
+25/tcp open  smtp```
+```
 4.  Use Wireshark to capture a Nmap connect and UDP scan and compare it against the Netcat port scans. Are they the same or different?
 
 
