@@ -1,0 +1,500 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-08 14:23 PST
+Nmap scan report for 192.168.198.8
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 8e:08:fb:84:69:56:cf:34:4b:2d:82:a5:30:b9:5e:72 (RSA)
+|   256 af:8d:4e:d7:10:62:6b:0f:dc:82:f7:70:e4:fb:eb:b6 (ECDSA)
+|_  256 8a:00:93:9f:56:1a:0b:a2:d3:b0:c8:59:01:ad:8f:ff (ED25519)
+23/tcp   closed telnet
+25/tcp   open   smtp          Postfix smtpd
+| ssl-cert: Subject: commonName=mail
+| Subject Alternative Name: DNS:mail
+| Not valid before: 2021-12-02T15:18:58
+|_Not valid after:  2031-11-30T15:18:58
+|_smtp-commands: mail, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: Host:  mail; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.198.9
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:32
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 192.168.198.11
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:38
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 192.168.198.12
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:48
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 192.168.198.13
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  open   netbios-ssn   Samba smbd 4.6.2
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   netbios-ssn   Samba smbd 4.6.2
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+
+Host script results:
+|_nbstat: NetBIOS name: SAMBA, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-03-08T22:24:44
+|_  start_date: N/A
+
+Nmap scan report for 192.168.198.14
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp?
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla.
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     220-FileZilla Server 1.2.0
+|     Please visit https://filezilla-project.org/
+|   GetRequest: 
+|     220-FileZilla Server 1.2.0
+|     Please visit https://filezilla-project.org/
+|     What are you trying to do? Go away.
+|   HTTPOptions, RTSPRequest: 
+|     220-FileZilla Server 1.2.0
+|     Please visit https://filezilla-project.org/
+|     Wrong command.
+|   Help: 
+|     220-FileZilla Server 1.2.0
+|     Please visit https://filezilla-project.org/
+|     214-The following commands are recognized.
+|     USER TYPE SYST SIZE RNTO RNFR RMD REST QUIT
+|     HELP XMKD MLST MKD EPSV XCWD NOOP AUTH OPTS DELE
+|     CDUP APPE STOR ALLO RETR PWD FEAT CLNT MFMT
+|     MODE XRMD PROT ADAT ABOR XPWD MDTM LIST MLSD PBSZ
+|     NLST EPRT PASS STRU PASV STAT PORT
+|_    Help ok.
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=filezilla-server self signed certificate
+| Not valid before: 2022-01-06T15:37:24
+|_Not valid after:  2023-01-07T15:42:24
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port21-TCP:V=7.92%I=7%D=3/8%Time=6227D783%P=x86_64-pc-linux-gnu%r(NULL,
+SF:4D,"220-FileZilla\x20Server\x201\.2\.0\r\n220\x20Please\x20visit\x20htt
+SF:ps://filezilla-project\.org/\r\n")%r(GenericLines,4D,"220-FileZilla\x20
+SF:Server\x201\.2\.0\r\n220\x20Please\x20visit\x20https://filezilla-projec
+SF:t\.org/\r\n")%r(Help,17C,"220-FileZilla\x20Server\x201\.2\.0\r\n220\x20
+SF:Please\x20visit\x20https://filezilla-project\.org/\r\n214-The\x20follow
+SF:ing\x20commands\x20are\x20recognized\.\r\n\x20NOP\x20\x20USER\x20TYPE\x
+SF:20SYST\x20SIZE\x20RNTO\x20RNFR\x20RMD\x20\x20REST\x20QUIT\r\n\x20HELP\x
+SF:20XMKD\x20MLST\x20MKD\x20\x20EPSV\x20XCWD\x20NOOP\x20AUTH\x20OPTS\x20DE
+SF:LE\r\n\x20CWD\x20\x20CDUP\x20APPE\x20STOR\x20ALLO\x20RETR\x20PWD\x20\x2
+SF:0FEAT\x20CLNT\x20MFMT\r\n\x20MODE\x20XRMD\x20PROT\x20ADAT\x20ABOR\x20XP
+SF:WD\x20MDTM\x20LIST\x20MLSD\x20PBSZ\r\n\x20NLST\x20EPRT\x20PASS\x20STRU\
+SF:x20PASV\x20STAT\x20PORT\r\n214\x20Help\x20ok\.\r\n")%r(GetRequest,76,"2
+SF:20-FileZilla\x20Server\x201\.2\.0\r\n220\x20Please\x20visit\x20https://
+SF:filezilla-project\.org/\r\n501\x20What\x20are\x20you\x20trying\x20to\x2
+SF:0do\?\x20Go\x20away\.\r\n")%r(HTTPOptions,61,"220-FileZilla\x20Server\x
+SF:201\.2\.0\r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\
+SF:r\n500\x20Wrong\x20command\.\r\n")%r(RTSPRequest,61,"220-FileZilla\x20S
+SF:erver\x201\.2\.0\r\n220\x20Please\x20visit\x20https://filezilla-project
+SF:\.org/\r\n500\x20Wrong\x20command\.\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:45
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 192.168.198.15
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp open   http          Jetty 9.4.43.v20210629
+|_http-server-header: Jetty(9.4.43.v20210629)
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Dashboard [Jenkins]
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:56
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 192.168.198.20
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 ac:d6:d2:e6:6f:60:c2:ed:bc:0e:be:8f:75:e9:37:86 (RSA)
+|   256 35:fb:0b:12:ef:d8:f1:f5:d6:82:f9:b9:8d:15:84:00 (ECDSA)
+|_  256 5a:28:c2:ae:cd:f0:e6:6c:f4:e3:0c:ad:c4:ff:f7:eb (ED25519)
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   open   http          Apache httpd 2.4.41 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-title: LOGIN |Messaging Web Application
+|_Requested resource was ./login.php
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  open   netbios-ssn   Samba smbd 4.6.2
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   netbios-ssn   Samba smbd 4.6.2
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: SAMBAWEB, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb2-time: 
+|   date: 2022-03-08T22:24:53
+|_  start_date: N/A
+
+Nmap scan report for 192.168.198.21
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 ac:d6:d2:e6:6f:60:c2:ed:bc:0e:be:8f:75:e9:37:86 (RSA)
+|   256 35:fb:0b:12:ef:d8:f1:f5:d6:82:f9:b9:8d:15:84:00 (ECDSA)
+|_  256 5a:28:c2:ae:cd:f0:e6:6c:f4:e3:0c:ad:c4:ff:f7:eb (ED25519)
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   open   http          Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Chicken monitoring site
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.198.22
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 ac:d6:d2:e6:6f:60:c2:ed:bc:0e:be:8f:75:e9:37:86 (RSA)
+|   256 35:fb:0b:12:ef:d8:f1:f5:d6:82:f9:b9:8d:15:84:00 (ECDSA)
+|_  256 5a:28:c2:ae:cd:f0:e6:6c:f4:e3:0c:ad:c4:ff:f7:eb (ED25519)
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp open   mysql         MySQL 8.0.27-0ubuntu0.20.04.1
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.27-0ubuntu0.20.04.1
+|   Thread ID: 12
+|   Capabilities flags: 65535
+|   Some Capabilities: LongPassword, ConnectWithDatabase, Speaks41ProtocolNew, Speaks41ProtocolOld, ODBCClient, Support41Auth, DontAllowDatabaseTableColumn, IgnoreSigpipes, FoundRows, SwitchToSSLAfterHandshake, InteractiveClient, LongColumnFlag, SupportsTransactions, SupportsLoadDataLocal, IgnoreSpaceBeforeParenthesis, SupportsCompression, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: '\x0F:}'6u4!
+| A\x16@I\x0D\x16\x146%1
+|_  Auth Plugin Name: caching_sha2_password
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.198.149
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+53/tcp   open   domain        Simple DNS Plus
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  open   microsoft-ds?
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2022-03-08T22:25:05
+|_  start_date: N/A
+
+Nmap scan report for 192.168.198.254
+Host is up (0.079s latency).
+
+PORT     STATE    SERVICE       VERSION
+21/tcp   filtered ftp
+22/tcp   closed   ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+53/tcp   filtered domain
+80/tcp   closed   http
+110/tcp  filtered pop3
+111/tcp  filtered rpcbind
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+143/tcp  filtered imap
+443/tcp  closed   https
+445/tcp  filtered microsoft-ds
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+1723/tcp filtered pptp
+3306/tcp filtered mysql
+3389/tcp filtered ms-wbt-server
+5900/tcp filtered vnc
+8080/tcp filtered http-proxy
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 3072 ac:d6:d2:e6:6f:60:c2:ed:bc:0e:be:8f:75:e9:37:86 (RSA) used by:
+|   192.168.198.20
+|   192.168.198.21
+|   192.168.198.22
+| Key 256 5a:28:c2:ae:cd:f0:e6:6c:f4:e3:0c:ad:c4:ff:f7:eb (ED25519) used by:
+|   192.168.198.20
+|   192.168.198.21
+|   192.168.198.22
+| Key 256 35:fb:0b:12:ef:d8:f1:f5:d6:82:f9:b9:8d:15:84:00 (ECDSA) used by:
+|   192.168.198.20
+|   192.168.198.21
+|_  192.168.198.22
+| clock-skew: 
+|   0s: 
+|     192.168.198.14
+|     192.168.198.15
+|     192.168.198.13
+|     192.168.198.12
+|     192.168.198.149
+|     192.168.198.9
+|     192.168.198.20
+|_    192.168.198.11
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 15 IP addresses (12 hosts up) scanned in 118.75 seconds
