@@ -70,10 +70,45 @@ this can also be accomplished via the "fping" tool, which uses ICMP to identify 
 2.  Scan the IP addresses you found in exercise 1 for open webserver ports. Use Nmap to find the webserver and operating system versions.
 run nmap, scanning for top 20 ports and reading IPs from a list
 `nmap -sT -A --top-ports=20 -iL ping-sweep.txt`
+```
+Nmap scan report for 192.168.198.8
+Host is up (0.084s latency).
 
+PORT     STATE  SERVICE       VERSION
+22/tcp   open   ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 8e:08:fb:84:69:56:cf:34:4b:2d:82:a5:30:b9:5e:72 (RSA)
+|   256 af:8d:4e:d7:10:62:6b:0f:dc:82:f7:70:e4:fb:eb:b6 (ECDSA)
+|_  256 8a:00:93:9f:56:1a:0b:a2:d3:b0:c8:59:01:ad:8f:ff (ED25519)
+25/tcp   open   smtp          Postfix smtpd
+| ssl-cert: Subject: commonName=mail
+| Subject Alternative Name: DNS:mail
+| Not valid before: 2021-12-02T15:18:58
+|_Not valid after:  2031-11-30T15:18:58
+|_smtp-commands: mail, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING
+Service Info: Host:  mail; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 192.168.198.9
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE       VERSION
+135/tcp  open   msrpc         Microsoft Windows RPC
+139/tcp  open   netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open   microsoft-ds?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-03-08T22:24:32
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+...
+```
 
 3.  Use NSE scripts to scan the machines in the labs that are running the SMB service.
-
+`nmap --script=smb-os-discovery -iL ping-sweep.txt -oG smb`
 
 4.  Use Wireshark to capture a Nmap connect and UDP scan and compare it against the Netcat port scans. Are they the same or different?
 
