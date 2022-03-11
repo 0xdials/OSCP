@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes/3 Command Line Fun.md",
+            "file": "notes/7 Active Information Gathering.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/3 Command Line Fun.md",
+                "file": "notes/7 Active Information Gathering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "notes/7 Active Information Gathering.md",
+    "Pasted image 20220311125551.png",
     "notes/3 Command Line Fun.md",
     "notes/2 Getting Comfortable with Kali.md",
-    "notes/7 Active Information Gathering.md",
     "images/7 active information gathering/connect_scan.png",
     "images/7 active information gathering/greppable_poing_range.png",
     "images/7 active information gathering/dnsrecon.png",
     "images/7 active information gathering/fping_range.png",
     "images/7 active information gathering/SYN_scan.png",
-    "syn_scan.png",
-    "notes/99 commands cheat sheet.md"
+    "syn_scan.png"
   ]
 }

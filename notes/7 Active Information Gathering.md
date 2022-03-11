@@ -1,4 +1,4 @@
-# 7.1.7 exercises
+# 7.1.7 DNS exercises
 #### Exercises
 
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
@@ -135,3 +135,16 @@ connect scan
 ![[connect_scan.png]]
 SYN scan
 ![[SYN_scan.png]]
+
+# 7.3.3 SMB exercises
+#### Exercises
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Nmap to make a list of the SMB servers in the lab that are running Windows.
+
+
+2.  Use NSE scripts to scan these systems for SMB vulnerabilities.
+
+
+3.  Use nbtscan and enum4linux against these systems to identify the types of data you can obtain from different versions of Windows.
