@@ -142,7 +142,7 @@ SYN scan
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
 
 1.  Use Nmap to make a list of the SMB servers in the lab that are running Windows.
-
+`nmap -v -p 139, 445 --script=smb-os-discovery -iL iplist`
 
 2.  Use NSE scripts to scan these systems for SMB vulnerabilities.
 
