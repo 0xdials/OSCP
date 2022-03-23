@@ -1,4 +1,4 @@
-# 7.1.7 exercises
+# 7.1.7 DNS exercises
 #### Exercises
 
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
@@ -52,7 +52,7 @@ for line in lines:
 3.  Recreate the example above and use **dnsrecon** to attempt a zone transfer from megacorpone.com
 `dnsrecon -d megacorpone.com -t axfr`
 
-![[Pasted image 20220303230713.png]]
+![[dnsrecon.png]]
 
 
 # 7.2.3 port scanning exercises !!connection problems!!
@@ -64,9 +64,9 @@ _(To be performed on your own Kali machine - Reporting is required for these exe
 `nmap -v -sn <first.three.octets>.1-254 -oG ping-sweep.txt`
 we would then grep the output and pipe to cut to easily dentify discovered machines
 `grep Up ping-sweep.txt | cut -d " " -f 2`
-![[Pasted image 20220308142101.png]]
+![[greppable_poing_range.png]]
 this can also be accomplished via the "fping" tool, which uses ICMP to identify addresses (does not send TCP syn/ack packets to ports, unlike "nmap -sn")
-![[Pasted image 20220308142032.png]]
+![[fping_range.png]]
 2.  Scan the IP addresses you found in exercise 1 for open webserver ports. Use Nmap to find the webserver and operating system versions.
 run nmap, scanning for top 20 ports and reading IPs from a list
 `nmap -sT -A --top-ports=20 -iL ping-sweep.txt`
@@ -125,9 +125,13 @@ PORT   STATE SERVICE
 25/tcp open  smtp```
 ```
 4.  Use Wireshark to capture a Nmap connect and UDP scan and compare it against the Netcat port scans. Are they the same or different?
-
+nmap udp scan of port 160
+![[nmap_udp.png]]
+vs netcat udp scan of the same port
+![[nc_udp_scan.png]]
 
 5.  Use Wireshark to capture a Nmap SYN scan and compare it to a connect scan and identify the difference between them.
+<<<<<<< HEAD
 
 
 
@@ -141,3 +145,24 @@ _(To be performed on your own Kali machine - Reporting is required for these exe
 ![[Pasted image 20220323162520.png]]
 
 2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
+=======
+connect scan
+![[connect_scan.png]]
+SYN scan
+![[SYN_scan.png]]
+
+# 7.3.3 SMB exercises
+#### Exercises
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Nmap to make a list of the SMB servers in the lab that are running Windows.
+`nmap -v -p 139, 445 --script=smb-os-discovery -iL iplist`
+
+2.  Use NSE scripts to scan these systems for SMB vulnerabilities.
+
+
+3.  Use nbtscan and enum4linux against these systems to identify the types of data you can obtain from different versions of Windows.
+
+
+
