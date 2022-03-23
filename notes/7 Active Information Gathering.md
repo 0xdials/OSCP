@@ -151,7 +151,7 @@ connect scan
 SYN scan
 ![[SYN_scan.png]]
 
-# 7.3.3 SMB exercises
+# 7.3.3 SMB exercises !!!CONNECTION PROBLEMS!!!
 #### Exercises
 
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
@@ -165,4 +165,41 @@ _(To be performed on your own Kali machine - Reporting is required for these exe
 3.  Use nbtscan and enum4linux against these systems to identify the types of data you can obtain from different versions of Windows.
 
 
+
+# 7.4.3 nfs enumeration
+## Practice - NFS Enumeration
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Nmap to make a list of machines running NFS in the labs.
+`nmap -v -p 111 10.11.1.1-255`
+yields the following ips
+10.11.1.5
+10.11.1.8
+10.11.1.10
+10.11.1.13
+10.11.1.14
+10.11.1.39
+10.11.1.44
+10.11.1.115
+10.11.1.120
+10.11.1.121
+10.11.1.122
+10.11.1.123
+10.11.1.136
+10.11.1.141
+10.11.1.217
+10.11.1.222
+10.11.1.231
+10.11.1.237
+with these being considered "open"
+10.11.1.8
+10.11.1.115
+10.11.1.141
+10.11.1.217
+10.11.1.231
+10.11.1.237
+
+
+2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
 
