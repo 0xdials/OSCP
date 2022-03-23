@@ -55,7 +55,7 @@ for line in lines:
 ![[Pasted image 20220303230713.png]]
 
 
-# 7.2.3 port scanning exercises
+# 7.2.3 port scanning exercises !!connection problems!!
 #### Exercises
 
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
@@ -128,3 +128,16 @@ PORT   STATE SERVICE
 
 
 5.  Use Wireshark to capture a Nmap SYN scan and compare it to a connect scan and identify the difference between them.
+
+
+
+# 7.4.3 NFS enumeration
+## Practice - NFS Enumeration
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Use Nmap to make a list of machines running NFS in the labs.
+`nmap -v -p 111 10.11.1.1-255`
+![[Pasted image 20220323162520.png]]
+
+2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
