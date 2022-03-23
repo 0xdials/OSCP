@@ -203,3 +203,5 @@ with these being considered "open"
 
 2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
 
+`nmap -p 111 --script nfs* -iL iplist `
+![[Pasted image 20220323165000.png]]
