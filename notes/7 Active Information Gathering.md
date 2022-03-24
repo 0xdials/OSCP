@@ -213,7 +213,13 @@ with these being considered "open"
 _(To be performed on your own Kali machine - Reporting is required for these exercises)_
 
 1.  Search your target network range to see if you can identify any systems that respond to the SMTP _VRFY_ command.
-
+first we use nmap to quickly identify which hosts are currently running SMTP
+`nmap -p 25 10.11.1.0/24`
+we can continue enumeration on discovered hosts with nmap user enumeration scripts
+`nmap -p 25 -iL smtp_list --script smtp-enum-users.nse`
+or manually with netcat
+`nc -nv 10.11.1.231 25`
+![[Pasted image 20220323175005.png]]
 
 2.  Try using this Python code to automate the process of username discovery using a text file with usernames as input.
 
