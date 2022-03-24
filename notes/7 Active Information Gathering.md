@@ -205,3 +205,49 @@ with these being considered "open"
 
 `nmap -p 111 --script nfs* -iL iplist `
 ![[Pasted image 20220323165000.png]]
+
+
+# 7.5.1 smtp enumeration
+## Pratice - SMTP Enumeration
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Search your target network range to see if you can identify any systems that respond to the SMTP _VRFY_ command.
+
+
+2.  Try using this Python code to automate the process of username discovery using a text file with usernames as input.
+
+
+
+
+python script
+```python
+#!/usr/bin/python
+
+import socket
+import sys
+
+if len(sys.argv) != 2:
+        print "Usage: vrfy.py <username>"
+        sys.exit(0)
+
+# Create a Socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the Server
+connect = s.connect(('10.11.1.217',25))
+
+# Receive the banner
+banner = s.recv(1024)
+
+print banner
+
+# VRFY a user
+s.send('VRFY ' + sys.argv[1] + '\r\n')
+result = s.recv(1024)
+
+print result
+
+# Close the socket
+s.close()
+```
