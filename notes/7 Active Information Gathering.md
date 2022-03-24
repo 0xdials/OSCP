@@ -222,9 +222,9 @@ or manually with netcat
 ![[Pasted image 20220323175005.png]]
 
 2.  Try using this Python code to automate the process of username discovery using a text file with usernames as input.
-
-
-
+using the "vrfy.py" python code below we can write a very simple bash one liner to test each username present in a username file
+` for user in $(cat usernames); do python2 vrfy.py "$user" 10.11.1.231; done`
+![[Pasted image 20220323180542.png]]
 
 python script
 ```python
@@ -233,15 +233,16 @@ python script
 import socket
 import sys
 
-if len(sys.argv) != 2:
-        print "Usage: vrfy.py <username>"
+if len(sys.argv) != 3:
+        print "Usage: vrfy.py <username> <ip>"
         sys.exit(0)
+ip = sys.argv[2]
 
 # Create a Socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Connect to the Server
-connect = s.connect(('10.11.1.217',25))
+connect = s.connect((ip, 25))
 
 # Receive the banner
 banner = s.recv(1024)
@@ -252,7 +253,7 @@ print banner
 s.send('VRFY ' + sys.argv[1] + '\r\n')
 result = s.recv(1024)
 
-print result
+print result 
 
 # Close the socket
 s.close()
