@@ -276,3 +276,7 @@ Finally, we run `onesixtyone` with our previously generated files:
 This yields one result:
 ![[Pasted image 20220324195710.png]]
 2.  Use snmpwalk and snmp-check to gather information about the discovered targets.
+we use the snmpwalk tool to furhter enumerate on the findings of onesixtyone:
+`snmpwalk -c public -v1 -t 10 10.11.1.115 `
+
+![[Pasted image 20220324202250.png]]
