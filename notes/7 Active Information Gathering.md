@@ -258,3 +258,21 @@ print result
 # Close the socket
 s.close()
 ```
+
+
+# 7.6.4 snmp enumeration
+## Practice - SNMP Enumeration
+
+_(To be performed on your own Kali machine - Reporting is required for these exercises)_
+
+1.  Scan your target network with onesixtyone to identify any SNMP servers.
+We first create a file containing a list of strings which onesixtyone will send as an SNMP request to each IP. This list can be created manually or a community generated list can be used.
+Manually create a  community file:
+`echo -e "private\npublic\nmanager" > community `
+We now run a quick bash one-liner to create a list of IPs for the network we wish to scan:
+`for ip in $(seq 1 254); do echo 10.11.1.$ip; done > ips`
+Finally, we run `onesixtyone` with our previously generated files:
+`onesixtyone -c community -i ips `
+This yields one result:
+![[Pasted image 20220324195710.png]]
+2.  Use snmpwalk and snmp-check to gather information about the discovered targets.
