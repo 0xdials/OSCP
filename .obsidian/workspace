@@ -7,9 +7,11 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "authenticated_scan.png"
+            "file": "notes/8 vulnerability scanning.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "authenticated_scan.png",
+                "file": "notes/8 vulnerability scanning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "authenticated_scan.png",
-    "nmap_rpc_scripts.png",
-    "nmap_rpc.png",
-    "netcat_smtp.png",
+    "notes/8 vulnerability scanning.md",
+    "images/7 active information gathering/directory_traversal.png",
+    "images/8 vulnerability scanning/nessus_ports.png",
+    "images/7 active information gathering/http_passwd_attempt.png",
+    "images/7 active information gathering/http_directory_traversal.png",
+    "images/8 vulnerability scanning/authenticated_scan.png",
     "conflict-files-obsidian-git.md",
-    "8 vulnerability scanning.md",
-    "smtp_script.png",
-    "onesixtyone_results.png",
-    "snmpwalk_results.png",
-    "nessus_setup.png"
+    "images/7 active information gathering/nmap_rpc_scripts.png",
+    "images/7 active information gathering/nmap_rpc.png",
+    "images/7 active information gathering/netcat_smtp.png"
   ]
 }
