@@ -142,7 +142,7 @@ _(To be performed on your own Kali machine - Reporting is required for these exe
 
 1.  Use Nmap to make a list of machines running NFS in the labs.
 `nmap -v -p 111 10.11.1.1-255`
-![[Pasted image 20220323162520.png]]
+![[nmap_rpc.png]]
 
 2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
 =======
@@ -204,7 +204,7 @@ with these being considered "open"
 2.  Use NSE scripts to scan these systems and collect additional information about accessible shares.
 
 `nmap -p 111 --script nfs* -iL iplist `
-![[Pasted image 20220323165000.png]]
+![[nmap_rpc_scripts.png]]
 
 
 # 7.5.1 smtp enumeration
@@ -219,12 +219,12 @@ we can continue enumeration on discovered hosts with nmap user enumeration scrip
 `nmap -p 25 -iL smtp_list --script smtp-enum-users.nse`
 or manually with netcat
 `nc -nv 10.11.1.231 25`
-![[Pasted image 20220323175005.png]]
+![[netcat_smtp.png]]
 
 2.  Try using this Python code to automate the process of username discovery using a text file with usernames as input.
 using the "vrfy.py" python code below we can write a very simple bash one liner to test each username present in a username file
 ` for user in $(cat usernames); do python2 vrfy.py "$user" 10.11.1.231; done`
-![[Pasted image 20220323180542.png]]
+![[smtp_script.png]]
 
 python script
 ```python
@@ -274,9 +274,9 @@ We now run a quick bash one-liner to create a list of IPs for the network we wis
 Finally, we run `onesixtyone` with our previously generated files:
 `onesixtyone -c community -i ips `
 This yields one result:
-![[Pasted image 20220324195710.png]]
+![[onesixtyone_results.png]]
 2.  Use snmpwalk and snmp-check to gather information about the discovered targets.
 we use the snmpwalk tool to furhter enumerate on the findings of onesixtyone:
 `snmpwalk -c public -v1 -t 10 10.11.1.115 `
 
-![[Pasted image 20220324202250.png]]
+![[snmpwalk_results.png]]
