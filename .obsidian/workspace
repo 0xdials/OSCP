@@ -7,11 +7,9 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "notes/8 vulnerability scanning.md",
-            "mode": "source",
-            "source": false
+            "file": "images/8 vulnerability scanning/nmap_nfs_enum.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/8 vulnerability scanning.md",
+                "file": "images/8 vulnerability scanning/nmap_nfs_enum.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +103,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "images/8 vulnerability scanning/nmap_nfs_enum.png",
+    "images/8 vulnerability scanning/nessus_nfs.png",
+    "images/8 vulnerability scanning/nessus_wireshark_ports.png",
+    "images/8 vulnerability scanning/nessus_wireshark.png",
+    "images/8 vulnerability scanning/nessus_OS_detect2.png",
+    "images/8 vulnerability scanning/nessus_OS_detect.png",
     "notes/8 vulnerability scanning.md",
     "images/7 active information gathering/directory_traversal.png",
     "images/8 vulnerability scanning/nessus_ports.png",
-    "images/7 active information gathering/http_passwd_attempt.png",
-    "images/7 active information gathering/http_directory_traversal.png",
-    "images/8 vulnerability scanning/authenticated_scan.png",
-    "conflict-files-obsidian-git.md",
-    "images/7 active information gathering/nmap_rpc_scripts.png",
-    "images/7 active information gathering/nmap_rpc.png",
-    "images/7 active information gathering/netcat_smtp.png"
+    "images/7 active information gathering/http_passwd_attempt.png"
   ]
 }
