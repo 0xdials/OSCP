@@ -1,7 +1,14 @@
 # attacks
 
 ## xss - cross site scripting
+an attack where malicious scripts are injected 
 
-## csrf - cross-site request forgery
+## csrf - cross-site request forgery 
 forces a user to execute unwanted actions on a web app which they are currently authenticated. this can force users into doing things like changing account details or transfering funds. typically defended against with tokens
 #### example: https://youtu.be/d2nVDoVr0jE?t=2315 41:30 for python script
+
+## ssrf - server-side request forgery
+occurs when a web app is fetching a remote resource without valifating the user-supplied uri. it allows attackers to send crafted requests to an unexpected destination, even when protected by a firewall, vpn, etc
+
+## sql injection
+an attack where an sql query is maliciously injected into an application via the input data from the client. this can typically read sensitive data from the database, modify data, and even execute administration operations or issue commands to the host operating system.
