@@ -28,4 +28,6 @@ to
 ## remote file inclusion
 same as lfi but for files not present on the server
 
+## open redirect vulnerability
 
+usually used as a phishing attack
