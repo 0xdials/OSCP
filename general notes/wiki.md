@@ -1,3 +1,9 @@
+# resources and threat tracking
+## common vulnerability scoring system SIG CVSS
+
+## mitre att&ck
+
+
 # attacks
 
 ## xss - cross site scripting
@@ -21,3 +27,5 @@ to
 
 ## remote file inclusion
 same as lfi but for files not present on the server
+
+
