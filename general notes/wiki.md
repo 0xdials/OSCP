@@ -37,3 +37,5 @@ exampled with SSRF:
 
 ## http parameter pollution
 when an attacker is able to craft an http request to manipulate or retrieve hidden data.
+
+## insecure direct object reference - idor
