@@ -29,5 +29,11 @@ to
 same as lfi but for files not present on the server
 
 ## open redirect vulnerability
+when a web application allows redirection to any site
+exampled with SSRF:
+- web application does not allow connections from localhost
+- web application allows open redirects
+`allowed.com/?redirect=//127.0.0.1`
 
-usually used as a phishing attack
+## http parameter pollution
+when an attacker is able to craft an http request to manipulate or retrieve hidden data.
