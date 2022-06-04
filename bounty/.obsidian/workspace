@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "1b4d76e7fcc65ec8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b38bd6561fe0b13",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2 TNN methodology - DOD sample.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2b5db0bbbda1c34b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3bbbfafe950ed154",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8f313cc28e2e1e8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c6beaa0ec4fe1c89",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8f4d0bfd3e74bf86",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b7b07b28bbfa4fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6972a0f4d2161cb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2 TNN methodology - DOD sample.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3b38bd6561fe0b13",
+  "lastOpenFiles": [
+    "2 TNN methodology - DOD sample.md",
+    "1 j. haddix methodology.md"
+  ]
+}
