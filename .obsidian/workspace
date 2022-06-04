@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "general notes/wiki.md",
+            "file": "bounty/1 j. haddix methodology.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "general notes/wiki.md",
+                "file": "bounty/1 j. haddix methodology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "general notes/wiki.md",
+    "bounty/1 j. haddix methodology.md",
+    "bounty/2 TNN methodology - DOD sample.md",
+    "wiki/wiki.md",
     "course notes/9 Web Application Attacks.md",
     "course notes/8 vulnerability scanning.md",
     "course notes/99 commands cheat sheet.md",
     "images/8 vulnerability scanning/nmap_nfs_enum.png",
     "images/8 vulnerability scanning/nessus_nfs.png",
     "images/8 vulnerability scanning/nessus_wireshark_ports.png",
-    "images/8 vulnerability scanning/nessus_wireshark.png",
-    "images/8 vulnerability scanning/nessus_OS_detect2.png",
-    "images/8 vulnerability scanning/nessus_OS_detect.png"
+    "images/8 vulnerability scanning/nessus_wireshark.png"
   ]
 }
