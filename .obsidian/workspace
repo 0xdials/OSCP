@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "bounty/1 j. haddix methodology.md",
+            "file": "course notes/9 Web Application Attacks.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bounty/1 j. haddix methodology.md",
+                "file": "course notes/9 Web Application Attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,10 +105,10 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "course notes/9 Web Application Attacks.md",
     "bounty/1 j. haddix methodology.md",
     "bounty/2 TNN methodology - DOD sample.md",
     "wiki/wiki.md",
-    "course notes/9 Web Application Attacks.md",
     "course notes/8 vulnerability scanning.md",
     "course notes/99 commands cheat sheet.md",
     "images/8 vulnerability scanning/nmap_nfs_enum.png",
