@@ -48,3 +48,13 @@ This exploit only requires us to visit the following url:
 
 From there we can edit the field after `menu.php?file=` to any file we wish to read, for example:
 `http://192.168.231.10/menu.php?file=c:\windows\system32\drivers\etc\hosts`
+
+# 9.8.5  Practice - LFI Code Execution
+
+#### Exercises
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Obtain code execution through the use of the LFI attack.
+2.  Use the code execution to obtain a full shell.
+
