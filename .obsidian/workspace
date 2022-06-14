@@ -7,9 +7,11 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "htb/backend/images/Pasted image 20220612175503.png"
+            "file": "htb/backend/backend.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "htb/backend/images/Pasted image 20220612175503.png",
+                "file": "htb/backend/backend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,15 +105,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "htb/backend/images/Pasted image 20220612175503.png",
     "htb/backend/backend.md",
+    "htb/backend/Pasted image 20220613113823.png",
+    "htb/backend/Pasted image 20220612175503.png",
     "pg boxes/vault/vault.md",
     "pg boxes/vault/Pasted image 20220613224514.png",
     "pg boxes/vault/Pasted image 20220613150130.png",
     "pg boxes/vault/Pasted image 20220613150258.png",
     "htb/cache/akerva/1 external.md",
     "htb/cache/hancliffe/1 external.md",
-    "Pasted image 20220612175313.png",
-    "htb/cache/pandora/1 external.md"
+    "Pasted image 20220612175313.png"
   ]
 }
