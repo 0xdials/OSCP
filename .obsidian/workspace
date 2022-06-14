@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "prep/privesc/win/windows.md",
+            "file": "pg boxes/vault/vault.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "prep/privesc/win/windows.md",
+                "file": "pg boxes/vault/vault.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,12 +105,12 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
+    "pg boxes/vault/vault.md",
     "prep/privesc/win/windows.md",
     "prep/privesc/win/Windows+Privilege+Escalation.pdf",
     "htb/backend/backend.md",
     "htb/backend/Pasted image 20220613113823.png",
     "htb/backend/Pasted image 20220612175503.png",
-    "pg boxes/vault/vault.md",
     "pg boxes/vault/Pasted image 20220613224514.png",
     "pg boxes/vault/Pasted image 20220613150130.png",
     "pg boxes/vault/Pasted image 20220613150258.png",
