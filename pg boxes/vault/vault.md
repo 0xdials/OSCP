@@ -58,5 +58,5 @@ We start by anonymous login to smb and enumerating the shares. For this we use c
 We can then pipe the json output of the spider_plus json through jq, filtering all but the directories and their files. 
 
 ![[Pasted image 20220613150258.png]]
-Nothing stands out but interestingly we do have READ/WRITE permissions on DocumentsShare. From here we can try to capture a user's hash by uploading 
+Nothing stands out but interestingly we do have READ/WRITE permissions on DocumentsShare. From here we can try to capture a user's hash by uploading malicious scf 
 
