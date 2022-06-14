@@ -7,11 +7,9 @@
         "id": "ec2634e7431bda82",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "course notes/9 Web Application Attacks.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted image 20220613150258.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/9 Web Application Attacks.md",
+                "file": "Pasted image 20220613150258.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,15 +103,15 @@
   },
   "active": "ec2634e7431bda82",
   "lastOpenFiles": [
-    "course notes/9 Web Application Attacks.md",
-    "bounty/1 j. haddix methodology.md",
-    "bounty/2 TNN methodology - DOD sample.md",
-    "wiki/wiki.md",
-    "course notes/8 vulnerability scanning.md",
-    "course notes/99 commands cheat sheet.md",
-    "images/8 vulnerability scanning/nmap_nfs_enum.png",
-    "images/8 vulnerability scanning/nessus_nfs.png",
-    "images/8 vulnerability scanning/nessus_wireshark_ports.png",
-    "images/8 vulnerability scanning/nessus_wireshark.png"
+    "Pasted image 20220613150258.png",
+    "Pasted image 20220613150130.png",
+    "pg boxes/vault/vault.md",
+    "htb/cache/akerva/1 external.md",
+    "htb/cache/hancliffe/1 external.md",
+    "htb/backend/backend.md",
+    "htb/backend/images/Pasted image 20220612175503.png",
+    "Pasted image 20220612175313.png",
+    "htb/cache/pandora/1 external.md",
+    "htb/OSCP/seal/1 recon.md"
   ]
 }

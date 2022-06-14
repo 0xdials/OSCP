@@ -1,0 +1,119 @@
+{
+  "main": {
+    "id": "b81478c30c050cb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec2634e7431bda82",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "RouterSpace/enumeration.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d76cae4c140eb3ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6d0bacb1f0a8014",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a88011756828ab9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ef052dd9f79b8c9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 254.5
+  },
+  "right": {
+    "id": "b137f5909e3463b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "2141a4fbebfa3737",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fde76c990dc52974",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "RouterSpace/enumeration.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5de310f60f85766e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "fa834cb310323f79",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ec2634e7431bda82",
+  "lastOpenFiles": [
+    "RouterSpace/enumeration.md",
+    "cache/akerva/1 external.md",
+    "notes/7 Active Information Gathering.md",
+    "notes/6 Passive Information Gathering - OSINT.md",
+    "images/6 passive information gathering/github_user_credentials.png",
+    "images/6 passive information gathering/whois_first_named_server.png",
+    "images/6 passive information gathering/harvester_google_results.png",
+    "images/6 passive information gathering/harvester_google.png",
+    "images/6 passive information gathering/github_user_results.png",
+    "images/6 passive information gathering/github_user_search.png"
+  ]
+}
