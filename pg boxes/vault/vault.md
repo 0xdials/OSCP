@@ -60,5 +60,8 @@ We can then pipe the json output of the spider_plus json through jq, filtering a
 ![[Pasted image 20220613150258.png]]
 Nothing stands out but interestingly we do have READ/WRITE permissions on DocumentsShare. From here we can try to capture a user's hash by uploading malicious scf, url, and lnk file. To create these files we can use a script created by XCT found here https://github.com/xct/hashgrab 
 
-After creating the files we just need to login
+After creating the files we just need to login to the smb share DocumentsShare and place our files. Before we do this we want to have responder listening as an end point for our malicious files. 
+
+![[Pasted image 20220613223110.png]]
+
 
