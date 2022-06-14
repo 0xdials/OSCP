@@ -64,4 +64,6 @@ After creating the files we just need to login to the smb share DocumentsShare a
 
 ![[Pasted image 20220613223110.png]]
 
+![[Pasted image 20220613223134.png]]
 
+And we immediately get a hash. We'll throw this in hashcat 
