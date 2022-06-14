@@ -66,4 +66,8 @@ After creating the files we just need to login to the smb share DocumentsShare a
 
 ![[Pasted image 20220613223134.png]]
 
-And we immediately get a hash. We'll throw this in hashcat 
+And we immediately get a hash. We'll throw this in john to crack. 
+![[Pasted image 20220613224255.png]]
+Now we can use winrm and grab the user flag.
+
+![[Pasted image 20220613224514.png]]
