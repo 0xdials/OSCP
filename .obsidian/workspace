@@ -7,11 +7,9 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "course notes/9 Web Application Attacks.md",
-            "mode": "source",
-            "source": false
+            "file": "Screenshot_2022-06-09-07-24-43_1460x868.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/9 Web Application Attacks.md",
+                "file": "Screenshot_2022-06-09-07-24-43_1460x868.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,14 +87,15 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
+    "Screenshot_2022-06-09-07-24-43_1460x868.png",
+    "log_poisoning.png",
+    "log_lfi_revshell.png",
+    "rfi_malicious_file.png",
+    "lfi_whoami.png",
+    "rfi_revshell.png",
+    "shell_exec_revshell.png",
+    "mariadb_query.png",
     "course notes/9 Web Application Attacks.md",
-    "course notes/8 vulnerability scanning.md",
-    "cookie_steal.png",
-    "pitchfork_brute.png",
-    "xss_document_cookie.png",
-    "admin_user_add.png",
-    "grep_response.png",
-    "Successful_bruteforce.png",
-    "burp_capture.png"
+    "course notes/8 vulnerability scanning.md"
   ]
 }
