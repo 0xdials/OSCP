@@ -166,4 +166,5 @@ This creates the new endpoint "backdoor.php" which allows us to specify a comman
 ![[Pasted image 20220620174054.png]]
 
 2.  Turn the simple code execution into a full shell.
-To gain a shell we can replace our previous ipconfig command with a reverse shell.
+To gain a shell we simply replace our previous ipconfig command with a reverse shell.
+![[Pasted image 20220620174529.png]]
