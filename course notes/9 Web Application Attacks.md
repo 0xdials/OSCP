@@ -206,4 +206,4 @@ If we view the page source we can see that the santization attempt did not work 
 The same search form is vulnerable to SQL injection. 
 
 4.  Is it possible to gain a shell through the SQL injection vulnerability? Why or why not?
-As the backend is H2 and H2 is not able to 
+As the backend is H2 and H2 is not able to execute commands it is impossible to use this injection to gain a shell.
