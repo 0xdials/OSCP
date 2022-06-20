@@ -122,5 +122,6 @@ We can see that the malicious query is returning all user data, indicating that 
 A fairly similar username of "tom ' OR 1=1;#'" will bypass the login functionality.
 ![[Screenshot_2022-06-10-09-40-08_508x384.png]]
 3.  Why is the username displayed like it is in the web application once the authentication process is bypassed?
-
+Because the web application is coded to reflect the entered username back to the user.
 4.  Execute the SQL injection in the password field. Is the "LIMIT 1" necessary in the payload? Why or why not?
+The limit arguement is used to specify the maximum amount of rows that will be returned 
