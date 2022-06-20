@@ -149,3 +149,6 @@ or a list of tables
 The reason our malicious queries are being displayed on the screen has to do with the alignment of columns. By utilizing the correct amount of columns we are able to basically stick the data requested via our malicious query on to the currently outputted information, ignorning any errors as the columns are in alignment.
 
 3.  Extract all users and associated passwords from the database.
+The following url will extract usernames and passwords from the "users" table:
+`http://10.11.0.22/debug.php?id=1 union all select 1, username, password from users`
+![[Pasted image 20220620172230.png]]
