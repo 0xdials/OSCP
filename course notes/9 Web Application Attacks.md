@@ -34,7 +34,7 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 ![[cookie_steal.png]]
 ![[Screenshot_2022-06-09-05-57-22_1292x560 2.png]]
 2.  Consider what other ways an XSS vulnerability in this application might be used for attacks.
-	As this is a stored XSS there are numerous possible ways to exploit this XSS which would have severe implications on the server and its user's.
+As this is a stored XSS there are numerous possible ways to exploit this XSS which would have severe implications on the server and its user's. Examples could include anything from defacing the web application to account compromise.
 
 3.  Does this exploit attack the server or clients of the site?
 As this is a stored XSS the server is on the recieving end. That being said, any user who visits the page is suseptable to attack.
