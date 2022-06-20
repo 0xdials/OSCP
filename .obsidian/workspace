@@ -7,9 +7,11 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Screenshot_2022-06-09-07-24-43_1460x868.png"
+            "file": "course notes/9 Web Application Attacks.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Screenshot_2022-06-09-07-24-43_1460x868.png",
+                "file": "course notes/9 Web Application Attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +89,15 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
-    "Screenshot_2022-06-09-07-24-43_1460x868.png",
-    "log_poisoning.png",
-    "log_lfi_revshell.png",
-    "rfi_malicious_file.png",
-    "lfi_whoami.png",
-    "rfi_revshell.png",
-    "shell_exec_revshell.png",
-    "mariadb_query.png",
     "course notes/9 Web Application Attacks.md",
-    "course notes/8 vulnerability scanning.md"
+    "images/9 web application attacks/xss_document_cookie.png",
+    "Screenshot_2022-06-09-05-57-22_1292x560 1.png",
+    "Screenshot_2022-06-09-05-57-22_1292x560.png",
+    "images/9 web application attacks/session_hijack.png",
+    "images/9 web application attacks/lfi_log_ipconfig.png",
+    "images/9 web application attacks/log_poisoning.png",
+    "images/9 web application attacks/log_lfi_revshell.png",
+    "images/9 web application attacks/rfi_malicious_file.png",
+    "images/9 web application attacks/lfi_whoami.png"
   ]
 }

