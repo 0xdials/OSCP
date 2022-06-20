@@ -7,11 +7,9 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "course notes/9 Web Application Attacks.md",
-            "mode": "source",
-            "source": false
+            "file": "Screenshot_2022-06-09-05-26-39_936x779.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/9 Web Application Attacks.md",
+                "file": "Screenshot_2022-06-09-05-26-39_936x779.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +87,8 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
+    "Screenshot_2022-06-09-05-26-39_936x779.png",
+    "Successful_bruteforce.png",
     "course notes/9 Web Application Attacks.md",
     "burp_capture.png"
   ]
