@@ -135,6 +135,9 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 We can enumerate the number of columns through trial and error via `union select all 1,2,...` 
 ![[Pasted image 20220620165113.png]]
 ![[Pasted image 20220620165813.png]]
+Once we understand the number of columns we are able to work with we can begin enumerating different aspects of the databse. For example:
+version information
+`http://192.168.157.10/debug.php?id=1%20union%20all%20select%201,%202,%20@@version`
 
 2.  Understand how and why you can pull data from your injected commands and have it displayed on the screen.
 
