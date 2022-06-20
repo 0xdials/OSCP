@@ -146,6 +146,6 @@ or a list of tables
 
 
 2.  Understand how and why you can pull data from your injected commands and have it displayed on the screen.
-The reason our malicious queries are being displayed on the screen has to do with the alignment of columns. By injecting 
+The reason our malicious queries are being displayed on the screen has to do with the alignment of columns. By utilizing the correct amount of columns we are able to basically stick the data requested via our malicious query on to the currently outputted information, ignorning any errors as the columns are in alignment.
 
 3.  Extract all users and associated passwords from the database.
