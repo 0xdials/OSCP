@@ -8,9 +8,10 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 - We spot a phpmyadmin login portal located at the following URL `http://192.168.231.10/phpmyadmin/`
 - In order to brute-force the login we must first capture the request in Burp Suite
 ![[burp_capture.png]]
-- we then must set the correct payload variables and set the attack type to "Pitchforkl"
-- Finally, we setup the payloads via the "Grep Extract" section in Intruder, capturing the response 
-- Once these steps are complete we can brute force the password 
+- we then must set the correct payload variables and set the attack type to "Pitchforkl"![[Screenshot_2022-06-09-12-23-04_1195x341.png]]
+- Finally, we setup the payloads via the "Grep Extract" section in Intruder, capturing the response ![[Screenshot_2022-06-09-05-26-39_936x779.png]]
+-  Once these steps are complete we can bruteforce the password 
+![[Screenshot_2022-06-09-05-26-09_991x326.png]]
 
 
 2.  Insert a new user into the "users" table.
