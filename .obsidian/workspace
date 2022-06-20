@@ -7,11 +7,9 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "course notes/9 Web Application Attacks.md",
-            "mode": "source",
-            "source": false
+            "file": "images/9 web application attacks/sqlmap_os_sheell.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/9 Web Application Attacks.md",
+                "file": "images/9 web application attacks/sqlmap_os_sheell.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +87,15 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
+    "images/9 web application attacks/sqlmap_os_sheell.png",
+    "images/9 web application attacks/sqli_passwords.png",
+    "images/9 web application attacks/slqi_columns.png",
+    "images/9 web application attacks/sqli_column_error.png",
+    "images/9 web application attacks/sql_cmd_injection.png",
+    "images/9 web application attacks/sql_cmd_injection_ revshell.png",
+    "images/9 web application attacks/sqlmap_database.png",
     "course notes/9 Web Application Attacks.md",
     "Pasted image 20220620174423.png",
-    "images/9 web application attacks/username_sqli.png",
-    "images/9 web application attacks/xss_document_cookie.png",
-    "Screenshot_2022-06-09-05-57-22_1292x560 1.png",
-    "Screenshot_2022-06-09-05-57-22_1292x560.png",
-    "images/9 web application attacks/session_hijack.png",
-    "images/9 web application attacks/lfi_log_ipconfig.png",
-    "images/9 web application attacks/log_poisoning.png",
-    "images/9 web application attacks/log_lfi_revshell.png"
+    "images/9 web application attacks/username_sqli.png"
   ]
 }
