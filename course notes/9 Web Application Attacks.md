@@ -85,12 +85,14 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 1.  Exploit the RFI vulnerability in the web application and get a shell.
 We start by creating a malicious script to be hosted on our local machine
 ![[Screenshot_2022-06-09-10-38-40_432x85.png]]
-
+We then setup a python server to serve this malicious file.
 2.  Using /menu2.php?file=current_menu as a starting point, use RFI to get a shell.
-
+From there we request this malicious file via the URL of the vulnerable web application 
+![[Screenshot_2022-06-09-10-39-12_768x365.png]]
 
 3.  Use one of the webshells i
-
+We can build on this by instead of issuing the command "whoami" we supply a url encoded reverse shell.
+![[Screenshot_2022-06-09-10-42-52_1013x396.png]]
 
 # 9.8.10 PHP wrappers
 ## Practice - PHP Wrappers
