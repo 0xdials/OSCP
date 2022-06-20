@@ -90,6 +90,7 @@
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
     "course notes/9 Web Application Attacks.md",
+    "images/9 web application attacks/username_sqli.png",
     "images/9 web application attacks/xss_document_cookie.png",
     "Screenshot_2022-06-09-05-57-22_1292x560 1.png",
     "Screenshot_2022-06-09-05-57-22_1292x560.png",
@@ -97,7 +98,6 @@
     "images/9 web application attacks/lfi_log_ipconfig.png",
     "images/9 web application attacks/log_poisoning.png",
     "images/9 web application attacks/log_lfi_revshell.png",
-    "images/9 web application attacks/rfi_malicious_file.png",
-    "images/9 web application attacks/lfi_whoami.png"
+    "images/9 web application attacks/rfi_malicious_file.png"
   ]
 }
