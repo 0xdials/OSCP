@@ -154,7 +154,7 @@ The following url will extract usernames and passwords from the "users" table:
 ![[Pasted image 20220620172230.png]]
 
 
-# 9.9.11 From SQL-Injection to Code Execution
+# 9.9.11 From SQL Injection to Code Execution
 ## Practice - From SQL Injection to Code Execution
 
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
@@ -168,3 +168,16 @@ This creates the new endpoint "backdoor.php" which allows us to specify a comman
 2.  Turn the simple code execution into a full shell.
 To gain a shell we simply replace our previous ipconfig command with a reverse shell.
 ![[Pasted image 20220620174529.png]]
+
+
+# 9.9.13 Automating SQL Injection
+## Practice - Automating SQL Injection
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Use sqlmap to obtain a full dump of the database.
+Using SQLMap is fairly straightforward. We first need to supply the tool with the URL and the parameter to test.
+`sqlmap -u http://10.11.0.22/debug.php?id=1 -p "id"`
+From here 
+
+3.  Use sqlmap to obtain an interactive shell.
