@@ -132,8 +132,9 @@ The limit arguement is used to specify the maximum amount of rows that will be r
 _(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
 
 1.  Enumerate the structure of the database using SQL injection.
-We can enumerate the number of columns through trial and error vi
+We can enumerate the number of columns through trial and error via `union select all 1,2,...` 
 ![[Pasted image 20220620165113.png]]
+![[Pasted image 20220620165813.png]]
 
 2.  Understand how and why you can pull data from your injected commands and have it displayed on the screen.
 
