@@ -125,3 +125,16 @@ A fairly similar username of "tom ' OR 1=1;#'" will bypass the login functionali
 Because the web application is coded to reflect the entered username back to the user.
 4.  Execute the SQL injection in the password field. Is the "LIMIT 1" necessary in the payload? Why or why not?
 The limit arguement is used to specify the maximum amount of rows that will be returned. As this web application is using code that expects a single record to be returned we must use "LIMIT 1" in order to avoid errors.
+
+# 9.9.9 Extracting Data
+## Practice - Extracting Data from the Database
+
+_(To be performed on your own Kali and Windows 10 lab client machines - Reporting is required for these exercises)_
+
+1.  Enumerate the structure of the database using SQL injection.
+
+
+2.  Understand how and why you can pull data from your injected commands and have it displayed on the screen.
+
+
+3.  Extract all users and associated passwords from the database.
