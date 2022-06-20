@@ -189,3 +189,13 @@ For this particular exercise we need to output the entire "webappdb" database wh
 3.  Use sqlmap to obtain an interactive shell.
 This is achieved by passing the "os-shell" arguement.
 ![[sqlmap_os_sheell.png]]
+
+
+# 9.10.1 Extra Miles
+## Practice - Extra Miles
+
+_(Reporting is not required for these exercises)_
+
+1.  Identify and exploit the XSS vulnerability in the web application.
+2.  Identify and exploit the SQL injection vulnerability in the web application.
+3.  Is it possible to gain a shell through the SQL injection vulnerability? Why or why not?
