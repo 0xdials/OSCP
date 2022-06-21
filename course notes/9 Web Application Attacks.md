@@ -198,9 +198,9 @@ _(Reporting is not required for these exercises)_
 
 1.  Identify and exploit the XSS vulnerability in the web application.
 The search bar of this web application is vulnerable to XSS. An exampled payload would be `<scr<script>ipt>alert("1")</sc</script>ript>`
-![[Pasted image 20220620180817.png]]
+![[xss_alert.png]]
 If we view the page source we can see that the santization attempt did not work as it did not recursively remove other malicious tags.
-![[Pasted image 20220620180937.png]]
+![[xss_html.png]]
 
 2.  Identify and exploit the SQL injection vulnerability in the web application.
 The same search form is vulnerable to SQL injection. 
