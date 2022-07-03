@@ -18,4 +18,6 @@ To see the A's copied onto the stack we simply need to execute our function, don
 2.  Supply at least 80 A's and verify that EIP after the _strcpy_ will contain the value 41414141.
 For this exercise we must adjust the initial arguement of 12 A's to 80. After that we follow the same steps listed above.
 
-Once we execute past the return instruction we can see our A's 
+Once we execute arrive at the return instruction of the main function we can see our A's being copied onto the stack and then popped into EIP.
+
+![[Pasted image 20220703141511.png]]
