@@ -49,6 +49,7 @@ while(size < 2000):
     sys.exit()
 ```
 We must now start the syncbreeze service and attach Immunity Debugger to said service. Once this is done we can begin our fuzzer script, watching the Immunity Debugger window for crashes.
+We see that the Immunity Debugger notes a crash at 800 bytes
 
 
 
