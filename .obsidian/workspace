@@ -7,9 +7,11 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "images/10_intro_buffer_overflow/imun_jump_in.png"
+            "file": "11 Windows Buffer Overflows.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "images/10_intro_buffer_overflow/imun_jump_in.png",
+                "file": "11 Windows Buffer Overflows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,6 +89,7 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
+    "11 Windows Buffer Overflows.md",
     "images/10_intro_buffer_overflow/imun_jump_in.png",
     "images/10_intro_buffer_overflow/imun_eip_control.png",
     "images/10_intro_buffer_overflow/imun_copied_A.png",
@@ -95,7 +98,6 @@
     "course notes/10 Intro to Buffer Overflow 1.md",
     "course notes/99 commands cheat sheet.md",
     "course notes/10 Intro to Buffer Overflow.md",
-    "course notes/9 Web Application Attacks.md",
-    "images/9_web_application_attacks/xss_html.png"
+    "course notes/9 Web Application Attacks.md"
   ]
 }
