@@ -48,7 +48,8 @@ while(size < 2000):
     print "\nCould not connect!"
     sys.exit()
 ```
-We must now start the syncbreeze service and attach Immunity Debugger to said service.
+We must now start the syncbreeze service and attach Immunity Debugger to said service. Once this is done we can begin our fuzzer script, watching the Immunity Debugger window for crashes.
+
 
 
 2.  Inspect the content of other registers and stack memory. Does anything seem to be directly influenced by the fuzzing input?
