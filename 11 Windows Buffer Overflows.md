@@ -53,4 +53,5 @@ We see that the Immunity Debugger notes a crash at 800 bytes.
 
 
 2.  Inspect the content of other registers and stack memory. Does anything seem to be directly influenced by the fuzzing input?
-
+The ESP register contains "A's" and we can also see the "A" characters on the stack itself.
+![[Pasted image 20220706175131.png]]
