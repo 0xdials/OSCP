@@ -207,11 +207,12 @@ After this is sent and we encounter the crash we simply need to select the ESP r
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
 The list of bad characters and their conversions is as follows:
 ```
-\x00
-\x0a
-\x0d
-\x25
-\x26
-\x2b
-\x3d
+\x00 null byte
+\x0a \n
+\x0d \r
+\x25 %
+\x26 &
+\x2b +
+\x3d =
 ```
+These characters have special properties which do not allow them to be rep
