@@ -215,4 +215,4 @@ The list of bad characters and their conversions is as follows:
 \x2b +
 \x3d =
 ```
-These characters have special properties which do not allow them to be rep
+These characters have special properties which will mangle our input buffer
