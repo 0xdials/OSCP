@@ -121,3 +121,12 @@ We now should have 4 B's present in the EIP register and ESP should contain C's.
 
 ![[Pasted image 20220706231410.png]]
 
+# 11.2.8 Checking for Bad Characters
+#### Exercises
+
+_(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
+
+1.  Repeat the required steps in order to identify the bad characters that cannot be included in the payload.
+
+
+2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
