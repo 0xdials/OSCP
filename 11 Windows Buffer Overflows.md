@@ -104,7 +104,17 @@ except:
 ```
 
 2.  Determine the offset within the input buffer to successfully control EIP.
-To do this we simply need to create a pattern buffer with a length of 800 using the metasploit tool "msf-pattern_offset". Once we have this buffer generated we replace the "inputbuffer" variable in our previous code with this newly created pattern.
+To do this we simply need to create a pattern buffer with a length of 800 using the metasploit tool "msf-pattern_offset". Once we have this buffer generated we replace the "inputbuffer" variable in our previous code with this newly created pattern. We now see a our pattern has overwritten the EIP register
+![[Pasted image 20220706230833.png]]
+
+We can now use msf-pattern_offset to identify the exact location of this in our buffer is at offset 780. Accounting for this, we adjust our initial script:
+```python
+filler = "A" * 780
+eip = "B" * 4
+buffer = "C" * 16
+
+inputBuffer = filler + eip + buffer
+```
 
 Upon running the script again we will notice in Immunity Debugger that 
 
