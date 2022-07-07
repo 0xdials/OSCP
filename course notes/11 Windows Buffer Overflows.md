@@ -127,6 +127,7 @@ We now should have 4 B's present in the EIP register and ESP should contain C's.
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Repeat the required steps in order to identify the bad characters that cannot be included in the payload.
+First we must extend our initial buffer in order to allow more space for the shell code. We simply increase our buffer from 800 to 1500 with the following snippet:
 
 
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
