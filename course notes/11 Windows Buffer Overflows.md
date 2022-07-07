@@ -54,7 +54,7 @@ We see that the Immunity Debugger notes a crash at 800 bytes.
 
 2.  Inspect the content of other registers and stack memory. Does anything seem to be directly influenced by the fuzzing input?
 The ESP register contains "A's" and we can also see the "A" characters on the stack itself.
-![[Pasted image 20220706175131.png]]
+![[imun_A.png]]
 
 
 # 11.2.4 Controlling EIP
@@ -106,7 +106,7 @@ except:
 2.  Determine the offset within the input buffer to successfully control EIP. &
 3. Update your standalone script to place a unique value into EIP to ensure your offset is correct.
 To do this we simply need to create a pattern buffer with a length of 800 using the metasploit tool "msf-pattern_offset". Once we have this buffer generated we replace the "inputbuffer" variable in our previous code with this newly created pattern. We now see a our pattern has overwritten the EIP register
-![[Pasted image 20220706230833.png]]
+![[imun_eip.png]]
 
 We can now use msf-pattern_offset to identify the exact location of this in our buffer is at offset 780. Accounting for this, we adjust our initial script:
 ```python
@@ -119,7 +119,7 @@ inputBuffer = filler + eip + buffer
 
 We now should have 4 B's present in the EIP register and ESP should contain C's.
 
-![[Pasted image 20220706231410.png]]
+![[imun_eip_esp.png]]
 
 # 11.2.8 Checking for Bad Characters
 #### Exercises
@@ -138,7 +138,7 @@ inputBuffer = filler + eip + offset + buffer
 ```
 
 We can see the ESP points to the D's we have copied.
-![[Pasted image 20220707005808.png]]
+![[imun_D.png]]
 Now that we have more room to work with we can begin checking for bad characters. We do this by replacing the D's with a list of hex characters. The script being used to check bad characters can be found here:
 ```python
 #!/usr/bin/python
@@ -202,7 +202,7 @@ except:
 
 After this is sent and we encounter the crash we simply need to select the ESP register and select Follow in Dump to show the output of these characters. As we can see from the screenshot below we made it as far as the 0x09 character before encountering a bad character. As the next character, 0x0A, represents a line feed which terminates HTTP field similar to a carriage return this character will not be able to be used in our shellcode as it will not be present when passed to the program. We can continue this trial and error process until we have removed all bad characters.
 
-![[Pasted image 20220707012349.png]]
+![[imun_hex_dump.png]]
 
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
 The list of bad characters and their conversions is as follows:
