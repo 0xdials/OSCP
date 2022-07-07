@@ -116,6 +116,8 @@ buffer = "C" * 16
 inputBuffer = filler + eip + buffer
 ```
 
-Upon running the script again we will notice in Immunity Debugger that 
+We now should have 4 B's present in the EIP register and ESP should contain C's.
+
+
 
 3.  Update your standalone script to place a unique value into EIP to ensure your offset is correct.
