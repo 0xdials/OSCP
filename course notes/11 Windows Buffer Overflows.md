@@ -137,4 +137,8 @@ buffer = "D" * (1500 - len(filler) - len(eip) - len(offset))
 inputBuffer = filler + eip + offset + buffer
 ```
 
+We can see the ESP points to the D's we have copied.
+![[Pasted image 20220707005808.png]]
+Now that we have more room to work with we can begin checking for bad characters. We do this bu
+
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
