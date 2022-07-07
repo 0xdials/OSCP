@@ -104,6 +104,6 @@ except:
 ```
 
 2.  Determine the offset within the input buffer to successfully control EIP.
-
+To do this we simply need to create a pattern buffer with a length of 800 using the metasploit tool "msf-pattern_offset". Once we have this buffer generated we replace the "inp"
 
 3.  Update your standalone script to place a unique value into EIP to ensure your offset is correct.
