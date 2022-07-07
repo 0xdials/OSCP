@@ -200,8 +200,12 @@ except:
   print "\nCould not connect!"
 ```
 
-After this is sent and we encounter the crash we simply need to select the ESP register and select Follow in Dump to show the output of these characters. As we can see from the screenshot below we made it as far as the 0x09 character before encountering a bad character.
+After this is sent and we encounter the crash we simply need to select the ESP register and select Follow in Dump to show the output of these characters. As we can see from the screenshot below we made it as far as the 0x09 character before encountering a bad character. As the next character, 0x0A, represents a line feed which terminates HTTP field similar to a carriage return this character will not be able to be used in our shellcode as it will not be present when passed to the program. We can continue this trial and error process until we have removed all bad characters.
 
 ![[Pasted image 20220707012349.png]]
 
 2.  Why are these characters not allowed? How do these bad hex characters translate to ASCII?
+The list of bad characters and their conversions is as follows:
+```
+\x0a
+```
