@@ -55,3 +55,17 @@ We see that the Immunity Debugger notes a crash at 800 bytes.
 2.  Inspect the content of other registers and stack memory. Does anything seem to be directly influenced by the fuzzing input?
 The ESP register contains "A's" and we can also see the "A" characters on the stack itself.
 ![[Pasted image 20220706175131.png]]
+
+
+# 11.2.4 Controlling EIP
+## Practice - Controlling EIP
+
+_(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
+
+1.  Write a standalone script to replicate the crash.
+
+
+2.  Determine the offset within the input buffer to successfully control EIP.
+
+
+3.  Update your standalone script to place a unique value into EIP to ensure your offset is correct.
