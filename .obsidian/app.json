@@ -3,6 +3,8 @@
   "livePreview": true,
   "alwaysUpdateLinks": true,
   "spellcheckDictionary": [
-    "ECX"
+    "ECX",
+    "MSFVenom",
+    "netcat"
   ]
 }
