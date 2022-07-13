@@ -226,6 +226,7 @@ These characters have special properties which will mangle our input buffer
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Locate the JMP ESP that is usable in the exploit.
-
+	Once we have Immunity Debugger attached to syncbreeze we can request information on currently loaded DLLs via "mona modules"
+	![[Pasted image 20220713140938.png]]
 
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
