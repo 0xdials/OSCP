@@ -10,6 +10,7 @@
     "ASLR",
     "NXCompat",
     "holder sh",
-    "shellcode"
+    "shellcode",
+    "endianess"
   ]
 }
