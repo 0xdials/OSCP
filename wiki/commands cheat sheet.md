@@ -3,7 +3,9 @@
 #### x86 cheat sheet
 https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 
-
+#### registers
+##### ESP - Stack Pointer
+keeps track of most recently regferenced 
 
 # COMMANDS
 ## netcat
