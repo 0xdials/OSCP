@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "wiki/commands cheat sheet.md",
+            "file": "wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"# \"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/commands cheat sheet.md",
+                "file": "wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,14 +90,14 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
-    "wiki/commands cheat sheet.md",
+    "wiki/cheat sheet.md",
+    "wiki/attacks.md",
     "course notes/11 Windows Buffer Overflows.md",
     "images/11_windows_buffer_overflow/imun_hex_dump.png",
     "images/11_windows_buffer_overflow/imun_D.png",
     "images/11_windows_buffer_overflow/imun_eip_esp.png",
     "images/11_windows_buffer_overflow/imun_eip.png",
     "images/11_windows_buffer_overflow/imun_A.png",
-    "wiki/attacks.md",
     "images/10_intro_buffer_overflow/imun_jump_in.png",
     "images/10_intro_buffer_overflow/imun_eip_control.png"
   ]

