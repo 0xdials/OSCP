@@ -234,7 +234,7 @@ _(To be performed on your own Kali and Windows lab client machines - Reporting i
 Here we can see that the DLL "LIBSPP.DLL" has SafeSEH, ASLR, and NXCompat disabled which is required for this exploit. It is also being loaded at 0x100000 which does not contain any bad characters.
 
 The next step is to find the hexadecimal representation, or opcode, of JMP ESP. We can use msf-nasm_shell for this.
-
-
+![[Pasted image 20220713142249.png]]
+We must now search for FFE4, or "\xff\xe4", in the 
 
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
