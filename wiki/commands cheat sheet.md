@@ -25,7 +25,11 @@ used as loop counter
 ##### EDX - Data Register
 used in I/O port access, arithmetic
 
+##### ESI - Source Index
+used for string and array copying
 
+##### EDI - Destination Index Register
+pointer addressing data and destination in string/array copying
 
 # COMMANDS
 ## netcat
