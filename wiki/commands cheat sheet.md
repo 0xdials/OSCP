@@ -5,8 +5,10 @@ https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 
 #### registers
 ##### ESP - Stack Pointer
-keeps track of most recently referenced 
+keeps track of most recently referenced location (top) of the stack, stores pointer to it
 
+##### EBP - Base Pointer
+stores 
 # COMMANDS
 ## netcat
 #### file transfer
