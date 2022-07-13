@@ -305,3 +305,5 @@ import socket
 After running the code we end at our JMP ESP breakpoint
 ![[Pasted image 20220713151141.png]]
 
+Stepping into this command sends us to the "D" placeholder, signifying a successful jump.
+![[Pasted image 20220713151246.png]]
