@@ -226,8 +226,12 @@ These characters have special properties which will mangle our input buffer
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Locate the JMP ESP that is usable in the exploit.
-	Once we have Immunity Debugger attached to syncbreeze we can request information on currently loaded DLLs via "mona modules" As many support modules contain this JMP ESP instruction we will 
+	As support libraries often contain the JMP ESP instruction our goal will be to find one that meets our needs. To begin we must first attach Immunity Debugger to the Syncbreeze service. Once we have Immunity Debugger attached to syncbreeze we can request information on currently loaded DLLs via "mona modules" 
 	![[Pasted image 20220713140938.png]]
 
 ![[Pasted image 20220713141240.png]]
+
+Here we can see that the DLL "LIBSPP.DLL" has SafeSEH, ASLR, NXCom
+
+
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
