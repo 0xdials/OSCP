@@ -13,7 +13,19 @@ https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 ##### EIP - Instruction Pointer
 points to the next code instruction to be executed, directs the flow of a program
 
-##### EAX - Accumulator 
+##### EAX - Accumulator Register
+used for arithmetic, interrupt calls, logical instructions
+
+##### EBX - Base Pointer
+used as a pointer for memory access
+
+##### ECX - Counter Register
+used as loop counter
+
+##### EDX - Data Register
+used in I/O port access, arithmetic
+
+
 
 # COMMANDS
 ## netcat
