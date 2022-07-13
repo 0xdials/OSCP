@@ -9,6 +9,7 @@
     "SafeSEH",
     "ASLR",
     "NXCompat",
-    "holder sh"
+    "holder sh",
+    "shellcode"
   ]
 }

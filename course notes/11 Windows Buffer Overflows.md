@@ -251,4 +251,4 @@ We have now found out JMP ESP instruction.
 
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
 
-First we set a breakpoint on the JMP ESP instruction we have just found
+First, we set a breakpoint (F2) on the JMP ESP instruction we have just found in order to follow the execution of the instruction. We now let the application run.
