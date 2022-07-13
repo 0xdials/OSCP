@@ -216,3 +216,16 @@ The list of bad characters and their conversions is as follows:
 \x3d =
 ```
 These characters have special properties which will mangle our input buffer
+
+
+
+
+# 11.2.10 - Finding a Return Address
+#### Exercises
+
+_(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
+
+1.  Locate the JMP ESP that is usable in the exploit.
+
+
+2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
