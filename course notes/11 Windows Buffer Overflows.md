@@ -235,6 +235,9 @@ Here we can see that the DLL "LIBSPP.DLL" has SafeSEH, ASLR, and NXCompat disabl
 
 The next step is to find the hexadecimal representation, or opcode, of JMP ESP. We can use msf-nasm_shell for this.
 ![[Pasted image 20220713142249.png]]
-We must now search for FFE4, or "\xff\xe4", in the 
-
+We must now search for FFE4, or "\xff\xe4", in the LIBSPP.DLL module using the following mona command
+`!mona find -s "\xff\xe4" -m "libspp.dll"`
+From this search we find one address which luckily does not contain any bad characters.
+![[Pasted image 20220713142615.png]]
+We can then view this address using the "Go to address in dissassembler" button.
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
