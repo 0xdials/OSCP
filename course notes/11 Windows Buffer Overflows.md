@@ -301,3 +301,7 @@ import socket
  except:
  	print("\nCould not connect")
 ```
+
+After running the code we end at our JMP ESP breakpoint
+![[Pasted image 20220713151141.png]]
+
