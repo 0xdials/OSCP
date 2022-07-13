@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "wiki/cheat sheet.md",
+            "file": "wiki/commands cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"# \"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/cheat sheet.md",
+                "file": "wiki/commands cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,7 +90,7 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
-    "wiki/cheat sheet.md",
+    "wiki/commands cheat sheet.md",
     "wiki/attacks.md",
     "course notes/11 Windows Buffer Overflows.md",
     "images/11_windows_buffer_overflow/imun_hex_dump.png",
