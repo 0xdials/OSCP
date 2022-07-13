@@ -5,10 +5,16 @@ https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
 
 #### registers
 ##### ESP - Stack Pointer
-keeps track of most recently referenced location (top) of the stack, stores pointer to it
+**STACK** keeps track of most recently referenced location (top) of the stack, stores pointer to it
 
 ##### EBP - Base Pointer
-stores 
+**STACK** points to the top of the stack when a function is called, used by a function to access information from its own stack frame
+
+##### EIP - Instruction Pointer
+points to the next code instruction to be executed, directs the flow of a program
+
+##### EAX - Accumulator 
+
 # COMMANDS
 ## netcat
 #### file transfer
