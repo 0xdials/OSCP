@@ -5,6 +5,10 @@
   "spellcheckDictionary": [
     "ECX",
     "MSFVenom",
-    "netcat"
+    "netcat",
+    "SafeSEH",
+    "ASLR",
+    "NXCompat",
+    "holder sh"
   ]
 }
