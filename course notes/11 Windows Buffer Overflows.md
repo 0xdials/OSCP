@@ -240,4 +240,10 @@ We must now search for FFE4, or "\xff\xe4", in the LIBSPP.DLL module using the f
 From this search we find one address which luckily does not contain any bad characters.
 ![[Pasted image 20220713142615.png]]
 We can then view this address using the "Go to address in dissassembler" button.
+![[Pasted image 20220713142857.png]]
+We have no found out JMP ESP instruction.
+![[Pasted image 20220713142941.png]]
+
+
+
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
