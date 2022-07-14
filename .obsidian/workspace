@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/11 Windows Buffer Overflows.md",
+            "file": "course notes/12 Linux Buffer Overflows.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/11 Windows Buffer Overflows.md",
+                "file": "course notes/12 Linux Buffer Overflows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,11 +87,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "17c15ac22ccf408d",
+  "active": "58443bbf5c960718",
   "lastOpenFiles": [
+    "course notes/11 Windows Buffer Overflows.md",
     "wiki/cheat sheet.md",
     "wiki/attacks.md",
-    "course notes/11 Windows Buffer Overflows.md",
     "images/11_windows_buffer_overflow/imun_hex_dump.png",
     "images/11_windows_buffer_overflow/imun_D.png",
     "images/11_windows_buffer_overflow/imun_eip_esp.png",
