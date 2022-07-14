@@ -57,6 +57,10 @@ First we must create a pattern via msfvenom, we do this with the following comma
 
 We then add the pattern to our PoC, replacing the initial string of A's.
 ![[Pasted image 20220714141259.png]]
-We can then run the PoC, using EDB to determine what part of the pattern landed 
+We can then run the PoC, using EDB to determine what part of the pattern overwrote EIP.
+![[Pasted image 20220714141628.png]]
+
+We can see that the new value of EIP is 
+
 
 2.  Update your stand-alone script to ensure your offset is correct.
