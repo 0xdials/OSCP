@@ -60,7 +60,11 @@ We then add the pattern to our PoC, replacing the initial string of A's.
 We can then run the PoC, using EDB to determine what part of the pattern overwrote EIP.
 ![[Pasted image 20220714141628.png]]
 
-We can see that the new value of EIP is 
+We can see that the new value of EIP is 46367046 and we can now use msf-pattern_offset to find its location.
+![[Pasted image 20220714141906.png]]
+
+We can now update the "crash" variable to reflect the proper offset of 4368
+
 
 
 2.  Update your stand-alone script to ensure your offset is correct.
