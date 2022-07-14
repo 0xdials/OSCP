@@ -227,32 +227,32 @@ _(To be performed on your own Kali and Windows lab client machines - Reporting i
 
 1.  Locate the JMP ESP that is usable in the exploit.
 	As support libraries often contain the JMP ESP instruction our goal will be to find one that meets our needs. To begin we must first attach Immunity Debugger to the Syncbreeze service. Once we have Immunity Debugger attached to syncbreeze we can request information on currently loaded DLLs via "mona modules" 
-	![[Pasted image 20220713140938.png]]
+	![[mona_modules.png]]
 
-![[Pasted image 20220713141240.png]]
+![[mona_reg_gadget.png]]
 
 Here we can see that the DLL "LIBSPP.DLL" has SafeSEH, ASLR, and NXCompat disabled which is required for this exploit. It is also being loaded at 0x100000 which does not contain any bad characters.
 
 The next step is to find the hexadecimal representation, or opcode, of JMP ESP. We can use msf-nasm_shell for this.
-![[Pasted image 20220713142249.png]]
+![[mona_nasm_jmp.png]]
 
 We must now search for FFE4, or "\xff\xe4", in the LIBSPP.DLL module using the following mona command
 `!mona find -s "\xff\xe4" -m "libspp.dll"`
 From this search we find one address which luckily does not contain any bad characters.
-![[Pasted image 20220713142615.png]]
+![[mona_find_jmp.png]]
 
 We can then view this address using the "Go to address in dissassembler" button.
 ![[Pasted image 20220713142857.png]]
 
 We have now found out JMP ESP instruction.
-![[Pasted image 20220713142941.png]]
+![[jmp_in_ID.png]]
 
 
 
 2.  Update your PoC to include the discovered JMP ESP, set a breakpoint on it, and follow the execution to the placeholder shellcode.
 
 First, we set a breakpoint (F2) on the JMP ESP instruction we have just found in order to follow the execution of the instruction. We now let the application run.
-![[Pasted image 20220713143634.png]]
+![[jmp_address.png]]
 
 We then update the eip variable in our exploit to point to 0x10090c83, due to little endianess we must place the address in reverse order. The exploit being used will look like this:
 ```python

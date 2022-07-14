@@ -42,3 +42,13 @@ We need to start edb, attach to crossfire, and put crossfire into "Run" mode.
 ![[Pasted image 20220714121306.png]]
 Once this is complete we can execute our PoC code on our Kali machine to observe the crash.
 
+![[Pasted image 20220714121915.png]]
+
+
+# 12.3.1 Controlling EIP
+#### Exercises
+
+_(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
+
+1.  Determine the correct buffer offset required to overwrite the return address on the stack.
+2.  Update your stand-alone script to ensure your offset is correct.
