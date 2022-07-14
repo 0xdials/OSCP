@@ -242,8 +242,7 @@ From this search we find one address which luckily does not contain any bad char
 ![[mona_find_jmp.png]]
 
 We can then view this address using the "Go to address in dissassembler" button.
-![[Pasted image 20220713142857.png]]
-
+![[locate_jmp.png]]
 We have now found out JMP ESP instruction.
 ![[jmp_in_ID.png]]
 
@@ -392,7 +391,7 @@ except:
 
 2.  Attempt to execute your exploit without using a NOP sled and observe the decoder corrupting the stack.
 Without the NOP sled we can see that we encounter an access violation due to a number of bytes close to the ESP being mangled.
-![[Pasted image 20220714003519.png]]
+![[mangled_shellcode.png]]
 
 The GetPC routine execution changes a few bytes of the encoder itself (and possibly the shellcode) which eventually results in a crash.
 
@@ -402,7 +401,7 @@ Once 10 NOPs are added we immediately get a reverse shell.
 
 ![[Pasted image 20220714003655.png]]
 
-![[Pasted image 20220714002733.png]]
+![[buffer_rev_shell.png]]
 
 # 11.2.15 - Improving the Exploit
 #### Exercises

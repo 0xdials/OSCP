@@ -7,11 +7,9 @@
         "id": "17c15ac22ccf408d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "course notes/11 Windows Buffer Overflows.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted image 20220713151141.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/11 Windows Buffer Overflows.md",
+                "file": "Pasted image 20220713151141.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +87,15 @@
   },
   "active": "17c15ac22ccf408d",
   "lastOpenFiles": [
+    "mangled_shellcode.png",
+    "buffer_rev_shell.png",
+    "Pasted image 20220713215416.png",
+    "Pasted image 20220713151246.png",
     "Pasted image 20220713151141.png",
-    "jmp_address.png",
-    "jmp_in_ID.png",
-    "Pasted image 20220713142857.png",
-    "locate_jmp.png",
-    "mona_find_jmp.png",
-    "mona_nasm_jmp.png",
-    "msf_nasm_jmp.png",
-    "mona_reg_gadget.png",
-    "mona_modules.png"
+    "Pasted image 20220714121053.png",
+    "edb_running.png",
+    "Pasted image 20220714121814.png",
+    "Pasted image 20220714121915.png",
+    "course notes/11 Windows Buffer Overflows.md"
   ]
 }

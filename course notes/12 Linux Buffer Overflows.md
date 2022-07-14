@@ -39,7 +39,7 @@ except:
 
 3.  Attach the debugger to the Crossfire server, run the exploit against your Linux client, and confirm that the EIP register is overwritten by the malicious buffer.
 We need to start edb, attach to crossfire, and put crossfire into "Run" mode.
-![[Pasted image 20220714121306.png]]
+![[edb_running.png]]
 Once this is complete we can execute our PoC code on our Kali machine to observe the crash.
 
 ![[Pasted image 20220714121915.png]]
