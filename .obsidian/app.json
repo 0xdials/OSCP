@@ -13,6 +13,10 @@
     "shellcode",
     "endianess",
     "eip",
-    "msfvenom"
+    "msfvenom",
+    "msf-nasm",
+    "NOPs",
+    "he \"badc",
+    "of \"badc"
   ]
 }

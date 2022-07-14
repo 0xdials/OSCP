@@ -103,10 +103,25 @@ except:
 
 _(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
 
-1.  Determine the opcodes required to generate a first stage shellcode using msf-nasm_shell.
+**1.  Determine the opcodes required to generate a first stage shellcode using msf-nasm_shell.**
+
+When running the PoC, we notice that the ESP register points towards the end of our buffer, giving us 7 bytes to work with. We can use this space to create a first stage shellcode to align the EAX register and make it point to the correct place in our buffer. To do this, we first must measure how far into the buffer we need to skip in order to land at the start of our payload.
+
+As we can see from the following screenshot, there are 12 characters present at the start of our buffer which we need to skip (10 letters, 2 spaces).
+![[Pasted image 20220714172657.png]]
+In order to skip these 12 bytes we need to utilize the ADD assembly instruction followed by a JMP instruction. We can generate these opcodes by using msf-nasm_shell:
+
+![[Pasted image 20220714173039.png]]
+
+As we can see from the previous screenshot, the bytes used to perform the ADD and the JMP are
+`\x83\xc0\x0c\xff\xe0`
+As there are only 5 bytes needed to accomplish our goals, we must fill the remaining two bytes, `x\90` or NOPs will work perfectly for this.
+
+Our final first stage shellcode should look as follows:
+`\x83\xc0\x0c\xff\xe0\x90\x90`
 
 
-2.  Identify the bad characters that cannot be included in the payload and return address.
+**2.  Identify the bad characters that cannot be included in the payload and return address.**
 
 I began by placing setting the "badchars" variable to represent all possible bad characters. I then placed this into the initial crash variable which was previous filled with "A" characters. I subtracted the length of "badchars" in order to maintain the same length and maintain control of EIP
 
@@ -158,7 +173,7 @@ except:
   print("Could not connect.")
 ```
 
-This unfortunately required a bit of trial and error as the lines containing bad characters would sometimes result in a failed crash. Through the process of elimination eventually the characters were identified.
+This unfortunately required a bit of trial and error, as the lines containing bad characters would sometimes result in a failed crash. Through the process of elimination, eventually the characters were identified.
 
 `\x20` and `x00`
 
