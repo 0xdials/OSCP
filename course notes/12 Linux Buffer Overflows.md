@@ -8,6 +8,11 @@ _(To be performed on your own Kali and Debian lab client machines - Reporting is
 In order to login to our linux client we simply need to start the machine and then rdesktop with our credentials.
 `rdesktop -u student -g 1024x768 -r clipboard:CLIPBOARD 192.168.233.44`
 
+In preperation for the remaining tasks we must also launch the "Crossfire" application
+![[Pasted image 20220714121053.png]]
+We also need to start edb, attach to crossfire, and put crossfire into "Run" mode.
+![[Pasted image 20220714121306.png]]
+
 2.  On your Kali machine, recreate the proof-of-concept code that crashes the Crossfire server.
 
 
