@@ -301,7 +301,7 @@ import socket
 ```
 
 After running the code we end at our JMP ESP breakpoint
-![[jmp_breakpoint.png]]
+![[course notes/images/11_windows_buffer_overflow/jmp_breakpoint.png]]
 
 Stepping into this command sends us to the "D" placeholder, signifying a successful jump.
 ![[D_copied.png]]
