@@ -307,3 +307,16 @@ After running the code we end at our JMP ESP breakpoint
 
 Stepping into this command sends us to the "D" placeholder, signifying a successful jump.
 ![[Pasted image 20220713151246.png]]
+
+# 11.2.13 Getting a Shell
+#### Exercises
+
+_(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
+
+1.  Update your PoC to include a working payload.
+
+
+2.  Attempt to execute your exploit without using a NOP sled and observe the decoder corrupting the stack.
+
+
+3.  Add a NOP sled to your PoC and obtain a shell from SyncBreeze.
