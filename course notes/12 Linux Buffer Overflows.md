@@ -63,7 +63,10 @@ We can then run the PoC, using EDB to determine what part of the pattern overwro
 We can see that the new value of EIP is 46367046 and we can now use msf-pattern_offset to find its location.
 ![[Pasted image 20220714141906.png]]
 
-We can now update the "crash" variable to reflect the proper offset of 4368. The script should now look something like this:
+
+**2.  Update your stand-alone script to ensure your offset is correct.**
+
+Using the information above, we can update our PoC to ensure the proper offset is being sent. We have now updated the "crash" variable to reflect the proper offset of 4368. The "eip" variable should overwrite the EIP with 4 "B" characters. The remaining space should be filled with "C" characters via the "offset" variable. The script should now look something like this:
 ```python
 #!/usr/bin/python3
 import socket
@@ -91,7 +94,3 @@ try:
 except:
   print("Could not connect.")
 ```
-
-
-
-**2.  Update your stand-alone script to ensure your offset is correct.**
