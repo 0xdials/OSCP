@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/6 Passive Information Gathering - OSINT.md",
-            "mode": "preview",
+            "file": "course notes/12 Linux Buffer Overflows.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/6 Passive Information Gathering - OSINT.md",
+                "file": "course notes/12 Linux Buffer Overflows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "course notes/6 Passive Information Gathering - OSINT.md",
     "course notes/3 Command Line Fun.md",
     "course notes/2 Getting Comfortable with Kali.md",
     "course notes/00 table of contents.md",
@@ -97,7 +98,6 @@
     "course notes/10 Intro to Buffer Overflow.md",
     "course notes/9 Web Application Attacks.md",
     "course notes/8 vulnerability scanning.md",
-    "course notes/7 Active Information Gathering.md",
-    "course notes/6 Passive Information Gathering - OSINT.md"
+    "course notes/7 Active Information Gathering.md"
   ]
 }

@@ -1,6 +1,6 @@
 # 12.2.1 - Replicating the Crash
 
-## Practice - Replicating the Crash
+#### Exercises
 
 _(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
 
@@ -51,4 +51,11 @@ Once this is complete we can execute our PoC code on our Kali machine to observe
 _(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
 
 1.  Determine the correct buffer offset required to overwrite the return address on the stack.
+First we must create a pattern via msfvenom, we do this with the following command:
+`msf-pattern_create -l 4379 `
+
+We then add the pattern to our PoC, replacing the initial string of A's.
+
+
+
 2.  Update your stand-alone script to ensure your offset is correct.
