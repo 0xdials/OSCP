@@ -314,7 +314,9 @@ Stepping into this command sends us to the "D" placeholder, signifying a success
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
 1.  Update your PoC to include a working payload.
+In order to generate shellcode we will be using 
 
+![[Pasted image 20220713215416.png]]
 
 2.  Attempt to execute your exploit without using a NOP sled and observe the decoder corrupting the stack.
 
