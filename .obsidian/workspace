@@ -7,9 +7,11 @@
         "id": "300b2d8a53b60988",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "edb_crossfire_crash.png"
+            "file": "course notes/4 Pratical Tools.md",
+            "mode": "preview",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "edb_crossfire_crash.png",
+                "file": "course notes/4 Pratical Tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "58443bbf5c960718",
+  "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "edb_crossfire_crash.png",
-    "edb_crossfire_crash.png",
+    "course notes/3 Command Line Fun.md",
+    "course notes/2 Getting Comfortable with Kali.md",
+    "course notes/11 Windows Buffer Overflows.md",
     "course notes/12 Linux Buffer Overflows.md",
-    "crossfire_start.png",
-    "images/11_windows_buffer_overflow/buffer_rev_shell.png",
-    "images/12_linux_buffer_overflow/edb_running.png",
-    "images/11_windows_buffer_overflow/D_copied.png",
-    "images/11_windows_buffer_overflow/nops_added.png",
-    "images/11_windows_buffer_overflow/msfvenom_shellcode.png",
-    "images/11_windows_buffer_overflow/jmp_breakpoint.png"
+    "course notes/images/12_linux_buffer_overflow/edb_crossfire_crash.png",
+    "edb_crossfire_crash.png",
+    "course notes/images/12_linux_buffer_overflow/crossfire_start.png",
+    "course notes/images/11_windows_buffer_overflow/buffer_rev_shell.png",
+    "course notes/images/12_linux_buffer_overflow/edb_running.png",
+    "course notes/images/11_windows_buffer_overflow/D_copied.png"
   ]
 }
