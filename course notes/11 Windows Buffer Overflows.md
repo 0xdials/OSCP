@@ -1,5 +1,5 @@
 # 11.1.2 Discovering the Vulnerability
-## Practice - Discovering the Vulnerability
+#### Exercises
 
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 
@@ -58,7 +58,7 @@ The ESP register contains "A's" and we can also see the "A" characters on the st
 
 
 # 11.2.4 Controlling EIP
-## Practice - Controlling EIP
+#### Exercises
 
 _(To be performed on your own Kali and Windows lab client machines - Reporting is required for these exercises)_
 

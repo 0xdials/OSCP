@@ -12,6 +12,7 @@
     "holder sh",
     "shellcode",
     "endianess",
-    "eip"
+    "eip",
+    "msfvenom"
   ]
 }

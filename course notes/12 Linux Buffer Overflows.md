@@ -51,11 +51,12 @@ Once this is complete we can execute our PoC code on our Kali machine to observe
 _(To be performed on your own Kali and Debian lab client machines - Reporting is required for these exercises)_
 
 1.  Determine the correct buffer offset required to overwrite the return address on the stack.
+
 First we must create a pattern via msfvenom, we do this with the following command:
 `msf-pattern_create -l 4379 `
 
 We then add the pattern to our PoC, replacing the initial string of A's.
-
-
+![[Pasted image 20220714141259.png]]
+We can then run the PoC, using EDB to determine what part of the pattern landed 
 
 2.  Update your stand-alone script to ensure your offset is correct.
