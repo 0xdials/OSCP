@@ -391,7 +391,10 @@ except:
 ```
 
 2.  Attempt to execute your exploit without using a NOP sled and observe the decoder corrupting the stack.
+Without the NOP sled we can see that we encounter an access violation due to a number of bytes close to the ESP being mangled.
+![[Pasted image 20220714003519.png]]
 
+The GetPC routine execution changes a few bytes of the encoder itself (and possibly the shellcode) which eventually results in a crash.
 
 3.  Add a NOP sled to your PoC and obtain a shell from SyncBreeze.
 
