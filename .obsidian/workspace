@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/4 Pratical Tools.md",
+            "file": "course notes/6 Passive Information Gathering - OSINT.md",
             "mode": "preview",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/4 Pratical Tools.md",
+                "file": "course notes/6 Passive Information Gathering - OSINT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,13 +91,13 @@
   "lastOpenFiles": [
     "course notes/3 Command Line Fun.md",
     "course notes/2 Getting Comfortable with Kali.md",
-    "course notes/11 Windows Buffer Overflows.md",
+    "course notes/00 table of contents.md",
     "course notes/12 Linux Buffer Overflows.md",
-    "course notes/images/12_linux_buffer_overflow/edb_crossfire_crash.png",
-    "edb_crossfire_crash.png",
-    "course notes/images/12_linux_buffer_overflow/crossfire_start.png",
-    "course notes/images/11_windows_buffer_overflow/buffer_rev_shell.png",
-    "course notes/images/12_linux_buffer_overflow/edb_running.png",
-    "course notes/images/11_windows_buffer_overflow/D_copied.png"
+    "course notes/11 Windows Buffer Overflows.md",
+    "course notes/10 Intro to Buffer Overflow.md",
+    "course notes/9 Web Application Attacks.md",
+    "course notes/8 vulnerability scanning.md",
+    "course notes/7 Active Information Gathering.md",
+    "course notes/6 Passive Information Gathering - OSINT.md"
   ]
 }
