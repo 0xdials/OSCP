@@ -301,10 +301,10 @@ import socket
 ```
 
 After running the code we end at our JMP ESP breakpoint
-![[Pasted image 20220713151141.png]]
+![[jmp_breakpoint.png]]
 
 Stepping into this command sends us to the "D" placeholder, signifying a successful jump.
-![[Pasted image 20220713151246.png]]
+![[D_copied.png]]
 
 # 11.2.13 Getting a Shell
 #### Exercises
@@ -317,7 +317,7 @@ In order to generate shellcode we will be using MSFVenom, the following command 
 
 (Note: I was only able to achieve a reverse shell using "EXITFUNC=thread")
 
-![[Pasted image 20220713215416.png]]
+![[msfvenom_shellcode.png]]
 
 The shellcode has now been generated and can be added to our PoC.
 ```python
@@ -399,7 +399,7 @@ The GetPC routine execution changes a few bytes of the encoder itself (and possi
 
 Once 10 NOPs are added we immediately get a reverse shell.
 
-![[Pasted image 20220714003655.png]]
+![[nops_added.png]]
 
 ![[buffer_rev_shell.png]]
 

@@ -9,7 +9,7 @@ In order to login to our linux client we simply need to start the machine and th
 `rdesktop -u student -g 1024x768 -r clipboard:CLIPBOARD 192.168.233.44`
 
 In preperation for the remaining tasks we must also launch the "Crossfire" application
-![[Pasted image 20220714121053.png]]
+![[crossfire_start.png]]
 
 2.  On your Kali machine, recreate the proof-of-concept code that crashes the Crossfire server.
 Once the application is running we can use the following code on our Kali machine to crash the application 
@@ -42,7 +42,7 @@ We need to start edb, attach to crossfire, and put crossfire into "Run" mode.
 ![[edb_running.png]]
 Once this is complete we can execute our PoC code on our Kali machine to observe the crash.
 
-![[Pasted image 20220714121915.png]]
+![[edb_crossfire_crash.png]]
 
 
 # 12.3.1 Controlling EIP
