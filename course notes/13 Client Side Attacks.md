@@ -21,3 +21,6 @@ As I currently only have a home IP I went ahead and used the MegaCorp One IP of 
 
 
 **3.  Download the _Fingerprint2_ library and craft a web page similar to the one shown in the [Client Fingerprinting] section. Browse the web page from your Windows 10 lab machine and repeat the steps in order to collect the information extracted by the JavaScript library on your Kali web server.**
+
+The first step is to download the .zip file and extract it to our /var/www/html directory. 
+![[Pasted image 20220714220733.png]]
