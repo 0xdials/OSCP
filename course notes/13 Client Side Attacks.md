@@ -89,6 +89,11 @@ n = 50
 for i in range(0, len(str), n):
 	print "Str = Str + " + '"' + str[i:i+n] + '"'
 ```
+We then update our macro to include this newly split shellcode and to run the variable "Str" which is set to this shellcode.
+![[Pasted image 20220715180707.png]]
+
+From here, we just need to start a listener and open the document and we recieve our reverse shell.
+![[Pasted image 20220715180802.png]]
 
 # 13.3.5 Object Linking and Embedding
 #### Exercises
