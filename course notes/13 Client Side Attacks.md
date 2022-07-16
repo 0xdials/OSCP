@@ -126,7 +126,14 @@ We can trigger the Protected View by simply downloading our document from our Ap
 
 **2.  Reuse the batch file and embed it in a Microsoft Publisher document to receive a reverse shell to your Kali system.**
 
-
+Creating the object in Microsoft Publisher using our previous methods allows us to gain a reverse shell.
+![[Pasted image 20220716165201.png]]
+Once the object is run we receive our connection.
+![[Pasted image 20220716165222.png]]
 
 
 **3.  Move the file to the Apache web server to simulate the download of the Publisher document from the Internet and confirm the missing Protected View.**
+
+Once we move the Publisher file to our Apache server and download the file we can see that the "Protected View" is no longer present.
+
+![[Pasted image 20220716165532.png]]![[Pasted image 20220716165551.png]]
