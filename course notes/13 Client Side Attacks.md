@@ -110,6 +110,10 @@ We then need to open Microsoft Word and insert our launch.bat object.
 We can even change the name and icon of the malicious file to be more inconspicuous. 
 ![[Pasted image 20220715220140.png]]
 
+Once we open our Word document and launch our object we will recieve a reverse shell.
+![[Pasted image 20220715221253.png]]
+![[Pasted image 20220715221353.png]]
+
 # 13.3.7Evading Protected View
 #### Exercises
 _(To be performed on your own Kali and Windows lab client machines)_
