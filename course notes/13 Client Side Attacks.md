@@ -120,6 +120,9 @@ _(To be performed on your own Kali and Windows lab client machines)_
 
 **1.  Trigger the protection by Protected View by simulating a download of the Microsoft Word document from the Internet.**
 
+We can trigger the Protected View by simply downloading our document from our Apache web server.
+
+
 
 **2.  Reuse the batch file and embed it in a Microsoft Publisher document to receive a reverse shell to your Kali system.**
 
