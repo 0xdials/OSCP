@@ -101,6 +101,11 @@ _(To be performed on your own Kali and Windows lab client machines)_
 
 **1.  Use the PowerShell payload to create a batch file and embed it in a Microsoft Word document to send a reverse shell to your Kali system.**
 
+To begin, we need to create a batch to be embedded into Microsoft Word. To do this we simply echo our base64 encoded shellcode into an object named "lanch.bat" 
+![[Pasted image 20220715215507.png]]
+
+We then need to open Microsoft Word and insert our launch.bat object.
+![[Pasted image 20220715215735.png]]
 
 # 13.3.7Evading Protected View
 #### Exercises
