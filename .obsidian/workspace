@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "wiki/cheat sheet.md",
+            "file": "course notes/13 Client Side Attacks.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/cheat sheet.md",
+                "file": "course notes/13 Client Side Attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "wiki/cheat sheet.md",
     "course notes/13 Client Side Attacks.md",
     "course notes/7 Active Information Gathering.md",
     "course notes/8 vulnerability scanning.md",
@@ -97,7 +98,6 @@
     "course notes/images/12_linux_buffer_overflow/unresponsive_rev_shell.png",
     "course notes/images/12_linux_buffer_overflow/landed_in_A.png",
     "course notes/images/12_linux_buffer_overflow/jmp_eax_instruction.png",
-    "course notes/images/12_linux_buffer_overflow/add_eax_instruction.png",
-    "course notes/images/12_linux_buffer_overflow/jmp_breakpoint.png"
+    "course notes/images/12_linux_buffer_overflow/add_eax_instruction.png"
   ]
 }
