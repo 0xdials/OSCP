@@ -107,6 +107,9 @@ To begin, we need to create a batch to be embedded into Microsoft Word. To do th
 We then need to open Microsoft Word and insert our launch.bat object.
 ![[Pasted image 20220715215735.png]]
 
+We can even change the name and icon of the malicious file to be more inconspicuous. 
+![[Pasted image 20220715220140.png]]
+
 # 13.3.7Evading Protected View
 #### Exercises
 _(To be performed on your own Kali and Windows lab client machines)_
