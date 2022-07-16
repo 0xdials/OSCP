@@ -119,5 +119,9 @@ Once we open our Word document and launch our object we will recieve a reverse s
 _(To be performed on your own Kali and Windows lab client machines)_
 
 **1.  Trigger the protection by Protected View by simulating a download of the Microsoft Word document from the Internet.**
+
+
 **2.  Reuse the batch file and embed it in a Microsoft Publisher document to receive a reverse shell to your Kali system.**
+
+
 **3.  Move the file to the Apache web server to simulate the download of the Publisher document from the Internet and confirm the missing Protected View.**
