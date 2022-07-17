@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/14 Locating Public Exploits.md",
+            "file": "15 Fixing Exploits.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/14 Locating Public Exploits.md",
+                "file": "15 Fixing Exploits.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "course notes/13 Client Side Attacks.md",
     "course notes/14 Locating Public Exploits.md",
-    "course notes/images/13_client_side_attacks/word_macro_shell.png",
-    "course notes/images/13_client_side_attacks/publisher_object.png",
-    "course notes/images/13_client_side_attacks/publisher_download.png",
-    "course notes/images/13_client_side_attacks/rev_shell_4.png",
-    "course notes/images/13_client_side_attacks/publisher_object_launch.png",
-    "course notes/images/13_client_side_attacks/doc_protected_view.png",
-    "course notes/images/13_client_side_attacks/doc_download.png",
-    "Pasted image 20220715221353.png"
+    "course notes/8 vulnerability scanning.md",
+    "15 Fixing Exploits.md",
+    "course notes/images/14_locating_public_exploits/Start_james.png",
+    "course notes/images/14_locating_public_exploits/rev_shell.png",
+    "course notes/images/14_locating_public_exploits/exploited_proof2.png",
+    "course notes/images/14_locating_public_exploits/exploited_proof.png",
+    "course notes/images/14_locating_public_exploits/exploit_run.png",
+    "course notes/images/14_locating_public_exploits/searchsploit_james.png",
+    "course notes/images/14_locating_public_exploits/james_search.png"
   ]
 }

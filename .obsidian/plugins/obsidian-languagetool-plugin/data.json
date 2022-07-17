@@ -4,5 +4,6 @@
   "glassBg": false,
   "shouldAutoCheck": true,
   "pickyMode": false,
-  "ruleOtherDisabledRules": "CASING,PUNCTUATION"
+  "ruleOtherDisabledRules": "CASING,PUNCTUATION",
+  "staticLanguage": "en"
 }

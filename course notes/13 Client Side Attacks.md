@@ -35,7 +35,7 @@ Now we can move into utilizing msfvenom to alter our hta page and create a new p
 Once generated, we need to setup a listener on the specified port and navigate to the endpoint on our Windows test machine and we will get a reverse shell.
 
 ![[reverse_poc_poc.png]]
-![[rev_shell.png]]
+![[course notes/images/13_client_side_attacks/rev_shell.png]]
 
 **2.  Is it possible to use the HTML Application attack against Microsoft Edge users, and if so, how?**
 Yes, upon testing with Microsoft Edge the hta file was successful in obtaining a reverse shell.
