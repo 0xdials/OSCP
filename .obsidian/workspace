@@ -7,11 +7,9 @@
         "id": "300b2d8a53b60988",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "wiki/cheat sheet.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted image 20220716165201.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/cheat sheet.md",
+                "file": "Pasted image 20220716165201.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +85,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "300b2d8a53b60988",
+  "active": "58443bbf5c960718",
   "lastOpenFiles": [
+    "Pasted image 20220716165551.png",
+    "wiki/cheat sheet.md",
     "Pasted image 20220714211853.png",
     "course notes/13 Client Side Attacks.md",
-    "wiki/cheat sheet.md",
     "course notes/7 Active Information Gathering.md",
     "course notes/8 vulnerability scanning.md",
     "course notes/images/12_linux_buffer_overflow/working_rev_shell.png",
     "course notes/images/12_linux_buffer_overflow/SIGCHILD_error.png",
     "course notes/images/12_linux_buffer_overflow/unresponsive_rev_shell.png",
-    "course notes/images/12_linux_buffer_overflow/landed_in_A.png",
-    "course notes/images/12_linux_buffer_overflow/jmp_eax_instruction.png"
+    "course notes/images/12_linux_buffer_overflow/landed_in_A.png"
   ]
 }

