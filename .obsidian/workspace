@@ -87,9 +87,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "58443bbf5c960718",
+  "active": "300b2d8a53b60988",
   "lastOpenFiles": [
     "course notes/13 Client Side Attacks.md",
+    "course notes/14 Locating Public Exploits.md",
     "course notes/images/13_client_side_attacks/word_macro_shell.png",
     "course notes/images/13_client_side_attacks/publisher_object.png",
     "course notes/images/13_client_side_attacks/publisher_download.png",
@@ -97,7 +98,6 @@
     "course notes/images/13_client_side_attacks/publisher_object_launch.png",
     "course notes/images/13_client_side_attacks/doc_protected_view.png",
     "course notes/images/13_client_side_attacks/doc_download.png",
-    "Pasted image 20220715221353.png",
-    "course notes/images/13_client_side_attacks/object_launch.png"
+    "Pasted image 20220715221353.png"
   ]
 }
