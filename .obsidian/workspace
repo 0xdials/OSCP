@@ -7,9 +7,11 @@
         "id": "300b2d8a53b60988",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Pasted image 20220716165201.png"
+            "file": "course notes/14 Locating Public Exploits.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20220716165201.png",
+                "file": "course notes/14 Locating Public Exploits.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +89,15 @@
   },
   "active": "58443bbf5c960718",
   "lastOpenFiles": [
-    "Pasted image 20220716165551.png",
-    "wiki/cheat sheet.md",
-    "Pasted image 20220714211853.png",
     "course notes/13 Client Side Attacks.md",
-    "course notes/7 Active Information Gathering.md",
-    "course notes/8 vulnerability scanning.md",
-    "course notes/images/12_linux_buffer_overflow/working_rev_shell.png",
-    "course notes/images/12_linux_buffer_overflow/SIGCHILD_error.png",
-    "course notes/images/12_linux_buffer_overflow/unresponsive_rev_shell.png",
-    "course notes/images/12_linux_buffer_overflow/landed_in_A.png"
+    "course notes/images/13_client_side_attacks/word_macro_shell.png",
+    "course notes/images/13_client_side_attacks/publisher_object.png",
+    "course notes/images/13_client_side_attacks/publisher_download.png",
+    "course notes/images/13_client_side_attacks/rev_shell_4.png",
+    "course notes/images/13_client_side_attacks/publisher_object_launch.png",
+    "course notes/images/13_client_side_attacks/doc_protected_view.png",
+    "course notes/images/13_client_side_attacks/doc_download.png",
+    "Pasted image 20220715221353.png",
+    "course notes/images/13_client_side_attacks/object_launch.png"
   ]
 }
