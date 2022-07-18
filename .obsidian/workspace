@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "15 Fixing Exploits.md",
+            "file": "course notes/15 Fixing Exploits.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "15 Fixing Exploits.md",
+                "file": "course notes/15 Fixing Exploits.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "300b2d8a53b60988",
+  "active": "58443bbf5c960718",
   "lastOpenFiles": [
     "course notes/14 Locating Public Exploits.md",
+    "Pasted image 20220717233058.png",
+    "course notes/15 Fixing Exploits.md",
     "course notes/8 vulnerability scanning.md",
-    "15 Fixing Exploits.md",
     "course notes/images/14_locating_public_exploits/Start_james.png",
     "course notes/images/14_locating_public_exploits/rev_shell.png",
     "course notes/images/14_locating_public_exploits/exploited_proof2.png",
     "course notes/images/14_locating_public_exploits/exploited_proof.png",
     "course notes/images/14_locating_public_exploits/exploit_run.png",
-    "course notes/images/14_locating_public_exploits/searchsploit_james.png",
-    "course notes/images/14_locating_public_exploits/james_search.png"
+    "course notes/images/14_locating_public_exploits/searchsploit_james.png"
   ]
 }
