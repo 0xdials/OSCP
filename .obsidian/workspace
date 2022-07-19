@@ -89,6 +89,8 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "frp_connect.png",
+    "16 File Transfers.md",
     "course notes/15 Fixing Exploits.md",
     "course notes/images/15_fixing_exploits/address_variables.png",
     "course notes/images/15_fixing_exploits/wine_syncbreeze_exe.png",
@@ -96,8 +98,6 @@
     "Pasted image 20220719015717.png",
     "course notes/images/15_fixing_exploits/EIP_value_altered.png",
     "course notes/images/15_fixing_exploits/rev_shell_3.png",
-    "course notes/images/15_fixing_exploits/EIP_value.png",
-    "course notes/images/15_fixing_exploits/eip_address.png",
-    "course notes/images/15_fixing_exploits/cms_exploit_success.png"
+    "course notes/images/15_fixing_exploits/EIP_value.png"
   ]
 }
