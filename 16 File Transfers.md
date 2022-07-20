@@ -65,8 +65,12 @@ Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts
  ts.Close
 ```
 
+We can then run the script with cscript and download files from our Kali machine's server.
+![[Pasted image 20220720022641.png]]
+
 **2.  Use PowerShell to transfer files in a non-interactive shell from Kali to Windows and vice versa.**
 
+For more recent versions of Windows a much better approach is to utilize PowerShell. 
 
 **3.  For PowerShell version 3 and above, which is present by default on Windows 8.1 and Windows 10, the cmdlet [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) was added. Try to make use of it in order to perform both upload and download requests to your Kali machine.**
 
