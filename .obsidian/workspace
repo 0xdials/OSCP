@@ -89,15 +89,15 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "frp_connect.png",
+    "interactive_ftp.png",
+    "non-interactive_ftp.png",
+    "systemctl_ftpd.png",
     "16 File Transfers.md",
+    "Pasted image 20220719221822.png",
+    "frp_connect.png",
     "course notes/15 Fixing Exploits.md",
     "course notes/images/15_fixing_exploits/address_variables.png",
     "course notes/images/15_fixing_exploits/wine_syncbreeze_exe.png",
-    "Pasted image 20220717233936.png",
-    "Pasted image 20220719015717.png",
-    "course notes/images/15_fixing_exploits/EIP_value_altered.png",
-    "course notes/images/15_fixing_exploits/rev_shell_3.png",
-    "course notes/images/15_fixing_exploits/EIP_value.png"
+    "Pasted image 20220717233936.png"
   ]
 }

@@ -15,7 +15,7 @@ systemctl restart pure-ftpd
 ```
 
 
-![[Pasted image 20220719154430.png]]
+![[systemctl_ftpd.png]]
 
 We can now switch to our Debian client and attempt to connect.
 ![[frp_connect.png]]
@@ -23,7 +23,10 @@ We can now switch to our Debian client and attempt to connect.
 
 **2.  Attempt to log in to the FTP server from a Netcat reverse shell and see what happens.**
 
+After setting up our listener on the Debian client we can use netcat to connect to our listener. We then use the command "ftp" to attempt to interact with our FTP server running on our Kali machine. This will result in a loss of control of our shell.
+![[non-interactive_ftp.png]]
 
+**3.  Research alternative methods to upgrade a non-interactive shell.**
 
-**3.  Research alternatives methods to upgrade a non-interactive shell.**
-
+To upgrade our shell we can use the python module "pty" , a standard module that is often used to upgrade to interactive shells. We can see that after upgrading our shell via "pty" we can access the ftp server running on our Kali machine.
+![[interactive_ftp.png]]
