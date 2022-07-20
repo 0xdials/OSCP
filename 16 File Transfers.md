@@ -24,5 +24,6 @@ We can now switch to our Debian client and attempt to connect.
 **2.  Attempt to log in to the FTP server from a Netcat reverse shell and see what happens.**
 
 
+
 **3.  Research alternatives methods to upgrade a non-interactive shell.**
 
