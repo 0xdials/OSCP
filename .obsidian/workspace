@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "wiki/cheat sheet.md",
+            "file": "16 File Transfers.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/cheat sheet.md",
+                "file": "16 File Transfers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "course notes/15 Fixing Exploits.md",
+    "wiki/cheat sheet.md",
     "16 File Transfers.md",
     "interactive_ftp.png",
     "non-interactive_ftp.png",
     "systemctl_ftpd.png",
     "Pasted image 20220719221822.png",
     "frp_connect.png",
-    "course notes/15 Fixing Exploits.md",
     "course notes/images/15_fixing_exploits/address_variables.png",
-    "course notes/images/15_fixing_exploits/wine_syncbreeze_exe.png",
-    "Pasted image 20220717233936.png"
+    "course notes/images/15_fixing_exploits/wine_syncbreeze_exe.png"
   ]
 }

