@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/15 Fixing Exploits.md",
+            "file": "16 File Transfers.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/15 Fixing Exploits.md",
+                "file": "16 File Transfers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "course notes/15 Fixing Exploits.md",
     "course notes/14 Locating Public Exploits.md",
     "course notes/13 Client Side Attacks.md",
     "course notes/12 Linux Buffer Overflows.md",
@@ -97,7 +98,6 @@
     "course notes/11 Windows Buffer Overflows.md",
     "course notes/8 vulnerability scanning.md",
     "course notes/7 Active Information Gathering.md",
-    "course notes/6 Passive Information Gathering - OSINT.md",
-    "course notes/5 Bash Scripting.md"
+    "course notes/6 Passive Information Gathering - OSINT.md"
   ]
 }

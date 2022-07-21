@@ -6,7 +6,7 @@
   "bgHue": 220,
   "bgSat": 18,
   "bgLight": 97,
-  "trimNames": false,
+  "trimNames": true,
   "lightStyle": "advanced-light",
   "darkStyle": "advanced-dark",
   "uiFont": "Input",
