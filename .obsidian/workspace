@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "17 Antivirus Evasion.md",
+            "file": "Untitled.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "17 Antivirus Evasion.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,8 +87,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "300b2d8a53b60988",
+  "active": "58443bbf5c960718",
   "lastOpenFiles": [
+    "17 Antivirus Evasion.md",
     "wiki/cheat sheet.md",
     "course notes/16 File Transfers.md",
     "htb/timelapse/timelapse.md",
@@ -97,7 +98,6 @@
     "course notes/images/16_file_transfers/tftp_success.png",
     "course notes/images/16_file_transfers/firewall_disable.png",
     "Pasted image 20220721215958.png",
-    "Pasted image 20220721215854.png",
-    "course notes/images/16_file_transfers/tftp_fail_firewall.png"
+    "Pasted image 20220721215854.png"
   ]
 }
