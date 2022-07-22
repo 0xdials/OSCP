@@ -185,3 +185,9 @@ QUIT
 
 `cat "smtp" |while read L; do sleep "1"; echo "$L"; done | "nc" -C -v "192.168.243.55" "25"`
 
+
+
+## crackmapexec
+
+#### anonymous/fake login - list shares
+cme smb 10.10.11.152 -u 'anon' -p '' --shares 
