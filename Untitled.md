@@ -1,4 +1,4 @@
-```
+```POWERSHELL
 [Byte[]]$sc = <place your shellcode here>;
 
 $size = 0x1000;
