@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "16 File Transfers.md",
+            "file": "wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "16 File Transfers.md",
+                "file": "wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "16 File Transfers.md",
     "course notes/15 Fixing Exploits.md",
     "course notes/14 Locating Public Exploits.md",
     "course notes/13 Client Side Attacks.md",
@@ -97,7 +98,6 @@
     "course notes/10 Intro to Buffer Overflow.md",
     "course notes/11 Windows Buffer Overflows.md",
     "course notes/8 vulnerability scanning.md",
-    "course notes/7 Active Information Gathering.md",
-    "course notes/6 Passive Information Gathering - OSINT.md"
+    "course notes/7 Active Information Gathering.md"
   ]
 }

