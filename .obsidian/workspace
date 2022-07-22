@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "course notes/16 File Transfers.md",
+            "file": "17 Antivirus Evasion.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course notes/16 File Transfers.md",
+                "file": "17 Antivirus Evasion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +90,7 @@
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
     "wiki/cheat sheet.md",
+    "course notes/16 File Transfers.md",
     "htb/timelapse/timelapse.md",
     "course notes/images/16_file_transfers/cscript_wget.png",
     "course notes/images/16_file_transfers/frp_connect.png",
@@ -97,7 +98,6 @@
     "course notes/images/16_file_transfers/firewall_disable.png",
     "Pasted image 20220721215958.png",
     "Pasted image 20220721215854.png",
-    "course notes/images/16_file_transfers/tftp_fail_firewall.png",
-    "course notes/images/16_file_transfers/evil_download.png"
+    "course notes/images/16_file_transfers/tftp_fail_firewall.png"
   ]
 }
