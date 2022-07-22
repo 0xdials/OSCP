@@ -1,4 +1,3 @@
-
 # RESOURCES
 ## buffer overflow
 #### x86 cheat sheet

