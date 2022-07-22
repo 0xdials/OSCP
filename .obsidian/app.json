@@ -28,5 +28,6 @@
     "Powershell",
     "Str"
   ],
-  "showLineNumber": false
+  "showLineNumber": false,
+  "spellcheck": true
 }

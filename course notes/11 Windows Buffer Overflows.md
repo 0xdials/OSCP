@@ -5,7 +5,7 @@ _(To be performed on your own Kali and Windows lab client machines - Reporting i
 
 1.  Build the fuzzer and replicate the SyncBreeze crash.
 To start we must first build a fuzzer using python. We can use the following code:
-```python
+```PYTHON
 #!/usr/bin/python
 import socket
 import time
