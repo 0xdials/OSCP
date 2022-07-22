@@ -33,7 +33,7 @@ $winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
 
 The script starts by importing a few functions from the kernel32.dll, specifically VirtualAlloc and CreateThread, as well as memset from msvcrt.dll. The functions will allow the allocation of memory, creation of an execution thread, and the writing of arbitrary data to said allocated memory. 
 
-The next portion of the script (begining at [Byte])
+The next portion of the script (beginning at line 14), is where the memory for our payload will be allocated and written.
 
 **2.  Get a meterpreter shell back to your Kali Linux machine using PowerShell.**
 
