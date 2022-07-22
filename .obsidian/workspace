@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "htb/timelapse/timelapse.md",
+            "file": "wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "htb/timelapse/timelapse.md",
+                "file": "wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
+    "htb/timelapse/timelapse.md",
     "course notes/images/16_file_transfers/cscript_wget.png",
     "course notes/images/16_file_transfers/frp_connect.png",
     "course notes/images/16_file_transfers/tftp_success.png",
@@ -97,7 +98,6 @@
     "Pasted image 20220721215854.png",
     "course notes/images/16_file_transfers/tftp_fail_firewall.png",
     "course notes/images/16_file_transfers/evil_download.png",
-    "course notes/images/16_file_transfers/new-exploit.png",
-    "course notes/images/16_file_transfers/vbs_script.png"
+    "course notes/images/16_file_transfers/new-exploit.png"
   ]
 }
