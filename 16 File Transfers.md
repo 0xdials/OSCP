@@ -121,8 +121,7 @@ We can see that when attempting to transfer a file via tftp on Windows we fail t
 
 ![[Pasted image 20220721215649.png]]
 
-This is due to the firewall rules present on the Windows system. We can adjust the setting 
-
-![[Pasted image 20220721215854.png]]
-
-![[Pasted image 20220721215958.png]]
+This is due to the firewall rules present on the Windows system. We can disable the firewall and attempt the transfer again.
+![[Pasted image 20220721220748.png]]
+And we can see the transfer is now successful.
+![[Pasted image 20220721220825.png]]
