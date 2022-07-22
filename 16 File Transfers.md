@@ -117,3 +117,12 @@ And we can see the file on our Kali machine.
 
 **Note:** If you encounter problems, first attempt the transfer process within an interactive shell and watch for issues that may cause problems in a non-interactive shell.
 
+We can see that when attempting to transfer a file via tftp on Windows we fail to get a connection and receive an error.
+
+![[Pasted image 20220721215649.png]]
+
+This is due to the firewall rules present on the Windows system. We can adjust the setting 
+
+![[Pasted image 20220721215854.png]]
+
+![[Pasted image 20220721215958.png]]
