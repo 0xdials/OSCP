@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "aceea7a7d638921d",
+    "type": "split",
+    "children": [
+      {
+        "id": "300b2d8a53b60988",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "17 Antivirus Evasion.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "16d7877e49cab53c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8ef7b786573deb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58443bbf5c960718",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8bb63fed3497e3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 283.5
+  },
+  "right": {
+    "id": "172510ba41557534",
+    "type": "split",
+    "children": [
+      {
+        "id": "17452228e6a1abca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "71591bcfa12145c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "17 Antivirus Evasion.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "300b2d8a53b60988",
+  "lastOpenFiles": [
+    "course notes/16 File Transfers.md",
+    "course notes/10 Intro to Buffer Overflow.md",
+    "course notes/11 Windows Buffer Overflows.md",
+    "course notes/12 Linux Buffer Overflows.md",
+    "course notes/13 Client Side Attacks.md",
+    "course notes/14 Locating Public Exploits.md",
+    "course notes/15 Fixing Exploits.md",
+    "Untitled.md",
+    "17 Antivirus Evasion.md",
+    "wiki/cheat sheet.md"
+  ]
+}
