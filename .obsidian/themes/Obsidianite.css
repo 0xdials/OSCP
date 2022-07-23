@@ -1084,8 +1084,9 @@ h6 a.tag {
 pre {
   position: relative;
 }
+/** Disabled language tag in favor of Obsidian plugin**/
 
-pre[class*='language-']:before {
+/*pre[class*='language-']:before {
   font-family: Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
   font-style: normal;
   font-weight: 700;
@@ -1144,7 +1145,7 @@ pre[class$='json']:before {
 
 pre[class$='python']:before {
   content: 'python';
-}
+}*/
 
 /**-------------------**
 | BLOCKQUOTE STYLING
