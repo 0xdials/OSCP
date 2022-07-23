@@ -29,5 +29,6 @@
     "Str"
   ],
   "showLineNumber": false,
-  "spellcheck": true
+  "spellcheck": true,
+  "readableLineLength": true
 }
