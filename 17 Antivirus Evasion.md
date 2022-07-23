@@ -111,4 +111,4 @@ always avoid packed applications or generally applications that have 'dodgy'
 characteristics such as sections with RWE permissions, more than one sections
 containing executable code etc.."
 
-This means we can essentially use any 32-bit installer
+This means we can essentially use any 32-bit standalone installer. 
