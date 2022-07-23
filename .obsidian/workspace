@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "17 Antivirus Evasion.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,15 +89,15 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "course notes/16 File Transfers.md",
-    "course notes/10 Intro to Buffer Overflow.md",
     "course notes/11 Windows Buffer Overflows.md",
+    "17 Antivirus Evasion.md",
+    "course notes/16 File Transfers.md",
+    "course notes/9 Web Application Attacks.md",
+    "course notes/10 Intro to Buffer Overflow.md",
+    "course notes/8 vulnerability scanning.md",
+    "course notes/7 Active Information Gathering.md",
     "course notes/12 Linux Buffer Overflows.md",
     "course notes/13 Client Side Attacks.md",
-    "course notes/14 Locating Public Exploits.md",
-    "course notes/15 Fixing Exploits.md",
-    "Untitled.md",
-    "17 Antivirus Evasion.md",
-    "wiki/cheat sheet.md"
+    "course notes/14 Locating Public Exploits.md"
   ]
 }
