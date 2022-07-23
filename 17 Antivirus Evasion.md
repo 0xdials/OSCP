@@ -85,3 +85,16 @@ For a one-liner we can use the very straightforward website "Revshells.com". Thi
 After setting up a listener we can run this command on our Windows client and receive our reverse connection.
 ![[Pasted image 20220722203527.png]]
 ![[Pasted image 20220722203535.png]]
+
+
+# 17.3.5 Antivirus Evasion
+**1.  Inject a meterpreter reverse shell payload in the WinRAR executable.**
+
+
+**2.  Transfer the binary to your Windows client and ensure that it is not being detected by the antivirus.**
+
+
+**3.  Run the WinRAR installer and migrate your meterpreter shell to prevent a disconnect.**
+
+
+**4.  Attempt to find different executables and inject malicious code into them using Shellter.**
