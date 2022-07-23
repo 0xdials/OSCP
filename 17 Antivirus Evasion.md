@@ -98,3 +98,4 @@ After setting up a listener we can run this command on our Windows client and re
 
 
 **4.  Attempt to find different executables and inject malicious code into them using Shellter.**
+ ~  192.168.119.197     192.168.119.197                                                                                                                                          ✔  192.168.119.197   01:47:51 PM
