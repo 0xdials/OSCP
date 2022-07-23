@@ -102,3 +102,13 @@ After setting up a listener we can run this command on our Windows client and re
 ![[Pasted image 20220723142312.png]]
 ![[Pasted image 20220723142408.png]]
 **4.  Attempt to find different executables and inject malicious code into them using Shellter.**
+
+The Shellter documentation reads as following:
+
+"You can basically use any 32-bit standalone (see above) native Windows
+application. Of course, since the main goal is to bypass an AV, you should
+always avoid packed applications or generally applications that have 'dodgy'
+characteristics such as sections with RWE permissions, more than one sections
+containing executable code etc.."
+
+This means we can essentially use any 32-bit installer
