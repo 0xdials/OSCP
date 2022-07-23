@@ -99,6 +99,6 @@ After setting up a listener we can run this command on our Windows client and re
 ![[Pasted image 20220723140716.png]]
 **3.  Run the WinRAR installer and migrate your meterpreter shell to prevent a disconnect.**
 
-
+![[Pasted image 20220723142312.png]]
+![[Pasted image 20220723142408.png]]
 **4.  Attempt to find different executables and inject malicious code into them using Shellter.**
- ~  192.168.119.197     192.168.119.197                                                                                                                                          ✔  192.168.119.197   01:47:51 PM
