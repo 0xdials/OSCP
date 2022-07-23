@@ -325,12 +325,21 @@ code,
   padding-top: 1ch;
 }
 
+/**
 .cm-s-obsidian .HyperMD-codeblock-begin,
 .cm-s-obsidian .HyperMD-codeblock-end {
   color: var(--cyan);
 }
-
+**/
 /** NEW SHIT **/
+
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  border: none;
+}
+
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg:before {
   position: absolute;
@@ -342,6 +351,13 @@ code,
   border-top-right-radius: 0.3em;
   background-color: #191621;
 }
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  border: none;
+}
+
 /** END OF NEW SHIT **/
 
 .markdown-rendered code {
