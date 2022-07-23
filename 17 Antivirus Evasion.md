@@ -99,6 +99,7 @@ After setting up a listener we can run this command on our Windows client and re
 ![[Pasted image 20220723140716.png]]
 **3.  Run the WinRAR installer and migrate your meterpreter shell to prevent a disconnect.**
 
+set AutoRunScript post/windows/manage/migrate
 ![[Pasted image 20220723142312.png]]
 ![[Pasted image 20220723142408.png]]
 **4.  Attempt to find different executables and inject malicious code into them using Shellter.**
@@ -112,3 +113,6 @@ characteristics such as sections with RWE permissions, more than one sections
 containing executable code etc.."
 
 This means we can essentially use any 32-bit standalone installer. For our example we are going to try out the 7zip 32-bit installer.
+
+![[Pasted image 20220723160251.png]]
+![[Pasted image 20220723160312.png]]
