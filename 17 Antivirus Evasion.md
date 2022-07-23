@@ -93,7 +93,7 @@ After setting up a listener we can run this command on our Windows client and re
 
 **2.  Transfer the binary to your Windows client and ensure that it is not being detected by the antivirus.**
 
-
+![[Pasted image 20220723140716.png]]
 **3.  Run the WinRAR installer and migrate your meterpreter shell to prevent a disconnect.**
 
 
