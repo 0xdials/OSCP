@@ -69,8 +69,12 @@ $winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
 ```
 
 We then need to adjust our Execution Policy to ensure we have the ability to run the script. We can check our permissions and adjust via `Get-ExecutionPolicy -Scope CurrentUser` and `Set-ExecutionPolicy Unrestricted -Scope CurrentUser` commands.
+![[Pasted image 20220722201317.png]]
 
-Once the policies are adjusted we can start MSFConsole and setup a listener using the "multi/handler" module.
+
+Once the policies are adjusted we can start MSFConsole and setup a listener using the "multi/handler" module. With our listener running we can then run the script on our Windows client and receive the reverse shell.
+![[Pasted image 20220722201512.png]]
 
 
 **3.  Attempt to get a reverse shell using a PowerShell one-liner rather than a script.[1](https://portal.offensive-security.com/courses/pen-200/books-and-videos/modal/modules/antivirus-evasion/bypassing-antivirus-detection/practice-powershell-in-memory-injection#fn1)**
+
