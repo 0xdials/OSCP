@@ -90,6 +90,9 @@ After setting up a listener we can run this command on our Windows client and re
 # 17.3.5 Antivirus Evasion
 **1.  Inject a meterpreter reverse shell payload in the WinRAR executable.**
 
+![[Pasted image 20220723141110.png]]
+
+![[Pasted image 20220723141325.png]]
 
 **2.  Transfer the binary to your Windows client and ensure that it is not being detected by the antivirus.**
 
