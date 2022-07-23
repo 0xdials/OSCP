@@ -78,3 +78,10 @@ Once the policies are adjusted we can start MSFConsole and setup a listener usin
 
 **3.  Attempt to get a reverse shell using a PowerShell one-liner rather than a script.[1](https://portal.offensive-security.com/courses/pen-200/books-and-videos/modal/modules/antivirus-evasion/bypassing-antivirus-detection/practice-powershell-in-memory-injection#fn1)**
 
+For a one-liner we can use the very straightforward website "Revshells.com". This site allows us to quickly input an IP and port and select "Powershell #3 (base64)" and we will receive our one liner.
+
+![[Pasted image 20220722203421.png]]
+
+After setting up a listener we can run this command on our Windows client and receive our reverse connection.
+![[Pasted image 20220722203527.png]]
+![[Pasted image 20220722203535.png]]

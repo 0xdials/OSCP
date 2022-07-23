@@ -7,11 +7,9 @@
         "id": "300b2d8a53b60988",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "17 Antivirus Evasion.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted image 20220722201317.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "17 Antivirus Evasion.md",
+                "file": "Pasted image 20220722201317.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +87,8 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "course notes/11 Windows Buffer Overflows.md",
     "17 Antivirus Evasion.md",
+    "course notes/11 Windows Buffer Overflows.md",
     "course notes/16 File Transfers.md",
     "course notes/9 Web Application Attacks.md",
     "course notes/10 Intro to Buffer Overflow.md",
