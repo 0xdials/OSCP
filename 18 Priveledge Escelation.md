@@ -115,3 +115,8 @@ wmic get name, version, vendor
 ```powershell
 schtasks /query /fo LIST /v
 ```
+
+#### Accesscheck
+```
+accesschk.exe -uws "Everyone" "C:\Program Files"
+```
