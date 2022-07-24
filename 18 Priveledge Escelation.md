@@ -23,7 +23,10 @@ rpm -q kernel
 lsmod
 /sbin/modinfo libdata
 ```
-
+***AutoElevating Binaries***
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
 ***Environment Variables***
 ```bash
 env
@@ -46,7 +49,7 @@ rpm -qa
 ```
 
 ***Files & Permissions***
-```
+```bash
 find / -writable -type d 2>/dev/null
 ```
 ***Unmounted Drives***
@@ -56,7 +59,7 @@ cat /etc/fstab
 lsblk
 ```
 ***Cron***
-```
+```bash
 crontab -l
 cat /etc/cron*
 ```
@@ -124,7 +127,11 @@ route print
 netstat -ano
 wmic get name, version, vendor
 ```
-
+**AutoElevating Binaries***
+```powershell
+reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
+reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
+```
 ***Scheduled Tasks***
 ```powershell
 schtasks /query /fo LIST /v
