@@ -147,3 +147,6 @@ Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, M
 ```powershell
 mountvol
 ```
+
+
+# 18.1.4 Automated Enumeration
