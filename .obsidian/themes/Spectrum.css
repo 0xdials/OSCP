@@ -223,7 +223,7 @@ body {
 }
 
 .markdown-preview-view div p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
 }
 
 .markdown-source-view.is-readable-line-width .CodeMirror {
@@ -260,7 +260,7 @@ body {
 .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl)
 .cm-contentContainer > .mermaid {
   max-width: fit-content;
-  min-width: 750px;
+  min-width: 750x;
 }
 
 /* 
@@ -962,7 +962,7 @@ table tbody tr:hover {
 }
 
 .cm-s-obsidian pre.HyperMD-codeblock-begin {
-  padding-top: 0.25rem;
+  padding-top: 1.25rem;
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {

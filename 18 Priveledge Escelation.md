@@ -154,3 +154,9 @@ mountvol
 
 
 # 18.1.4 Automated Enumeration
+
+**1.  Inspect your Windows and Linux clients by using the tools and commands presented in this section in order to get comfortable with automated local enumeration techniques.**
+
+
+
+**2.  Experiment with different windows-privesc-check and unix_privesc_check options.**
