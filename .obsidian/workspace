@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "18 Priveledge Escelation.md",
+            "file": "course notes/notes/2 Getting Comfortable with Kali.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "18 Priveledge Escelation.md",
+                "file": "course notes/notes/2 Getting Comfortable with Kali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
+    "course notes/notes/00 table of contents.md",
+    "course notes/999 links.md",
+    "course notes/notes/9 Web Application Attacks.md",
+    "18 Priveledge Escelation.md",
     "prep/privesc/win/windows.md",
     "prep/privesc/win/Windows+Privilege+Escalation.pdf",
     "prep/1 links.md",
     "prep/privesc/nix/linux.md",
-    "18 Priveledge Escelation.md",
-    "course notes/999 links.md",
     "pg boxes/vault/Pasted image 20220613150130.png",
-    "pg boxes/vault/Pasted image 20220613224255.png",
-    "pg boxes/vault/Pasted image 20220613223110.png",
-    "pg boxes/vault/Pasted image 20220613150258.png"
+    "pg boxes/vault/Pasted image 20220613224255.png"
   ]
 }
