@@ -101,12 +101,14 @@ netsh advfirewall firewall show rule name=all
 ```
 systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+wmic qfe get Caption, Description, HotFixID, InstalledOn
 ```
 ***Processes and Services***
 ```powershell
 tasklist /SVC
 route print
 netstat -ano
+wmic get name, version, vendor
 ```
 
 ***Scheduled Tasks***
