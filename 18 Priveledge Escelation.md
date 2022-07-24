@@ -20,8 +20,10 @@ cat /proc/version
 uname -a
 dmesg | grep -i linux
 rpm -q kernel
+lsmod
+/sbin/modinfo libdata
 ```
-***Device Drivers & Kernel Modules
+
 ***Environment Variables***
 ```bash
 env
@@ -132,6 +134,7 @@ schtasks /query /fo LIST /v
 ```powershell
 accesschk.exe -uws "Everyone" "C:\Program Files"
 PS> Get-ChildItem "C:\Program Files" -Recurse | Get-ACL | ?{$_.AccessToString - match "Everyone\sAllow\s\sModify"}
+Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
 ```
 ***Unmounted Drives***
 ```powershell
