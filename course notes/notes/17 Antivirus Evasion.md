@@ -69,39 +69,39 @@ $winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
 ```
 
 We then need to adjust our Execution Policy to ensure we have the ability to run the script. We can check our permissions and adjust via `Get-ExecutionPolicy -Scope CurrentUser` and `Set-ExecutionPolicy Unrestricted -Scope CurrentUser` commands.
-![[Pasted image 20220722201317.png]]
+![[Execution_Policy.png]]
 
 
 Once the policies are adjusted we can start MSFConsole and setup a listener using the "multi/handler" module. With our listener running we can then run the script on our Windows client and receive the reverse shell.
-![[Pasted image 20220722201512.png]]
+![[meterpreter_revshell.png]]
 
 
 **3.  Attempt to get a reverse shell using a PowerShell one-liner rather than a script.[1](https://portal.offensive-security.com/courses/pen-200/books-and-videos/modal/modules/antivirus-evasion/bypassing-antivirus-detection/practice-powershell-in-memory-injection#fn1)**
 
 For a one-liner we can use the very straightforward website "Revshells.com". This site allows us to quickly input an IP and port and select "Powershell #3 (base64)" and we will receive our one liner.
 
-![[Pasted image 20220722203421.png]]
+![[revshell_generator.png]]
 
 After setting up a listener we can run this command on our Windows client and receive our reverse connection.
-![[Pasted image 20220722203527.png]]
-![[Pasted image 20220722203535.png]]
+![[powershell_oneliner.png]]
+![[course notes/images/17_antivirus_evasion/rev_shell.png]]
 
 
 # 17.3.5 Antivirus Evasion
 **1.  Inject a meterpreter reverse shell payload in the WinRAR executable.**
 
-![[Pasted image 20220723141110.png]]
+![[shelter_winrar.png]]
 
-![[Pasted image 20220723141325.png]]
+![[shellter_payloads.png]]
 
 **2.  Transfer the binary to your Windows client and ensure that it is not being detected by the antivirus.**
 
-![[Pasted image 20220723140716.png]]
+![[av_bypass.png]]
 **3.  Run the WinRAR installer and migrate your meterpreter shell to prevent a disconnect.**
 
 set AutoRunScript post/windows/manage/migrate
-![[Pasted image 20220723142312.png]]
-![[Pasted image 20220723142408.png]]
+![[meterpreter_autorunscript.png]]
+![[meterpreter_winrar.png]]
 **4.  Attempt to find different executables and inject malicious code into them using Shellter.**
 
 The Shellter documentation reads as following:
@@ -114,5 +114,5 @@ containing executable code etc.."
 
 This means we can essentially use any 32-bit standalone installer. For our example we are going to try out the 7zip 32-bit installer.
 
-![[Pasted image 20220723160251.png]]
-![[Pasted image 20220723160312.png]]
+![[7zip_install.png]]
+![[meterpreter_7zip.png]]
