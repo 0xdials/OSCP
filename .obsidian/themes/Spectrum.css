@@ -962,7 +962,7 @@ table tbody tr:hover {
 }
 
 .cm-s-obsidian pre.HyperMD-codeblock-begin {
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
