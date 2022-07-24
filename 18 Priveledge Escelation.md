@@ -51,17 +51,21 @@ cat /etc/cron*
 ```Bash
 hostname
 ifconfig
+ip a
 ip link
 ip addr
+/sbin/route
+grep -Hs iptables /etc/*
 cat /etc/network/interfaces
 cat /etc/sysconfig/network
 cat /etc/resolv.conf
 cat /etc/sysconfig/network
 cat /etc/networks
-iptables -L
 dnsdomainname
 lsof -i
 lsof -i :80
+
+ss -anp
 netstat -antup
 netstat -antpx
 netstat -tulpn
@@ -83,7 +87,15 @@ net  user <USERNAME> # enumerate username "USERNAME"
 ***Network***
 ```powershell
 hostname
+ipconfig /all
 ```
+
+***Firewall***
+```powershell
+netsh advfirewall show current profile
+netsh advfirewall firewall show rule name=all
+```
+
 
 ***Operating System/Kernel***
 ```
@@ -93,5 +105,11 @@ systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ***Processes and Services***
 ```powershell
 tasklist /SVC
+route print
+netstat -ano
+```
 
+***Scheduled Tasks***
+```powershell
+schtasks /query /fo LIST /v
 ```
