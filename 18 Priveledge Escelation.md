@@ -11,7 +11,7 @@ whoami
 id
 cat /etc/passwd
 ```
-***Operating System/Kernel***
+***Operating System/Kernel/Drivers***
 ```bash
 hostname
 cat /etc/issue
@@ -21,7 +21,7 @@ uname -a
 dmesg | grep -i linux
 rpm -q kernel
 ```
-
+***Device Drivers & Kernel Modules
 ***Environment Variables***
 ```bash
 env
@@ -41,6 +41,17 @@ top
 cat /etc/service
 dpkg -l
 rpm -qa
+```
+
+***Files & Permissions***
+```
+find / -writable -type d 2>/dev/null
+```
+***Unmounted Drives***
+```bash
+mount
+cat /etc/fstab
+lsblk
 ```
 ***Cron***
 ```
@@ -96,12 +107,13 @@ netsh advfirewall show current profile
 netsh advfirewall firewall show rule name=all
 ```
 
-
-***Operating System/Kernel***
-```
+***Operating System/Kernel/Drivers***
+```powershell
 systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 wmic qfe get Caption, Description, HotFixID, InstalledOn
+PS> driverquery.exe /v /fo csv | ConverFrom-CSV | Select-Object 'Display Name', 'Start Mode', Path
+Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
 ```
 ***Processes and Services***
 ```powershell
@@ -116,7 +128,12 @@ wmic get name, version, vendor
 schtasks /query /fo LIST /v
 ```
 
-#### Accesscheck
-```
+***Files & Permissions***
+```powershell
 accesschk.exe -uws "Everyone" "C:\Program Files"
+PS> Get-ChildItem "C:\Program Files" -Recurse | Get-ACL | ?{$_.AccessToString - match "Everyone\sAllow\s\sModify"}
+```
+***Unmounted Drives***
+```powershell
+mountvol
 ```
