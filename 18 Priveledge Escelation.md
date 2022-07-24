@@ -54,6 +54,12 @@ iptables -L
 hostname
 dnsdomainname
 lsof -i
+lsof -i :80
 netstat -antup
-
+netstat -antpx
+netstat -tulpn
+chkconfig --list
+chkconfig --list | grep 3:on
+last
+w
 ```
