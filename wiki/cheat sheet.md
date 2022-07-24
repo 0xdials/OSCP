@@ -47,6 +47,11 @@ create self-signed certificate
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
 
 
+## FTP
+`passive`
+toggles the passive/active mode during session
+
+
 ## MSFVenom
 
 #### shell generation - bytes

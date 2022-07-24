@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "17 Antivirus Evasion.md",
+            "file": "wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "17 Antivirus Evasion.md",
+                "file": "wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "300b2d8a53b60988",
   "lastOpenFiles": [
-    "wiki/cheat sheet.md",
     "17 Antivirus Evasion.md",
+    "wiki/cheat sheet.md",
     "wiki/attacks.md",
     "Pasted image 20220722201317.png",
     "course notes/11 Windows Buffer Overflows.md",
