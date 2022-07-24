@@ -11,6 +11,7 @@ whoami
 id
 cat /etc/passwd
 ```
+
 ***Operating System/Kernel/Drivers***
 ```bash
 hostname
@@ -23,10 +24,12 @@ rpm -q kernel
 lsmod
 /sbin/modinfo libdata
 ```
+
 ***AutoElevating Binaries***
 ```bash
 find / -perm -u=s -type f 2>/dev/null
 ```
+
 ***Environment Variables***
 ```bash
 env
@@ -38,6 +41,7 @@ cat ~/.bashrc
 cat ~/.bash_logout
 cat ~/.zshrc
 ```
+
 ***Processes and Services***
 ```Bash
 ps aux | grep root
