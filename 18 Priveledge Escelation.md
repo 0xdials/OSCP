@@ -267,4 +267,5 @@ We can then search this output for the string "WARNING", making note of anything
 
 ![[Pasted image 20220724210628.png]]
 
-Moving on to windows, we can continue exploring the options of windows-privesc-check2.exe. 
+Moving on to windows, we can continue exploring the options of windows-privesc-check2.exe, this time taking a look at installed software on the system.
+

@@ -80,7 +80,7 @@ class RememberCursorPosition extends obsidian.Plugin {
         let st = this.getEphemeralState();
         if (!this.lastEphemeralState)
             this.lastEphemeralState = st;
-        if (!this.isEphemeralStatesEquals(st, this.lastEphemeralState)) {
+        if (!isNaN(st.scroll) && !this.isEphemeralStatesEquals(st, this.lastEphemeralState)) {
             this.saveEphemeralState(st);
             this.lastEphemeralState = st;
         }
