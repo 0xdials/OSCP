@@ -46,6 +46,8 @@ target
 create self-signed certificate
 `openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 362 -out bind_shell.crt`
 
+#### rdesktop
+`rdesktop -u student -k pt -g 2048x1110 192.168.197.10`
 
 ## FTP
 `passive`
