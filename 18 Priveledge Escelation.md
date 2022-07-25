@@ -256,5 +256,15 @@ We can see a number of different ways we can utilize this tool to check for poss
 
 For unix based systems we can use a similar script known as "unix-privesc-check". Running the script with no arguments will show us the help menu. We can run the script with the "standard" flag and pipe the output to a text file to review.
 
+We can see from our output that the /etc/passwd file is world writeable.
+![[Pasted image 20220724205418.png]]
 
 **2.  Experiment with different windows-privesc-check and unix_privesc_check options.**
+
+Continuing with the unix-privesc-check script we start by changing our previous flag of "standard" to "detailed" We can then pipe the output of this script to a text file.
+`./unix-privesc-check detailed 1> privesc_detailed.txt`
+We can then search this output for the string "WARNING", making note of anything of interest. From this we can see a number of possible attack vectors. 
+
+![[Pasted image 20220724210628.png]]
+
+Moving on to windows, we can continue exploring the options of windows-privesc-check2.exe. 
