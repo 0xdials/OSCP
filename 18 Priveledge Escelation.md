@@ -254,6 +254,7 @@ We can see a number of different ways we can utilize this tool to check for poss
 `C:\Tools\privilege_escalation\windows-privesc-check-master>windows-privesc-check2.exe --dump -G`
 ![[Pasted image 20220724163551.png]]
 
-For unix based systems we can use a similar script known as "unix-privesc-check". Running the script with no arguments will show us the help menu.
+For unix based systems we can use a similar script known as "unix-privesc-check". Running the script with no arguments will show us the help menu. We can run the script with the "standard" flag and pipe the output to a text file to review.
+
 
 **2.  Experiment with different windows-privesc-check and unix_privesc_check options.**
