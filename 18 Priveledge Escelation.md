@@ -267,5 +267,10 @@ We can then search this output for the string "WARNING", making note of anything
 
 ![[Pasted image 20220724210628.png]]
 
-Moving on to windows, we can continue exploring the options of windows-privesc-check2.exe, this time taking a look at installed software on the system.
+Moving on to windows, we can continue exploring the options of windows-privesc-check2.exe, this time taking a look at scheduled tasks on the system.
+`windows-privesc-check2.exe -j --dump`
+
+And we can see a large amount of information returned to us.
+
+![[Pasted image 20220725163620.png]]
 
