@@ -381,3 +381,11 @@ int main ()
 Once compiled into an exe we then follow the same steps as above, transferring the file to our windows machine, replacing the original "ServiioService.exe" binary, and restarting the system to restart the service. Before we reboot the machine we start a listener which, upon next login, will receive a reverse connection.
 
 ![[Pasted image 20220726111659.png]]
+
+
+# 18.3.3 Insecure File Permissions - Cron Case Study
+**1. Log in to your Debian client as an unprivileged user and attempt to elevate your privileges to root using the above technique.**
+
+
+# 18.3.5 Insecure File Permissions: /etc/passwd Case Study
+**1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the **/etc/passwd** file.**
