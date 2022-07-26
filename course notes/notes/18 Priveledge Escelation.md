@@ -386,6 +386,12 @@ Once compiled into an exe we then follow the same steps as above, transferring t
 # 18.3.3 Insecure File Permissions - Cron Case Study
 **1. Log in to your Debian client as an unprivileged user and attempt to elevate your privileges to root using the above technique.**
 
+To start, let's take a look at cron jobs running in the cron.log file. We can do this by grepping "CRON" from the log.
+`grep "CRON" /var/log/cron.log`
+
+
+
+
 
 # 18.3.5 Insecure File Permissions: /etc/passwd Case Study
 **1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the **/etc/passwd file.**
