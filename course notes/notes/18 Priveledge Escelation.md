@@ -388,4 +388,5 @@ Once compiled into an exe we then follow the same steps as above, transferring t
 
 
 # 18.3.5 Insecure File Permissions: /etc/passwd Case Study
-**1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the **/etc/passwd** file.**
+**1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the **/etc/passwd file.**
+
