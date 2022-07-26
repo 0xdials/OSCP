@@ -304,4 +304,24 @@ We can see the key does exist in HKCR and after doing a bit of research we learn
 
 `REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command`
 
-From here, lets adjust our filter to properly capture our changes, 
+From here, lets adjust our filter to properly capture our changes and we spot a new query, DelegateExecute.
+![[Pasted image 20220725195358.png]]
+We can now add an empty DelegateExecute entry. When fodhelper.exe discovers this empty value it should look for a program to launch specified in the `Shell\Open\command` key entry. We can add this to our registry with the following command:
+`REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /v DelegateExecute /t REG_SZ`
+
+We can now verify this with by removing the "NAME NOT FOUND" filter, replacing it with "SUCCESS".
+![[Pasted image 20220725195857.png]]
+
+fodhelper.exe has found our new key but as it is empty it moves on to the default command entry. We can now replace the empty default value with our own executable.  We can do this with the following command:
+`REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /d "calc.exe" /f`
+
+Now we just need to run the fodhelper.exe binary again and we should get our "calc.exe" execution.
+![[Pasted image 20220725200344.png]]
+Adjusting this command from "calc.exe" to "cmd.exe" will spawn a cmd.exe shell with UAC bypassed.
+![[Pasted image 20220725200717.png]]
+
+# 18.2.6 Inescure File Permissions: Servilo Cast Study
+**1.  Log in to your Windows client as an unprivileged user and attempt to elevate your privileges to SYSTEM using the above vulnerability and technique.**
+
+
+**2.  Attempt to get a remote system shell rather than adding a malicious user.**
