@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "18 Priveledge Escelation.md",
+            "file": "course notes/notes/11 Windows Buffer Overflows.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "18 Priveledge Escelation.md",
+                "file": "course notes/notes/11 Windows Buffer Overflows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
-    "Pasted image 20220725192947.png",
-    "Pasted image 20220725193114.png",
-    "18 Priveledge Escelation.md",
-    "wiki/cheat sheet.md",
+    "course notes/notes/10 Intro to Buffer Overflow.md",
     "course notes/notes/9 Web Application Attacks.md",
-    "course notes/notes/17 Antivirus Evasion.md",
-    "course notes/notes/2 Getting Comfortable with Kali.md",
-    "course notes/notes/00 table of contents.md",
-    "course notes/999 links.md",
-    "prep/privesc/win/windows.md"
+    "course notes/notes/18 Priveledge Escelation.md",
+    "course notes/images/16_privesc/calc_PoC.png",
+    "course notes/images/16_privesc/ms-settings_shell.png",
+    "course notes/images/16_privesc/UAC_bypassed_cmd.png",
+    "course notes/images/16_privesc/delegate_execute_success.png",
+    "course notes/images/16_privesc/deligate_execute.png",
+    "course notes/images/16_privesc/default_key_setting.png",
+    "course notes/images/16_privesc/procmon_filters_name.png"
   ]
 }

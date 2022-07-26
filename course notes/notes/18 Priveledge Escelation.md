@@ -252,12 +252,12 @@ Options:
 ```
 We can see a number of different ways we can utilize this tool to check for possible privilege escalation strategies. For example, lets take a look at the system's user groups with the following command:
 `C:\Tools\privilege_escalation\windows-privesc-check-master>windows-privesc-check2.exe --dump -G`
-![[Pasted image 20220724163551.png]]
+![[privesc_dump_groups.png]]
 
 For unix based systems we can use a similar script known as "unix-privesc-check". Running the script with no arguments will show us the help menu. We can run the script with the "standard" flag and pipe the output to a text file to review.
 
 We can see from our output that the /etc/passwd file is world writeable.
-![[Pasted image 20220724205418.png]]
+![[unix_privesc.png]]
 
 **2.  Experiment with different windows-privesc-check and unix_privesc_check options.**
 
@@ -272,7 +272,7 @@ Moving on to windows, we can continue exploring the options of windows-privesc-c
 
 And we can see a large amount of information returned to us.
 
-![[Pasted image 20220725163620.png]]
+![[dump_tasks.png]]
 
 # 18.2.4 UAC Bypass: fodhelper.exe Case Study
 **1. Log in to your Windows client as the admin user and attempt to bypass UAC using the application and technique covered above.**
@@ -284,41 +284,41 @@ We start fodhelper.exe binary with the goal of inspecting the program's manifest
 `C:\Windows\System32\fodhelper.exe
 `
 `sigcheck.exe -a -m C:\Windows\System32\fodhelper.exe`
-![[Pasted image 20220725192527.png]]
+![[sigcheck.png]]
 
 We see from these results that the "autoElevate" flag is set to "true" meaning that the executable will auto elevate to high integrity without prompting the user for consent. 
 We can now move to process monitor in order to better understand this tool. We do this by starting Procmon.exe and then running fodhelper.exe, setting filters to monitor only fodhelper.exe and the registry keys it interacts with.
 
-![[Pasted image 20220725193114.png]]
+![[procmon_filters_reg.png]]
 
 We can filter this down even further by adding a check to only include registry keys that do not exist and are able to be modified by us, hopefully allowing us to hijack one of these keys for our own command.
 
-![[Pasted image 20220725193611.png]]
+![[procmon_filters_name.png]]
 
 We can see an interesting key being queried despite not existing. We can modify our filter to only include the key from this path to investigate further. We can also remove our result filter to gain more information on what is happening here.
-![[Pasted image 20220725194219.png]]
+![[ms-settings_shell.png]]
 We can see that once the program fails to run the key via HKCU it then attempts to run the same key in HKCR, or "Classes Root" hive, and is successful. Lets inspect this key in regedit.
 
-![[Pasted image 20220725194425.png]]
+![[default_key_setting.png]]
 We can see the key does exist in HKCR and after doing a bit of research we learn that the fodhelper.exe is opening a specific section of the Windows settings application via the ms-settings application. These application mappings can be defined through the registry editor. As the process calls a key which does not exist before calling the key located in HKCR we should be able to hijack this request and inject our own command. We can add our own key with the following command:
 
 `REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command`
 
 From here, lets adjust our filter to properly capture our changes and we spot a new query, DelegateExecute.
-![[Pasted image 20220725195358.png]]
+![[deligate_execute.png]]
 We can now add an empty DelegateExecute entry. When fodhelper.exe discovers this empty value it should look for a program to launch specified in the `Shell\Open\command` key entry. We can add this to our registry with the following command:
 `REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /v DelegateExecute /t REG_SZ`
 
 We can now verify this with by removing the "NAME NOT FOUND" filter, replacing it with "SUCCESS".
-![[Pasted image 20220725195857.png]]
+![[delegate_execute_success.png]]
 
 fodhelper.exe has found our new key but as it is empty it moves on to the default command entry. We can now replace the empty default value with our own executable.  We can do this with the following command:
 `REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /d "calc.exe" /f`
 
 Now we just need to run the fodhelper.exe binary again and we should get our "calc.exe" execution.
-![[Pasted image 20220725200344.png]]
+![[calc_PoC.png]]
 Adjusting this command from "calc.exe" to "cmd.exe" will spawn a cmd.exe shell with UAC bypassed.
-![[Pasted image 20220725200717.png]]
+![[UAC_bypassed_cmd.png]]
 
 # 18.2.6 Inescure File Permissions: Servilo Cast Study
 **1.  Log in to your Windows client as an unprivileged user and attempt to elevate your privileges to SYSTEM using the above vulnerability and technique.**
