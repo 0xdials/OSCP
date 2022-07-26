@@ -274,3 +274,34 @@ And we can see a large amount of information returned to us.
 
 ![[Pasted image 20220725163620.png]]
 
+# 18.2.4 UAC Bypass: fodhelper.exe Case Study
+**1. Log in to your Windows client as the admin user and attempt to bypass UAC using the application and technique covered above.**
+
+In the following example we will be leveraging fodhelper.exe, a binary responsible for managing language changes in the operating system. As this binary runs as *high integrity* we can leverage this application and its interaction with registry keys to run a command of our choosing as high integrity.
+
+We start fodhelper.exe binary with the goal of inspecting the program's manifest. We can do this with sigcheck.exe, a binary included in sysinternals.
+
+`C:\Windows\System32\fodhelper.exe
+`
+`sigcheck.exe -a -m C:\Windows\System32\fodhelper.exe`
+![[Pasted image 20220725192527.png]]
+
+We see from these results that the "autoElevate" flag is set to "true" meaning that the executable will auto elevate to high integrity without prompting the user for consent. 
+We can now move to process monitor in order to better understand this tool. We do this by starting Procmon.exe and then running fodhelper.exe, setting filters to monitor only fodhelper.exe and the registry keys it interacts with.
+
+![[Pasted image 20220725193114.png]]
+
+We can filter this down even further by adding a check to only include registry keys that do not exist and are able to be modified by us, hopefully allowing us to hijack one of these keys for our own command.
+
+![[Pasted image 20220725193611.png]]
+
+We can see an interesting key being queried despite not existing. We can modify our filter to only include the key from this path to investigate further. We can also remove our result filter to gain more information on what is happening here.
+![[Pasted image 20220725194219.png]]
+We can see that once the program fails to run the key via HKCU it then attempts to run the same key in HKCR, or "Classes Root" hive, and is successful. Lets inspect this key in regedit.
+
+![[Pasted image 20220725194425.png]]
+We can see the key does exist in HKCR and after doing a bit of research we learn that the fodhelper.exe is opening a specific section of the Windows settings application via the ms-settings application. These application mappings can be defined through the registry editor. As the process calls a key which does not exist before calling the key located in HKCR we should be able to hijack this request and inject our own command. We can add our own key with the following command:
+
+`REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command`
+
+From here, lets adjust our filter to properly capture our changes, 
