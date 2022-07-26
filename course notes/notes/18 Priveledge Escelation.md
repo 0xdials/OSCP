@@ -388,8 +388,10 @@ Once compiled into an exe we then follow the same steps as above, transferring t
 
 To start, let's take a look at cron jobs running in the cron.log file. We can do this by grepping "CRON" from the log.
 `grep "CRON" /var/log/cron.log`
-
-
+![[Pasted image 20220726164159.png]]
+We can see a script labeled "user_backups.sh" is being run as root. Taking a look at the permissions of the file reveal that we have write access. 
+![[Pasted image 20220726164327.png]]
+We can simply edit this script, appending a reverse shell. As the script is being run as root this reverse shell will also be run as root.
 
 
 
