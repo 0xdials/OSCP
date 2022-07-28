@@ -1,6 +1,8 @@
 # 20.1.2 Port Forwarding
 **1.  Connect to your dedicated Linux lab client and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+In preparation for the following exercise we simply need to ssh into our Debian machine and run the required script as root.
+
 
 
 **2.  Attempt to replicate the port-forwarding technique covered in the above scenario.**
