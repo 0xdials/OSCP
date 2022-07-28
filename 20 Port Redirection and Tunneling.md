@@ -21,14 +21,18 @@ This will forward all traffic our Kali machine receives on port 80 to the Google
 Upon restarting the service we can see that we are now listening on port 80.
 ![[Pasted image 20220727203949.png]]
 
-
+Now to verify our connection, let's switch back to our Debian lab machine and attempt to connect to our listening Kali machine.
+![[Pasted image 20220727204428.png]]
+And we see we get a 200 OK from google, redirected through our Kali machine.
 
 # 20.2.2 SSH Local Port Forwarding
 **1.  Connect to your dedicated Linux lab client and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+As we did previously, we simply need to run the requested script.
 
 **2.  Run the ssh_local_port_forwarding.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+In addition to the clear_rules.sh script we must also run the ssh_local_port_forwarding.sh script in the same directory.
 
 **3.  Take note of the Linux client and Windows Server 2016 IP addresses shown in the Student Control Panel.**
 
