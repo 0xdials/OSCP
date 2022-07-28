@@ -14,6 +14,15 @@ Local Kali Machine
 Debian Lab Client
 ![[Pasted image 20220727202848.png]]
 
+In order to route Google's traffic to our Debian machine we will be utilizing RINETD, once installed we can navigate to the config folder found at /etc/rinetd.conf. We make the following edit to the configuration fire:
+![[Pasted image 20220727203726.png]]
+This will forward all traffic our Kali machine receives on port 80 to the Google IP and port and specified earlier.
+
+Upon restarting the service we can see that we are now listening on port 80.
+![[Pasted image 20220727203949.png]]
+
+
+
 # 20.2.2 SSH Local Port Forwarding
 **1.  Connect to your dedicated Linux lab client and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
