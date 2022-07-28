@@ -36,6 +36,10 @@ In addition to the clear_rules.sh script we must also run the ssh_local_port_for
 
 **3.  Take note of the Linux client and Windows Server 2016 IP addresses shown in the Student Control Panel.**
 
+Running the "ip a" command on the Linux client we see two IP addresses running under two separate network interfaces. This signifies that the machine is connected to two separate networks.
+![[Pasted image 20220728154901.png]]
+Running "ipconfig" on our Windows machine shows a similar setup.
+![[Pasted image 20220728155012.png]]
 
 **4.  Attempt to replicate the smbclient enumeration covered in the above scenario.**
 
