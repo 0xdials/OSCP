@@ -49,6 +49,9 @@ To establish a connection to the Windows client running on the internal network 
 This utilizes the following SSH syntax:
 `ssh -N -L [bind_address:]port:host:hostport [username@address]`
 
+After adjusting our smb.conf file, setting the minimum SMB version to SMBv2 we can restart the service and attempt to enumerate the shares (note we are using "localhost" in the command due to the tunnel).
+![[Pasted image 20220728161021.png]]
+
 # 20.2.4 SSH Remote Port Forwarding
 
 **1. Connect to your dedicated Linux lab client via SSH and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
