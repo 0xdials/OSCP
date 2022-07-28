@@ -43,6 +43,12 @@ Running "ipconfig" on our Windows machine shows a similar setup.
 
 **4.  Attempt to replicate the smbclient enumeration covered in the above scenario.**
 
+To establish a connection to the Windows client running on the internal network we will need to leverage a tunnel from our Kali machine through the compromised Linux machine, arriving at the Windows server machine. We can do this via the following SSH command:
+`sudo ssh -N -L 0.0.0.0:445:192.168.1.110:445 student@10.11.0.128`
+
+This utilizes the following SSH syntax:
+`ssh -N -L [bind_address:]port:host:hostport [username@address]`
+
 # 20.2.4 SSH Remote Port Forwarding
 
 **1. Connect to your dedicated Linux lab client via SSH and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
