@@ -7,6 +7,12 @@ In preparation for the following exercise we simply need to ssh into our Debian 
 
 **2.  Attempt to replicate the port-forwarding technique covered in the above scenario.**
 
+once our systems are prepared for the exercise we begin by checking the connectivity of both machines. Doing so will show us that although our local, Kali machine is able to reach the internet our Debian lab client will have no connection. 
+Local Kali Machine
+![[Pasted image 20220727202728.png]]
+
+Debian Lab Client
+![[Pasted image 20220727202848.png]]
 
 # 20.2.2 SSH Local Port Forwarding
 **1.  Connect to your dedicated Linux lab client and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
