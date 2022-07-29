@@ -60,9 +60,20 @@ As with previous sections, simply navigate to the proper directory and run the r
 
 **2. Close any SSH connections to your dedicated Linux lab client and then connect as the student account using rdesktop and run the ssh_remote_port_forward.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+For this exercise we need to now run the next script while connected via rdesktop. This is to ensure SSH rules are created correctly.
+![[Pasted image 20220728174816.png]]
 
 **3. Attempt to replicate the SSH remote port forwarding covered in the above scenario and ensure that you can scan and interact with the MySQL service.**
 
+As we are unable to access the Debian client from our Kali machine via SSH we must initiate the connection on the Debian machine, forwarding the remote port to our local Kali machine. To do this we can use a similar command as we used previously, replacing a few of the variables and flags.
+
+The following command, run on our Debian client should forward the proper ports to our Kali machine:
+`ssh -N -R 10.11.0.4:2221:127.0.0.1:3306 kali@10.11.0.4`
+(note: ensure ssh service is currently running on local machine)
+![[Pasted image 20220728175357.png]]
+
+And we now have access to MYSQL being run on the remote Debian client.
+![[Pasted image 20220728175558.png]]
 
 # 20.2.6 SSH Dynamic Port Forwarding
 
