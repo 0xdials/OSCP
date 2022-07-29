@@ -98,6 +98,7 @@ First, we then need to setup proxychains to run standard network applications th
 
 Now that proxychains is setup we can use it by adding "proxychains" a the start of our commands. For the requested nmap scan the following command can be used:
 `sudo proxychains nmap --top-ports=20 -sT -Pn 192.168.1.110`
+![[Pasted image 20220728184302.png]]
 
 **5.  Perform an nmap SYN scan through the tunnel. Does it work? Are the results accurate?**
 
