@@ -79,15 +79,25 @@ And we now have access to MYSQL being run on the remote Debian client.
 
 **1.  Connect to your dedicated Linux lab client and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+As with previous sections, simply navigate to the proper directory and run the requested scripts as root.
 
 **2.  Take note of the Linux client and Windows Server 2016 IP addresses.**
 
+We can see from our lab control panel the following IPs:
+Debian: 192.168.197.44
+Windows 2016 Server: 172.16.197.5
 
 **3.  Create a SOCKS4 proxy on your Kali machine, tunneling through the Linux target.**
 
+We can create the proxy using the following command:
+`sudo ssh -N -D 127.0.0.1:8080 student@10.11.0.128`
 
 **4.  Perform a successful nmap scan against the Windows Server 2016 machine through the proxy.**
 
+First, we then need to setup proxychains to run standard network applications through our created proxy. We do this by simply appended `socks4 127.0.0.1 8080` to our proxychains4.conf file.
+
+Now that proxychains is setup we can use it by adding "proxychains" a the start of our commands. For the requested nmap scan the following command can be used:
+`sudo proxychains nmap --top-ports=20 -sT -Pn 192.168.1.110`
 
 **5.  Perform an nmap SYN scan through the tunnel. Does it work? Are the results accurate?**
 
