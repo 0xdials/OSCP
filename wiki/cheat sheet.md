@@ -203,6 +203,7 @@ crack hash "hash.txt" with a format of "NT" using rules and rockyou
 `john --rules --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --format=NT`
 cracking unshadowed.txt file using "rules"
 `john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt`
+
 #### unshadow
 using unshadow command on a passwd and shadow file to create an unshadowed text file.
 `unshadow passwd-file.txt shadow-file.txt > unshadowed.txt`
