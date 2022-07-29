@@ -1,3 +1,5 @@
+# TODO: Table of Contents/Links
+
 
 # COMMANDS
 ### netcat
@@ -151,11 +153,15 @@ QUIT
 # Pivoting
 
 #### SSH Tunneling - Local
-format for accessing remote location via localhost on Kali
+format for accessing remote location via localhost forward on Kali
 `ssh -N -L [bind_address:]port:host:hostport [username@address]`
 
 ssh tunnel which allows traffic from Kali localhost:445 (0.0.0.0:445) to access 192.168.1.110:445 through SSH to studen@10.11.0.128
 `sudo ssh -N -L 0.0.0.0:445:192.168.1.110:445 student@10.11.0.128`
+
+#### SSH Tunneling - Remote
+format for accessing remote location via remote forward
+`ssh -N -R [bind_address:]port:host:hostport [username@address]`
 
 #### chisel
 \*nix local

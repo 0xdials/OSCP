@@ -56,6 +56,7 @@ After adjusting our smb.conf file, setting the minimum SMB version to SMBv2 we c
 
 **1. Connect to your dedicated Linux lab client via SSH and run the clear_rules.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+As with previous sections, simply navigate to the proper directory and run the requested scripts as root.
 
 **2. Close any SSH connections to your dedicated Linux lab client and then connect as the student account using rdesktop and run the ssh_remote_port_forward.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
