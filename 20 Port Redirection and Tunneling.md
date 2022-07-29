@@ -102,7 +102,9 @@ Now that proxychains is setup we can use it by adding "proxychains" a the start 
 
 **5.  Perform an nmap SYN scan through the tunnel. Does it work? Are the results accurate?**
 
-
+By altering the previous command from a TCP connect scan (-sT) to a SYN scan (-sS) we get the following results.
+![[Pasted image 20220728185447.png]]
+Note that all the ports are marked as filtered, indicated an unsuccessful scan. This is due to the lack of a payload for proxychains to forward.
 # 20.3.1 PLINK.exe
 
 **1.  Obtain a reverse shell on your Windows lab client through the Sync Breeze vulnerability.**
