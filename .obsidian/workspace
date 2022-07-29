@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "20 Port Redirection and Tunneling.md",
+            "file": "wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20 Port Redirection and Tunneling.md",
+                "file": "wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,9 +89,9 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
+    "20 Port Redirection and Tunneling.md",
     "wiki/cheat sheet.md",
     "needs_more_review.md",
-    "20 Port Redirection and Tunneling.md",
     "wiki/attacks.md",
     "course notes/images/18_privesc/calc_PoC.png",
     "course notes/images/18_privesc/change_user.png",
