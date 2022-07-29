@@ -163,6 +163,9 @@ ssh tunnel which allows traffic from Kali localhost:445 (0.0.0.0:445) to access 
 format for accessing remote location via remote forward
 `ssh -N -R [bind_address:]port:host:hostport [username@address]`
 
+commcand to ssh into a target () 
+` ssh student@192.168.197.52 -p 2222 -N -R 192.168.119.197:5555:127.0.0.1:5555 kali@192.168.119.197`
+
 #### chisel
 \*nix local
 `./chisel server --reverse -p 9001`
