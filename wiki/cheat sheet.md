@@ -163,7 +163,7 @@ ssh tunnel which allows traffic from Kali localhost:445 (0.0.0.0:445) to access 
 format for accessing remote location via remote forward
 `ssh -N -R [bind_address:]port:host:hostport [username@address]`
 
-commcand to ssh into a target () 
+command to ssh into a target (student@192.168.197.52) on port 2222 and then remotely forward port 5555 of student@192.168.197.52 to port 5555 on local kali machine (192.168.119.197) 
 ` ssh student@192.168.197.52 -p 2222 -N -R 192.168.119.197:5555:127.0.0.1:5555 kali@192.168.119.197`
 
 #### chisel
