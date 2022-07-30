@@ -134,6 +134,25 @@ As with the previous section, simply need to setup a listener and run our buffer
 
 **2.  Using the SYSTEM shell, attempt to replicate the port forwarding example using netsh.**
 
+We first confirm that the IP Helper service is running using the following command:
+`net start iphlpsvc`
+And we can check ipv6 is enable via a powershell command:
+`powershell Get-NetAdapterBinding -ComponentID ms_tcpip6`
+
+![[ps_ipv6_status.png]]
+
+From here, we just need to issue the following netsh command to setup the port forward:
+`netsh interface portproxy add v4tov4 listenport=4455 listenaddress=192.168.197.10 connectport=445 connectaddress=172.16.197.5
+
+This command will add an IPV4 to IPV4 proxy which is listening on 192.168.197.10:445. This proxy will then forward traffic to 172.16.197.5:445, the address of the Windows 2016 server.
+
+After issuing this command we can double check the local port to ensure it is listening:
+![[netsh_port_check.png]]
+
+Finally, we need to change the firewall in order to allow incoming connections. This can be done with the following command:
+`netsh advfirewall firewall add rule name="forward_port_rule" protocol=TCP dir=in localip=192.168.197.10 localport=4455 action=allow`
+
+We should now be able to access the Windows 2016 SMB share from our Kali machine. We can test this using SMBClient (note the 'port' flag matching the port we setup on the Windows machine).
 
 
 # 20.5.1 HTTPTunneling Through Deep Packet Inspection
