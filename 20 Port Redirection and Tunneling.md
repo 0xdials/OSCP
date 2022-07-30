@@ -162,6 +162,7 @@ We can then take this a step further and mount this drive directly on our Kali m
 # 20.5.1 HTTPTunneling Through Deep Packet Inspection
 **1.  Connect to your dedicated Linux lab client as the student account using rdesktop and run the http_tunneling.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
+Simply navigate to the proper directory and run the http_tunneling.sh script as root.
 
 **2.  Start the apache2 service and exploit the vulnerable web application hosted on port 443 (covered in a previous module) in order to get a reverse HTTP shell.**
 
