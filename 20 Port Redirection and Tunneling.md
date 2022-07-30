@@ -130,8 +130,11 @@ Once plink.exe has been executed and the tunnel has been created we can then sca
 # 20.4.1 NETSH
 **1.  Obtain a reverse shell on your Windows lab client through the Sync Breeze vulnerability.**
 
+As with the previous section, simply need to setup a listener and run our buffer overflow python script from section 12.
 
 **2.  Using the SYSTEM shell, attempt to replicate the port forwarding example using netsh.**
+
+
 
 # 20.5.1 HTTPTunneling Through Deep Packet Inspection
 **1.  Connect to your dedicated Linux lab client as the student account using rdesktop and run the http_tunneling.sh script from /root/port_forwarding_and_tunneling/ as root.**
