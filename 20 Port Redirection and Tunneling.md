@@ -155,6 +155,9 @@ Finally, we need to change the firewall in order to allow incoming connections. 
 We should now be able to access the Windows 2016 SMB share from our Kali machine. We can test this using SMBClient (note the 'port' flag matching the port we setup on the Windows machine).
 ![[smb_success.png]]
 
+We can then take this a step further and mount this drive directly on our Kali machine.
+![[smb_mounted.png]]
+
 
 # 20.5.1 HTTPTunneling Through Deep Packet Inspection
 **1.  Connect to your dedicated Linux lab client as the student account using rdesktop and run the http_tunneling.sh script from /root/port_forwarding_and_tunneling/ as root.**
