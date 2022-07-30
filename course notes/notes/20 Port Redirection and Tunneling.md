@@ -9,20 +9,20 @@ In preparation for the following exercise we simply need to ssh into our Debian 
 
 once our systems are prepared for the exercise we begin by checking the connectivity of both machines. Doing so will show us that although our local, Kali machine is able to reach the internet our Debian lab client will have no connection. 
 Local Kali Machine
-![[Pasted image 20220727202728.png]]
+![[ping_google.png]]
 
 Debian Lab Client
-![[Pasted image 20220727202848.png]]
+![[ping_google_debian.png]]
 
 In order to route Google's traffic to our Debian machine we will be utilizing RINETD, once installed we can navigate to the config folder found at /etc/rinetd.conf. We make the following edit to the configuration fire:
-![[Pasted image 20220727203726.png]]
+![[rinetd_conf.png]]
 This will forward all traffic our Kali machine receives on port 80 to the Google IP and port and specified earlier.
 
 Upon restarting the service we can see that we are now listening on port 80.
-![[Pasted image 20220727203949.png]]
+![[rinetd_listening.png]]
 
 Now to verify our connection, let's switch back to our Debian lab machine and attempt to connect to our listening Kali machine.
-![[Pasted image 20220727204428.png]]
+![[debian_forward_success.png]]
 And we see we get a 200 OK from google, redirected through our Kali machine.
 
 # 20.2.2 SSH Local Port Forwarding
@@ -37,9 +37,9 @@ In addition to the clear_rules.sh script we must also run the ssh_local_port_for
 **3.  Take note of the Linux client and Windows Server 2016 IP addresses shown in the Student Control Panel.**
 
 Running the "ip a" command on the Linux client we see two IP addresses running under two separate network interfaces. This signifies that the machine is connected to two separate networks.
-![[Pasted image 20220728154901.png]]
+![[multiple_network_addresses.png]]
 Running "ipconfig" on our Windows machine shows a similar setup.
-![[Pasted image 20220728155012.png]]
+![[windows_multi_network_address.png]]
 
 **4.  Attempt to replicate the smbclient enumeration covered in the above scenario.**
 
@@ -50,7 +50,7 @@ This utilizes the following SSH syntax:
 `ssh -N -L [bind_address:]port:host:hostport [username@address]`
 
 After adjusting our smb.conf file, setting the minimum SMB version to SMBv2 we can restart the service and attempt to enumerate the shares (note we are using "localhost" in the command due to the tunnel).
-![[Pasted image 20220728161021.png]]
+![[smbclient_success.png]]
 
 # 20.2.4 SSH Remote Port Forwarding
 
@@ -61,7 +61,7 @@ As with previous sections, simply navigate to the proper directory and run the r
 **2. Close any SSH connections to your dedicated Linux lab client and then connect as the student account using rdesktop and run the ssh_remote_port_forward.sh script from /root/port_forwarding_and_tunneling/ as root.**
 
 For this exercise we need to now run the next script while connected via rdesktop. This is to ensure SSH rules are created correctly.
-![[Pasted image 20220728174816.png]]
+![[iptable_list.png]]
 
 **3. Attempt to replicate the SSH remote port forwarding covered in the above scenario and ensure that you can scan and interact with the MySQL service.**
 
@@ -70,10 +70,10 @@ As we are unable to access the Debian client from our Kali machine via SSH we mu
 The following command, run on our Debian client should forward the proper ports to our Kali machine:
 `ssh -N -R 10.11.0.4:2221:127.0.0.1:3306 kali@10.11.0.4`
 (note: ensure ssh service is currently running on local machine)
-![[Pasted image 20220728175357.png]]
+![[ssh_remote_forward.png]]
 
 And we now have access to MYSQL being run on the remote Debian client.
-![[Pasted image 20220728175558.png]]
+![[nmap_through_tunnel.png]]
 
 # 20.2.6 SSH Dynamic Port Forwarding
 
@@ -98,12 +98,12 @@ First, we then need to setup proxychains to run standard network applications th
 
 Now that proxychains is setup we can use it by adding "proxychains" a the start of our commands. For the requested nmap scan the following command can be used:
 `sudo proxychains nmap --top-ports=20 -sT -Pn 192.168.1.110`
-![[Pasted image 20220728184302.png]]
+![[nmap_results.png]]
 
 **5.  Perform an nmap SYN scan through the tunnel. Does it work? Are the results accurate?**
 
 By altering the previous command from a TCP connect scan (-sT) to a SYN scan (-sS) we get the following results.
-![[Pasted image 20220728185447.png]]
+![[nmap_failed_results.png]]
 Note that all the ports are marked as filtered, indicated an unsuccessful scan. This is due to the lack of a payload for proxychains to forward.
 # 20.3.1 PLINK.exe
 
@@ -284,4 +284,27 @@ After running this exploit we should have created the /uploads/command.php endpo
 
 **3.  Replicate the scenario demonstrated above using your dedicated clients.**
 
-Once we have an upgraded reverse shell we can start by creating a local port forward from the compromised Debian server to our local Kali machine.
+Once we have an upgraded reverse shell we can start by creating a local port forward from the compromised Debian server to the Windows Server (specifically, 3389 the RDP port). We can do this with the following command:
+`ssh -L 0.0.0.0:8888:172.16.197.5:3389 student@127.0.0.1`
+
+We can confirm this is listening by using the "ss" command.
+![[ss_port_8888.png]]
+
+Now that we have our local forward created we must now create the HTTP tunnel from our Kali machine. The server will be setup first by running the following command on the Debian machine:
+`hts --forward-port localhost:8888 1234`
+![[hts_confirmation.png]]
+
+This will listen on localhost:1234 and will decapsulate the traffic from the incoming HTTP stream and redirect it to port 8888 (which is then redirected to the Windows port 3389)
+
+We must now create the HTTP tunnel client. This will take our remote desktop traffic, encapsulate it in an HTTP stream, and send it to the listening HTTP tunnel server (hts command we setup last step). We can do this with the following htc command:
+`htc --forward-port 8080 192.168.197.44:1234`
+
+We can confirm this worked by checking with both "ss" and "ps aux" commands.
+![[ps_ss_local_confirmation.png]]
+
+Running rdekstop and pointing the service to 127.0.0.1:8080 should redirect this traffic to the proper Windows destination.
+![[rdesktop_success.png]]
+
+
+We can further verify via wireshark, looking to ensure the traffic from our Kali machine to the Debian server is routed through HTTP.
+![[http_traffic.png]]

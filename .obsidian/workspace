@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "20 Port Redirection and Tunneling.md",
+            "file": "course notes/notes/00 table of contents.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20 Port Redirection and Tunneling.md",
+                "file": "course notes/notes/00 table of contents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
-    "needs_more_review.md",
-    "20 Port Redirection and Tunneling.md",
-    "wiki/cheat sheet.md",
-    "course notes/notes/18 Priveledge Escelation.md",
-    "course notes/notes/15 Fixing Exploits.md",
-    "course notes/notes/9 Web Application Attacks.md",
-    "course notes/notes/8 vulnerability scanning.md",
-    "course notes/notes/7 Active Information Gathering.md",
-    "course notes/notes/6 Passive Information Gathering - OSINT.md",
-    "course notes/notes/5 Bash Scripting.md"
+    "course notes/images/20_port_redirection/netsh_port_check.png",
+    "course notes/images/20_port_redirection/multiple_network_addresses.png",
+    "wiki/needs_more_review.md",
+    "course notes/images/20_port_redirection/debian_forward_success.png",
+    "course notes/notes/20 Port Redirection and Tunneling.md",
+    "course notes/images/20_port_redirection/smbclient_success.png",
+    "course notes/images/20_port_redirection/rinetd_listening.png",
+    "course notes/images/20_port_redirection/rinetd_conf.png",
+    "course notes/images/20_port_redirection/nmap_failed_results.png",
+    "course notes/images/20_port_redirection/nmap_results.png"
   ]
 }
