@@ -153,6 +153,7 @@ Finally, we need to change the firewall in order to allow incoming connections. 
 `netsh advfirewall firewall add rule name="forward_port_rule" protocol=TCP dir=in localip=192.168.197.10 localport=4455 action=allow`
 
 We should now be able to access the Windows 2016 SMB share from our Kali machine. We can test this using SMBClient (note the 'port' flag matching the port we setup on the Windows machine).
+![[smb_success.png]]
 
 
 # 20.5.1 HTTPTunneling Through Deep Packet Inspection
