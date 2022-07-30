@@ -284,4 +284,4 @@ After running this exploit we should have created the /uploads/command.php endpo
 
 **3.  Replicate the scenario demonstrated above using your dedicated clients.**
 
-Once we have a reverse shell 
+Once we have an upgraded reverse shell we can start by creating a local port forward from the compromised Debian server to our local Kali machine.
