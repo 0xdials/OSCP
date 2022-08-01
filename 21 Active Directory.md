@@ -22,7 +22,14 @@ Finally, we can list group on the domain with "net group /domain". Note that thi
 
 The script will be using a DirectorySearcher object to query Active Directory using LDAP in order to enumerate ad users along with all the properties of each user account. This script will use a specific LDAP provider path which we will need to create. 
 
-**2.  Modify the PowerShell script to return all computers in the domain.**
+LDAP provider path format:
+`LDAP://HostName[:PortNumber][/DistinguishedName]`
 
+We start by retrieving the current hostname:
+`[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
+![[hostname.png]]
+
+
+**2.  Modify the PowerShell script to return all computers in the domain.**
 
 **3.  Add a filter to only return computers running Windows 10.**
