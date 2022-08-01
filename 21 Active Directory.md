@@ -20,7 +20,7 @@ Finally, we can list group on the domain with "net group /domain". Note that thi
 
 **1.  Modify the PowerShell script to only return members of the Domain Admins group.**
 
-The script will be using a DirectorySearcher object to query Active Directory using LDAP.  
+The script will be using a DirectorySearcher object to query Active Directory using LDAP in order to enumerate ad users along with all the properties of each user account. This script will use a specific LDAP provider path which we will need to create. 
 
 **2.  Modify the PowerShell script to return all computers in the domain.**
 
