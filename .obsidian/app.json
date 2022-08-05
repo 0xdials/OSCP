@@ -27,5 +27,8 @@
     "Metasploit",
     "Powershell",
     "Str"
-  ]
+  ],
+  "showLineNumber": false,
+  "spellcheck": true,
+  "readableLineLength": true
 }

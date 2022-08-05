@@ -1066,11 +1066,10 @@ h6 a.tag {
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg:before {
   position: absolute;
-  content: '';
-  top: -5%;
-  left: 0;
+  content: "";
   width: 100%;
-  height: 60%;
+  height: 100%;
+  margin-top: 1.5em;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
   background-color: #191621;
@@ -1085,8 +1084,9 @@ h6 a.tag {
 pre {
   position: relative;
 }
+/** Disabled language tag in favor of Obsidian plugin**/
 
-pre[class*='language-']:before {
+/*pre[class*='language-']:before {
   font-family: Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
   font-style: normal;
   font-weight: 700;
@@ -1145,7 +1145,7 @@ pre[class$='json']:before {
 
 pre[class$='python']:before {
   content: 'python';
-}
+}*/
 
 /**-------------------**
 | BLOCKQUOTE STYLING

@@ -1,8 +1,10 @@
 [
-  "cm-editor-syntax-highlight-obsidian",
-  "obsidian-advanced-appearance",
-  "obsidian-collapse-all-plugin",
-  "table-editor-obsidian",
   "obsidian-git",
-  "obsidian-languagetool-plugin"
+  "obsidian-better-codeblock",
+  "scroll-speed",
+  "remember-cursor-position",
+  "obsidian-style-settings",
+  "obsidian-paste-image-rename",
+  "obsidian-collapse-all-plugin",
+  "oz-clear-unused-images"
 ]

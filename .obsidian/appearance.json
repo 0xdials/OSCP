@@ -1,6 +1,9 @@
 {
-  "baseFontSize": 18,
-  "cssTheme": "Royal Velvet",
+  "baseFontSize": 15,
+  "cssTheme": "Obsidianite",
   "translucency": true,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "interfaceFontFamily": "RobotoMono Nerd Font",
+  "monospaceFontFamily": "Input Nerd Font Mono",
+  "textFontFamily": "Arial,Iosevka,Fira Code,Bitstream Vera Serif,Source Code Pro"
 }
