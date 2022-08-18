@@ -29,6 +29,29 @@ We start by retrieving the current hostname:
 `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
 ![[hostname.png]]
 
+```powershell
+# Script to output the full LDAP providor path needed to perform
+# LDAP queries against the domain controller
+
+# create variable to store current domain object
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# create variable to store primary domain controller
+$PDC = ($domainObj.PdcRoleOwner).Name
+
+# begin formation of path
+$SearchString = "LDAP://"
+
+# append primary domain controller object to path
+$SearchString += $PDC + "/"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
+
+$SearchString += $DistinguishedName
+
+$SearchString
+
+```
 
 **2.  Modify the PowerShell script to return all computers in the domain.**
 
