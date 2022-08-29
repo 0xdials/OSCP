@@ -7,12 +7,8 @@
         "id": "1c3b58c7df4e8319",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "cybermentor.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cybermentor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +84,15 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
-    "course notes/notes/21 Active Directory.md",
-    "course notes/images/21_active_directory/net_group_domain.png",
-    "hostname.png",
-    "prep/wiki/needs_more_review.md",
+    "21 Active Directory.md",
+    "wiki/needs_more_review.md",
+    "21_active_directory/net_group_domain.png",
     "course notes/notes/00 table of contents.md",
     "course notes/images/20_port_redirection/netsh_port_check.png",
     "course notes/images/20_port_redirection/multiple_network_addresses.png",
     "course notes/images/20_port_redirection/debian_forward_success.png",
     "course notes/notes/20 Port Redirection and Tunneling.md",
-    "course notes/images/20_port_redirection/smbclient_success.png"
+    "course notes/images/20_port_redirection/smbclient_success.png",
+    "course notes/images/20_port_redirection/rinetd_listening.png"
   ]
 }
