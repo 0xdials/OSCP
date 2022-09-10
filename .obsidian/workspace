@@ -89,15 +89,15 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
+    "prep/privesc/nix/Linux+Privilege+Escalation.pdf",
+    "oscp methodology.md",
+    "[.md",
+    "cracked_hash.png",
     "cybermentor.md",
-    "21 Active Directory.md",
-    "wiki/needs_more_review.md",
-    "21_active_directory/net_group_domain.png",
-    "course notes/notes/00 table of contents.md",
-    "course notes/images/20_port_redirection/netsh_port_check.png",
-    "course notes/images/20_port_redirection/multiple_network_addresses.png",
-    "course notes/images/20_port_redirection/debian_forward_success.png",
-    "course notes/notes/20 Port Redirection and Tunneling.md",
-    "course notes/images/20_port_redirection/smbclient_success.png"
+    "hostname.png",
+    "responder_hash.png",
+    "LLMNR_poison.png",
+    "prep/privesc/nix/linux.md",
+    "21 Active Directory.md"
   ]
 }

