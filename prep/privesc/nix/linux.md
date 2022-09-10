@@ -51,7 +51,7 @@ debian:
 rpm package manager (redhat):
 `$ rpm -qa | grep <program>`
 
-# port forwarding
+### port forwarding
 - possible for root process to be bound to an internal port
 - if you cannot exploit locall on target machine it may be possible to forward using ssh to localhost
 ` $ ssh -R <LOCAL_PORT>:127.0.0.1:<SERVICE_PORT> <USERNAME>@<LOCAL_MACHINE>`
@@ -62,5 +62,20 @@ on target:
 `tcp  0  0  127.0.0.1:3306  0.0.0.0:*  LISTEN`
 `$ ssh -R 9001:127.0.0.1:3306 dials@192.168.0.129`
 on local:
+
+
+# weak file permissions
+
+# sudo
+
+# cron jobs
+
+# suid/sgid executables
+
+# passwords and keys
+
+
+# NFS
+
 
 
