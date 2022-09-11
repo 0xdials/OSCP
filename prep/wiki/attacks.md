@@ -9,6 +9,9 @@
 ## xss - cross site scripting
 an attack where malicious scripts are injected into a web application and sent to a different user. typically used to steal cookies or session tokens, they can also go so far as to rewrite the content of the HTML page.
 
+##### remedy
+sanitize input, dompurify is a good librarry
+
 #### reflected 
 where the malicious script comes from the current http request - application receives data in an http request and includes that data within the immediate response in an unsafe way
 
