@@ -22,7 +22,13 @@ resulting in the following being reflected back to the user
 `<p>You searched for: <script>/* Bad stuff here... */</script></p>`
 
 #### stored
+(also known as persistent or second-order XSS) arises when an application receives data from an untrusted source and includes that data within its later HTTP responses in an unsafe way.
+*example* this can be seen in the following example, looking at a message board which accepts and stores malicious code.
+`<p>Hello, this is my message!</p>`
+as the example application does not perform any other processing of the input an attacker can easily send a message which attacks other users
+`<p><script>/* Bad stuff here... */</script></p>`
 
+#### dom-based
 
 
 ## csrf - cross-site request forgery 

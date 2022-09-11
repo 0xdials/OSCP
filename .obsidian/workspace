@@ -89,13 +89,13 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
+    "[.md",
+    "prep/wiki/attacks.md",
     "prep/wiki/needs_more_review.md",
     "prep/wiki/cheat sheet.md",
-    "prep/wiki/attacks.md",
     "prep/privesc/nix/Linux+Privilege+Escalation.pdf",
     "prep/privesc/nix/linux.md",
     "oscp methodology.md",
-    "[.md",
     "cracked_hash.png",
     "cybermentor.md",
     "hostname.png"
