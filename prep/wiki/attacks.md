@@ -9,6 +9,22 @@
 ## xss - cross site scripting
 an attack where malicious scripts are injected into a web application and sent to a different user. typically used to steal cookies or session tokens, they can also go so far as to rewrite the content of the HTML page.
 
+#### reflected 
+where the malicious script comes from the current http request - application receives data in an http request and includes that data within the immediate response in an unsafe way
+
+*example* the website has as search function which receives the user supplied term in the URL
+``https://insecure-website.com/search?term=SEARCH_TEARM
+the application then echos this search term in the response
+`<p>You searched for: SEARCH_TERM</p>`
+it may be possible to abuse this to execute JS code, the following snippet entered as the search term could allow for xss
+`https://insecure-website.com/search?term=<script>/*+Bad+stuff+here...+*/</script>`
+resulting in the following being reflected back to the user
+`<p>You searched for: <script>/* Bad stuff here... */</script></p>`
+
+#### stored
+
+
+
 ## csrf - cross-site request forgery 
 forces a user to execute unwanted actions on a web app which they are currently authenticated. this can force users into doing things like changing account details or transfering funds. typically defended against with tokens
 #### example: https://youtu.be/d2nVDoVr0jE?t=2315 41:30 for python script
