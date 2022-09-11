@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "prep/wiki/attacks.md",
+            "file": "prep/wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "prep/wiki/attacks.md",
+                "file": "prep/wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
-    "[.md",
     "prep/wiki/attacks.md",
+    "[.md",
     "prep/wiki/needs_more_review.md",
     "prep/wiki/cheat sheet.md",
     "prep/privesc/nix/Linux+Privilege+Escalation.pdf",
