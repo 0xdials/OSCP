@@ -499,3 +499,119 @@ used for string and array copying
 
 ##### EDI - Destination Index Register
 pointer addressing data and destination in string/array copying
+
+```
+# Unicode char can cause breaks in some applications
+# Exemple with the pile of poo
+https://emojipedia.org/pile-of-poo/
+💩
+```
+
+
+
+
+
+
+
+# WEB
+## discovery
+### resources
+```bash
+# Fuzzing Wordlists
+https://github.com/fuzzdb-project/fuzzdb
+
+# Fuzzing and Content Discovery
+https://github.com/kaimi-io/web-fuzz-wordlists
+
+# Fuzz non-printable characters in any user input
+# Could result in regex bypass
+0x00, 0x2F, 0x3A, 0x40, 0x5B, 0x60, 0x7B, 0xFF
+%00, %2F, %3A, %40, %5B, %60, %7B, %FF
+
+# Unicode char can cause breaks in some applications
+# Exemple with the pile of poo
+https://emojipedia.org/pile-of-poo/
+💩
+```
+
+### hakrawler
+`https://github.com/hakluke/hakrawler  # Usage cat urls.txt | hakrawler  # Example tool chain echo google.com | haktrails subdomains | httpx | hakrawler`
+
+### idor
+```bash
+# Bypass restrictions using parameter pollution
+# You can use the same parameter several times
+api.example/profile?UserId=123 # Ok, your profile
+api.example/profile?UserId=456 # ERROR
+api.example/profile?UserId=456&UserId=123 # OK, it can work
+# Tips 
+# - Some encoded/hashed IDs can be predictable --> Create accounts to see 
+# - Try some id, user_id, message_id even if the application seems to not offer it (on API for ex)
+# - Parameter Polluttion (HPP) 
+# - Switch between POST and PUT to bypass potential controls
+```
+
+### ffuf
+```bash
+# Directory discovery
+ffuf -w /path/to/wordlist -u https://target/FUZZ
+
+# Adding classical header (some WAF bypass)
+ffuf -c -w "/opt/host/main.txt:FILE" -H "X-Originating-IP: 127.0.0.1, X-Forwarded-For: 127.0.0.1, X-Remote-IP: 127.0.0.1, X-Remote-Addr: 127.0.0.1, X-Client-IP: 127.0.0.1" -fs 5682,0 -u https://target/FUZZ
+
+# match all responses but filter out those with content-size 42
+ffuf -w wordlist.txt -u https://example.org/FUZZ -mc all -fs 42 -c -v
+
+# Fuzz Host-header, match HTTP 200 responses.
+ffuf -w hosts.txt -u https://example.org/ -H "Host: FUZZ" -mc 200
+
+# Virtual host discovery (without DNS records)
+ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
+
+# Playing with threads and wait
+./ffuf -u https://target/FUZZ -w /home/mdayber/Documents/Tools/Wordlists/WebContent_Discovery/content_discovery_4500.txt -c -p 0.1 -t 10
+
+# GET param fuzzing, filtering for invalid response size (or whatever)
+ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs 4242
+
+# GET parameter fuzzing if the param is known (fuzzing values) and filtering 401
+ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
+
+# POST parameter fuzzing
+ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" -u https://target/login.php -fc 401
+
+# Fuzz POST JSON data. Match all responses not containing text "error".
+ffuf -w entries.txt -u https://example.org/ -X POST -H "Content-Type: application/json" \
+      -d '{"name": "FUZZ", "anotherkey": "anothervalue"}' -fr "error"
+```
+
+### dirsearch
+```
+./dirsearch.py -u https://www.target.fr -f -e php,xml,txt -t 10 -w wordpress.fuzz.txt
+```
+
+### dirscrapper (js discrapping)
+```bash
+# You can parse and scrape javascript content in a target website to look for hidden subdomains or interesting paths
+# Often, endpoints are not public but users can still interact with them
+# Tools like dirscraper automates this (https://github.com/Cillian-Collins/dirscraper)
+
+# Classic
+python discraper.py -u <url>
+
+# Output mode
+python discraper.py -u <url> -o <output>
+
+# Silent mode (you won't see result in term)
+python discraper.py -u <url> -s -o <output>
+
+# Relative URL Extractor is another good tool to scrape from JS files (https://github.com/jobertabma/relative-url-extractor)
+ruby extract.rb https://hackerone.com/some-file.js
+```
+
+
+# NETWORK
+# SHELLS
+# WINDOWS
+# LINUX
+# PASSWORDS & CRACKING
