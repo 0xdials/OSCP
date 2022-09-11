@@ -29,6 +29,8 @@ as the example application does not perform any other processing of the input an
 `<p><script>/* Bad stuff here... */</script></p>`
 
 #### dom-based
+document-object model
+
 
 
 ## csrf - cross-site request forgery 
