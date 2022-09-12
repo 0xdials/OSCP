@@ -551,6 +551,44 @@ api.example/profile?UserId=456&UserId=123 # OK, it can work
 # - Switch between POST and PUT to bypass potential controls
 ```
 
+### HTTP Request Smuggling
+https://portswigger.net/web-security/request-smuggling
+```bash
+# Smuggler.py is a small tool used to test that python smuggler.py -h                                           smuggler.py 
+[-h] [-a PATH] [-d HEADER] [-i TIMEOUT] [-m METHOD][-o HOSTS] [-s SCHEME] [-t THREADS] [-u URLS] [-v VERBOSE]  optional arguments:   
+
+-h, --help            
+show this help message and exit   
+
+-a PATH, --path PATH  
+set paths list  
+
+-d HEADER, --header HEADER                         
+custom headers
+
+-i TIMEOUT, --timeout TIMEOUT                         
+set timeout, default 10   
+
+-m METHOD, --method METHOD                         
+set methods separated by comma, default: all 
+
+-o HOSTS, --hosts HOSTS                         
+set host list (required or -u)   
+
+-s SCHEME, --scheme SCHEME                         
+scheme to use, default: http,https   
+
+-t THREADS, --threads THREADS                         
+threads, default 10   
+
+-u URLS, --urls URLS  
+set url list (required or -o)   
+
+-v VERBOSE, --verbose VERBOSE                         
+display output, 0=nothing, 1=only vulnerable, 2=all                         requests, 3=requests+headers, 4=full debug, default: 1
+```
+
+
 ### ffuf
 ```bash
 # Directory discovery
@@ -609,6 +647,25 @@ python discraper.py -u <url> -s -o <output>
 ruby extract.rb https://hackerone.com/some-file.js
 ```
 
+
+
+## application scans
+### wpscan
+```bash
+# Scan Wordpress - version docker disponible
+$ wpscan -h
+
+# Scan non intrusif
+$ wpscan --url http://monsite.com
+
+# Enumeration
+wpscan.rb --url www.example.com --enumerate # Tout
+wpscan.rb --url www.example.com --enumerate p # Plugins
+wpscan.rb --url www.example.com --enumerate u # Users
+
+# Scan bruteforce les user énumérés avec une wordlist
+$ wpscan.rb --url www.example.com --wordlist darkc0de.lst --threads 50
+```
 
 ## injection
 ### xss 
