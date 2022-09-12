@@ -683,6 +683,18 @@ $ ./gochopchop plugins --severity High
 # URL list
 $ ./gochopchop scan --url-file url_file.txt
 ```
+## waf
+### wawoof
+```bash
+# Simple tool used to identify and fingerprint WAF
+# Sends a normal HTTP request and analyses the response; this identifies a number of WAF solutions
+# If that is not successful, it sends a number of (potentially malicious) HTTP requests and uses simple logic to deduce which WAF it is
+# If that is also not successful, it analyses the responses previously returned and uses another 
+# simple algorithm to guess if a WAF or security solution is actively responding to our attacks
+./wafw00l -l
+./wafw00t https://target.com
+```
+
 ## injection
 ### xss 
 filter evasion
