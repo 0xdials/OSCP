@@ -684,7 +684,7 @@ $ ./gochopchop plugins --severity High
 $ ./gochopchop scan --url-file url_file.txt
 ```
 ## waf
-### wawoof
+### wafwoof
 ```bash
 # Simple tool used to identify and fingerprint WAF
 # Sends a normal HTTP request and analyses the response; this identifies a number of WAF solutions
@@ -693,6 +693,12 @@ $ ./gochopchop scan --url-file url_file.txt
 # simple algorithm to guess if a WAF or security solution is actively responding to our attacks
 ./wafw00l -l
 ./wafw00t https://target.com
+```
+### or manual check via telnet
+```bash
+# Through telnet, you can identify if there is a WAF
+telnet <site/ip> <80/443>
+GET / HTTP/1.1
 ```
 
 ## injection
