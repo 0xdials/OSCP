@@ -701,6 +701,23 @@ telnet <site/ip> <80/443>
 GET / HTTP/1.1
 ```
 
+### enumerating firewalls/gateway
+```bash
+https://www.secjuice.com/osint-detecting-enumerating-firewalls-gateways/
+# Some tips and quick wins
+
+# URL
+# - /dana-na/ --> Pulse VPN Gateways
+# - /remote/login --> Fortinet VPN Gateways
+# - /+CSCOE+/logon.html --> Cisco-VPN
+# - /vpn/index.html --> Netscaler
+
+# Ports
+# 264 / 18264 --> Checkpoint
+# 4443 --> SonicWall / Sophos
+# 500/udp --> Can be Cisco VPN (IPSEC iirc)
+```
+
 ## injection
 ### xss 
 filter evasion
