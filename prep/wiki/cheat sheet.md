@@ -666,7 +666,23 @@ wpscan.rb --url www.example.com --enumerate u # Users
 # Scan bruteforce les user énumérés avec une wordlist
 $ wpscan.rb --url www.example.com --wordlist darkc0de.lst --threads 50
 ```
+### chopchop
+```bash
+https://github.com/michelin/ChopChop
 
+# ChopChop is a new tool used to scan/test different endpoints.
+# Its goal is to scan several endpoints and identify exposition of services/files/folders through the webroot.
+
+# Easiest usage
+$ ./gochopchop scan --url https://foobar.com
+
+# List plugins
+$ ./gochopchop plugins
+$ ./gochopchop plugins --severity High
+
+# URL list
+$ ./gochopchop scan --url-file url_file.txt
+```
 ## injection
 ### xss 
 filter evasion
