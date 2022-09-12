@@ -790,9 +790,6 @@ smtp://
 telnet://
 ```
 
-
-
-
 ### xss 
 *an attack where malicious scripts are injected into a web application and sent to a different user. typically used to steal cookies or session tokens, they can also go so far as to rewrite the content of the HTML page.*
 
