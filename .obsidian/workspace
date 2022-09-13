@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "pg boxes/vault/vault.md",
+            "file": "prep/wiki/cheat sheet.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pg boxes/vault/vault.md",
+                "file": "prep/wiki/cheat sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,8 @@
   },
   "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
+    "prep/wiki/attacks.md",
+    "pg boxes/vault/vault.md",
     "pg boxes/vault/Pasted image 20220613224514.png",
     "pg boxes/vault/Pasted image 20220613224255.png",
     "pg boxes/vault/Pasted image 20220613223134.png",
@@ -96,8 +98,6 @@
     "pg boxes/vault/Pasted image 20220613150258.png",
     "pg boxes/vault/Pasted image 20220613150130.png",
     "prep/privesc/win/windows.md",
-    "prep/privesc/win/Windows+Privilege+Escalation.pdf",
-    "prep/privesc/nix/linux.md",
-    "prep/wiki/cheat sheet.md"
+    "prep/privesc/win/Windows+Privilege+Escalation.pdf"
   ]
 }

@@ -896,8 +896,3 @@ https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.ht
 ]>
 <r>&sp;</r>
 ```
-# NETWORK
-# SHELLS
-# WINDOWS
-# LINUX
-# PASSWORDS & CRACKING
