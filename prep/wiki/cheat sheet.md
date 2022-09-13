@@ -467,6 +467,7 @@ use pth-winexe to pass the hash, executing a command prompt
 # ipv6
 ## mitm6
 +
+
 # RESOURCES
 ## buffer overflow
 #### x86 cheat sheet
@@ -506,11 +507,6 @@ pointer addressing data and destination in string/array copying
 https://emojipedia.org/pile-of-poo/
 💩
 ```
-
-
-
-
-
 
 
 # WEB
