@@ -71,3 +71,13 @@ And we immediately get a hash. We'll throw this in john to crack.
 Now we can use winrm and grab the user flag.
 
 ![[Pasted image 20220613224514.png]]
+
+
+Continuing on to root access, we begin by enumerating the current user. We immediately can see that we have both the SeBakupPrivilege and SeRestorePrivilege. These can be exploited via the following application. 
+
+https://github.com/xct/SeRestoreAbuse.git
+This uses SeRestore to take control of services in the registry and modify the service path. Once the service is started it is done so as System.
+
+https://github.com/Hackplayers/PsCabesha-tools/blob/master/Privesc/Acl-FullControl.ps1
+This allows the attacker to use SeBackup to gain full control of a file.
+
