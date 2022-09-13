@@ -869,8 +869,10 @@ new class extends confirm``{}
 filter evasion
 https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 
-## csrf
+### csrf
 *Cross-Site Request Forgery (CSRF/XSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.*
+### xxe
+
 
 # NETWORK
 # SHELLS
