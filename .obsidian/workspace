@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "prep/wiki/cheat sheet.md",
+            "file": "course notes/notes/21 Active Directory.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 339.5
   },
   "right": {
     "id": "172510ba41557534",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "prep/wiki/cheat sheet.md",
+                "file": "course notes/notes/21 Active Directory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "58443bbf5c960718",
+  "active": "1c3b58c7df4e8319",
   "lastOpenFiles": [
-    "prep/wiki/attacks.md",
+    "cybermentor.md",
+    "cybermentor - active directory.md",
+    "cracked_hash.png",
     "prep/wiki/cheat sheet.md",
+    "prep/wiki/attacks.md",
     "prep/wiki/ports.md",
     "pg boxes/vault/vault.md",
     "pg boxes/vault/Pasted image 20220613224514.png",
     "pg boxes/vault/Pasted image 20220613224255.png",
-    "pg boxes/vault/Pasted image 20220613223134.png",
-    "pg boxes/vault/Pasted image 20220613223110.png",
-    "pg boxes/vault/Pasted image 20220613150258.png",
-    "pg boxes/vault/Pasted image 20220613150130.png"
+    "pg boxes/vault/Pasted image 20220613223134.png"
   ]
 }
