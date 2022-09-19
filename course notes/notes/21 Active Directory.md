@@ -31,6 +31,7 @@ LDAP provider path format:
 We start by retrieving the current hostname:
 `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
 ![[hostname.png]]
+We can see from this output that our current domain name is "corp.com" with the primary domain controller being "dc01.corp.com". Using this information we can continue construction of our script.
 
 ```powershell
 # Script to output the full LDAP providor path needed to perform
