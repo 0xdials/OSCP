@@ -23,6 +23,10 @@ Finally, we can list group on the domain with "net group /domain". Note that thi
 
 **1.  Modify the PowerShell script to only return members of the Domain Admins group.**
 
+**2.  Modify the PowerShell script to return all computers in the domain.**
+
+**3.  Add a filter to only return computers running Windows 10.**
+
 The script will be using a DirectorySearcher object to query Active Directory using LDAP in order to enumerate ad users along with all the properties of each user account. This script will use a specific LDAP provider path which we will need to create. 
 
 LDAP provider path format:
@@ -31,7 +35,39 @@ LDAP provider path format:
 We start by retrieving the current hostname:
 `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
 ![[hostname.png]]
-We can see from this output that our current domain name is "corp.com" with the primary domain controller being "dc01.corp.com". Using this information we can continue construction of our script.
+We can see from this output that our current domain name is "corp.com" with the primary domain controller being "dc01.corp.com". We can conclude that the full providor path will be as follows:
+`LDAP://DC01.corp.com/DC=corp,DC=com`
+Using this information we can continue construction of our script, instantiating the DirectorySearcher class with our recently created LDAP provider path. We must also specify a SearchRoot, the node which handles searches. This takes the form of an object in the DirectoryEntry class. If no aruments are presented to the constructor SearchRoot will indicate that every search should return results from the entire AD network. Our script should now look something like the following.
+```Powershell
+# Script to output the full LDAP providor path needed to perform
+# LDAP queries against the domain controller
+
+# create variable to store current domain object
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# create variable to store primary domain controller
+$PDC = ($domainObj.PdcRoleOwner).Name
+
+# begin formation of path
+$SearchString = "LDAP://"
+
+# append primary domain controller object to path
+$SearchString += $PDC + "/"
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
+$SearchString += $DistinguishedName
+
+# Istantiate DirectorySearcher class
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+# specify SearchRoot
+$Searcher.SearchRoot = $objDomain
+```
+
+Finally, we can add filters to narrow our searches.
+
+
+
 
 ```powershell
 # Script to output the full LDAP providor path needed to perform
@@ -53,10 +89,29 @@ $DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
 
 $SearchString += $DistinguishedName
 
-$SearchString
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+# Question 1 - return all domain admins on network
+# $Searcher.filter="memberof=CN=Domain Admins,CN=Users,DC=corp,DC=com"
+# QEUSTION 2 - return all computers on network: # $Searcher.filter="objectcategory=CN=Computer,CN=Schema,CN=Configuration,DC=corp,DC=com"
+# QUESTION 3 - return computers running windows 10
+# $Searcher.filter="operatingsystem=*windows 10*"
+
+$Result = $Searcher.FindAll()
+
+Foreach($obj in $Result)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop
+    }
+    
+    Write-Host "------------------------"
+}
 
 ```
 
-**2.  Modify the PowerShell script to return all computers in the domain.**
-
-**3.  Add a filter to only return computers running Windows 10.**
