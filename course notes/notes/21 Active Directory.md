@@ -16,10 +16,7 @@ Finally, we can list group on the domain with "net group /domain". Note that thi
 ![[net_group_domain.png]]
 
 
-# 22.2.4 A Modern Approach
-
-
-
+# 21.2.4 A Modern Approach
 
 **1.  Modify the PowerShell script to only return members of the Domain Admins group.**
 
@@ -65,9 +62,6 @@ $Searcher.SearchRoot = $objDomain
 ```
 
 Finally, we can add filters to narrow our searches.
-
-
-
 
 ```powershell
 # Script to output the full LDAP providor path needed to perform
@@ -115,3 +109,9 @@ Foreach($obj in $Result)
 
 ```
 
+# 21.2.6 Resolving Nested Groups
+
+**1.  Repeat the enumeration to uncover the relationship between Secret_Group, Nested_Group, and Another_Nested_Group.**
+
+
+**2.  The script presented in this section required us to change the group name at each iteration. Adapt the script in order to unravel nested groups programmatically without knowing their names beforehand.**
