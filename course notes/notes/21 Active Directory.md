@@ -83,11 +83,11 @@ $DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
 
 $SearchString += $DistinguishedName
 
-
+# Istantiate DirectorySearcher class
 $Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
-
 $objDomain = New-Object System.DirectoryServices.DirectoryEntry
 
+# specify SearchRoot
 $Searcher.SearchRoot = $objDomain
 # Question 1 - return all domain admins on network
 # $Searcher.filter="memberof=CN=Domain Admins,CN=Users,DC=corp,DC=com"
@@ -112,6 +112,67 @@ Foreach($obj in $Result)
 # 21.2.6 Resolving Nested Groups
 
 **1.  Repeat the enumeration to uncover the relationship between Secret_Group, Nested_Group, and Another_Nested_Group.**
+We start by modifying our previous script to find all all records with an objectClass set to "Group".
+```Powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcRoleOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + "/"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
+
+$SearchString += $DistinguishedName
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+$Searcher.filter="(objectClass=Group)"
+
+$Result = $Searcher.FindAll()
+
+Foreach($obj in $Result)
+{
+    $obj.Properties.name
+}
+```
+
+From there, we can begin enumeration on the listed Groups, specifically "Secret_Group", "Netsted_Group", and "Another_Nested_Group".
+```Powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcRoleOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + "/"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
+
+$SearchString += $DistinguishedName
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+
+$Searcher.filter="(name=Secret_Group)" 
+# Replace "Secret_Group" with Nested_Group/Another_Nested_Group
+
+$Result = $Searcher.FindAll()
+
+Foreach($obj in $Result)
+{
+    $obj.Properties.member
+}
+```
 
 
 **2.  The script presented in this section required us to change the group name at each iteration. Adapt the script in order to unravel nested groups programmatically without knowing their names beforehand.**
