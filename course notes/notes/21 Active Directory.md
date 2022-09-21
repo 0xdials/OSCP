@@ -176,3 +176,40 @@ Foreach($obj in $Result)
 
 
 **2.  The script presented in this section required us to change the group name at each iteration. Adapt the script in order to unravel nested groups programmatically without knowing their names beforehand.**
+
+For this question we simply need to iterate over each group and list out their members. In order to capture nested groups we must instruct the script to enumerate this recursively. 
+
+```Powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcRoleOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + "/"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.', ',DC='))"
+
+$SearchString += $DistinguishedName
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+$Searcher.filter="(objectClass=Group)"
+
+$Result = $Searcher.FindAll()
+
+Foreach($Groups in $Result)
+{
+    $Searcher.filter="($Groups.Properties.name)"
+    $Group = $Searcher.FindAll()
+    Foreach($Group in $Groups){
+        $Group.Properties.name
+        $Group.Properties.member
+    }
+   
+}
+```
