@@ -209,3 +209,13 @@ Foreach($Groups in $Result)
 }
 ```
 
+
+# 21.2.8 Currently Logged on Users
+
+**1.  Download and use PowerView to perform the same enumeration against the student VM while in the context of the _Offsec_ account.**
+
+
+**2.  Log in to the student VM with the _Jeff_Admin_ account and perform a remote desktop login to the domain controller using the _Jeff_Admin_ account. Next, execute the Get-NetLoggedOn function on the student VM to discover logged-in users on the domain controller while in the context of the _Jeff_Admin_ account.**
+
+
+**3.  Repeat the enumeration by using the _DownloadString_ method from the _System.Net.WebClient_ class in order to download PowerView from your Kali system and execute it in memory without saving it to the hard disk.**
