@@ -213,7 +213,10 @@ Foreach($Groups in $Result)
 # 21.2.8 Currently Logged on Users
 
 **1.  Download and use PowerView to perform the same enumeration against the student VM while in the context of the _Offsec_ account.**
-
+First we import powerview by navigating to the directory and issuing the following command.
+`Import-Module .\PowerView.ps1`
+We can then begin to enumerate the logged on users via the following command:
+`GetNetLoggedon -ComputerName client251`
 
 **2.  Log in to the student VM with the _Jeff_Admin_ account and perform a remote desktop login to the domain controller using the _Jeff_Admin_ account. Next, execute the Get-NetLoggedOn function on the student VM to discover logged-in users on the domain controller while in the context of the _Jeff_Admin_ account.**
 
