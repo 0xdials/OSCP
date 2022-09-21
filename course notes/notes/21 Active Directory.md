@@ -203,14 +203,9 @@ $Searcher.filter="(objectClass=Group)"
 $Result = $Searcher.FindAll()
 
 Foreach($Groups in $Result)
-{
-    $Searcher.filter="($Groups.Properties.name)"
-    $Group = $Searcher.FindAll()
-    Foreach($Group in $Groups){
-        $Group.Properties.name
-        $Group.Properties.member
-    }
-   
+{   
+    $Groups.Properties.name
+    $Groups.Properties.member   
 }
 ```
 
