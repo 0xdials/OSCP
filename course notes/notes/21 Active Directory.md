@@ -222,3 +222,10 @@ We can then begin to enumerate the logged on users via the following command:
 
 
 **3.  Repeat the enumeration by using the _DownloadString_ method from the _System.Net.WebClient_ class in order to download PowerView from your Kali system and execute it in memory without saving it to the hard disk.**
+
+
+# 21.3.4 Cached Credential Storage and Retrieval
+
+**1.  Use Mimikatz to dump all password hashes from the student VM.**
+
+**2.  Log in to the domain controller as the Jeff_Admin account through Remote Desktop and use Mimikatz to dump all password hashes from the server.**
