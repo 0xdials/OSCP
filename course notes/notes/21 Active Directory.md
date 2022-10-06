@@ -233,3 +233,7 @@ In order to dump the passwords via mimikatz we simply need to open an elevated c
 
 **2.  Log in to the domain controller as the Jeff_Admin account through Remote Desktop and use Mimikatz to dump all password hashes from the server.**
 
+To complete this exercise we simply need to login to the 2016 Server machine using the jeff_admin account and then repeat the steps from above. I also ensured the administrator account was connected to test that remote connection credentials were captured by mimikatz.
+
+![[domain_controller_mimikatz.png]]
+
