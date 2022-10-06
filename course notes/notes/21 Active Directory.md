@@ -227,5 +227,9 @@ We can then begin to enumerate the logged on users via the following command:
 # 21.3.4 Cached Credential Storage and Retrieval
 
 **1.  Use Mimikatz to dump all password hashes from the student VM.**
+In order to dump the passwords via mimikatz we simply need to open an elevated command prompt and run the mimikatz binary. From the mimikatz prompt we then engage the SeDebugPrivilege via the command "privilege::debug" allowing us to interact with processes owned by other accounts. We can then run the command "sekurlsa::logonpasswords" to dump all hashes for any user logged on to the current workstation or server.
+![[mimikatz_start.png]]
+
 
 **2.  Log in to the domain controller as the Jeff_Admin account through Remote Desktop and use Mimikatz to dump all password hashes from the server.**
+
