@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "d3356179d1e647e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "290c041f4ba3ed9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "397fead859ba4f48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "course notes/notes/11 Windows Buffer Overflows.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "11 Windows Buffer Overflows"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6e09c2c7c4ededad",
+    "type": "split",
+    "children": [
+      {
+        "id": "07ddc92b99293486",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41729663f819db58",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "586e876fb598c058",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "31a85b18f6b2b948",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4e35b5af69ea236c",
+    "type": "split",
+    "children": [
+      {
+        "id": "11d80460a7300a2a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8487ef86817ad565",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "course notes/notes/11 Windows Buffer Overflows.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 11 Windows Buffer Overflows"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "oz-clear-unused-images:Clear Unused Images": false
+    }
+  },
+  "active": "397fead859ba4f48",
+  "lastOpenFiles": [
+    "course notes/notes/10 Intro to Buffer Overflow.md",
+    "course notes/notes/3 Command Line Fun.md",
+    "course notes/notes/00 table of contents.md",
+    "course notes/notes/2 Getting Comfortable with Kali.md",
+    "cracked_hash.png",
+    "course notes/notes/17 Antivirus Evasion.md",
+    "course notes/notes/9 Web Application Attacks.md",
+    "course notes/notes/6 Passive Information Gathering - OSINT.md"
+  ]
+}
